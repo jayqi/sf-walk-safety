@@ -1,0 +1,923 @@
+Category                     Descript                                                                 
+ARSON                        ARSON                                                                           999
+                             ARSON OF A COMMERCIAL BUILDING                                                  127
+                             ARSON OF A POLICE BUILDING                                                        4
+                             ARSON OF A POLICE VEHICLE                                                         2
+                             ARSON OF A VACANT BUILDING                                                       72
+                             ARSON OF A VEHICLE                                                             1297
+                             ARSON OF AN INHABITED DWELLING                                                  450
+                             ARSON WITH GREAT BODILY INJURY                                                    4
+                             ATTEMPTED ARSON                                                                 258
+                             FIRE, UNLAWFULLY CAUSING                                                         72
+ASSAULT                      AGGRAVATED ASSAULT OF POLICE OFFICER, SNIPING                                     2
+                             AGGRAVATED ASSAULT OF POLICE OFFICER,BODILY FORCE                               346
+                             AGGRAVATED ASSAULT ON POLICE OFFICER WITH A GUN                                  14
+                             AGGRAVATED ASSAULT ON POLICE OFFICER WITH A KNIFE                                45
+                             AGGRAVATED ASSAULT WITH A DEADLY WEAPON                                       13880
+                             AGGRAVATED ASSAULT WITH A GUN                                                  2228
+                             AGGRAVATED ASSAULT WITH A KNIFE                                                5265
+                             AGGRAVATED ASSAULT WITH BODILY FORCE                                          10657
+                             ASSAULT                                                                        1115
+                             ASSAULT BY POISONING                                                             15
+                             ASSAULT BY POLICE OFFICER                                                        10
+                             ASSAULT ON A POLICE OFFICER WITH A DEADLY WEAPON                                501
+                             ASSAULT OR ATTEMPTED MURDER UPON GOV'T OFFICERS                                   2
+                             ASSAULT WITH CAUSTIC CHEMICALS                                                  905
+                             ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ FULL AUTO                              1
+                             ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ GUN                                   19
+                             ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ SEMI AUTO                              1
+                             ASSAULT, AGGRAVATED, W/ GUN                                                     475
+                             ASSAULT, AGGRAVATED, W/ MACHINE GUN                                               3
+                             ASSAULT, AGGRAVATED, W/ SEMI AUTO                                                 5
+                             ATTEMPTED HOMICIDE BY SNIPING                                                     1
+                             ATTEMPTED HOMICIDE WITH A DANGEROUS WEAPON                                      162
+                             ATTEMPTED HOMICIDE WITH A GUN                                                   641
+                             ATTEMPTED HOMICIDE WITH A KNIFE                                                 373
+                             ATTEMPTED HOMICIDE WITH BODILY FORCE                                            105
+                             ATTEMPTED HOMICIDE WITH EXPLOSIVES                                                2
+                             ATTEMPTED MAYHEM WITH A DEADLY WEAPON                                            50
+                             ATTEMPTED MAYHEM WITH A GUN                                                       3
+                             ATTEMPTED MAYHEM WITH A KNIFE                                                    33
+                             ATTEMPTED MAYHEM WITH BODILY FORCE                                               22
+                             ATTEMPTED SIMPLE ASSAULT                                                        725
+                             BATTERY                                                                       58420
+                             BATTERY DURING LABOR DISPUTE                                                     31
+                             BATTERY OF A POLICE OFFICER                                                    2848
+                             BATTERY WITH SERIOUS INJURIES                                                  1775
+                             BATTERY, FORMER SPOUSE OR DATING RELATIONSHIP                                  6245
+                             CHILD ABUSE (PHYSICAL)                                                         2941
+                             CHILD, INFLICTING INJURY RESULTING IN TRAUMATIC CONDITION                       322
+                             CIVIL RIGHTS, INCL. INJURY, THREAT, OR DAMAGE (HATE CRIMES)                      17
+                             DISCHARGING IN GROSSLY NEGLIGENT MANNER                                         230
+                             ELDER ADULT OR DEPENDENT ABUSE (NOT EMBEZZLEMENT OR THEFT)                     1439
+                             FALSE IMPRISONMENT                                                              900
+                             FIREARM, DISCHARGING AT OCCUPIED BLDG, VEHICLE, OR AIRCRAFT                     104
+                             FIREARM, DISCHARGING IN GROSSLY NEGLIGENT MANNER                                170
+                             INFLICT INJURY ON COHABITEE                                                   15372
+                             LASERS, DISCHARGING OR LIGHTS AT AIRCRAFT                                         6
+                             MAYHEM WITH A DEADLY WEAPON                                                      77
+                             MAYHEM WITH A GUN                                                                 6
+                             MAYHEM WITH A KNIFE                                                              39
+                             MAYHEM WITH BODILY FORCE                                                         86
+                             RESISTING PEACE OFFICER, CAUSING THEIR SERIOUS INJURY OR DEATH                  171
+                             SHOOTING INTO INHABITED DWELLING OR OCCUPIED VEHICLE                            563
+                             STALKING                                                                       1826
+                             TERRORIZING BY ARSON OR EXPLOSIVE DEVICE                                          7
+                             TERRORIZING BY MARKING PRIVATE PROPERTY                                           4
+                             THREAT OR FORCE TO RESIST EXECUTIVE OFFICER                                     466
+                             THREAT TO STATE OFFICIAL OR JUDGE                                                13
+                             THREATENING PHONE CALL(S)                                                      1843
+                             THREATENING SCHOOL OR PUBLIC EMPLOYEE                                           107
+                             THREATS AGAINST LIFE                                                          30980
+                             THREATS TO SCHOOL TEACHERS                                                      314
+                             TRESPASS WITHIN 30 DAYS OF CREDIBLE THREAT                                       14
+                             UNLAWFUL DISSUADING/THREATENING OF A WITNESS                                    192
+                             WILLFUL CRUELTY TO CHILD                                                        251
+BAD CHECKS                   CHECKS, NON-SUFFICIENT FUNDS (FELONY)                                           254
+                             CHECKS, NON-SUFFICIENT FUNDS (MISDEMEANOR)                                      608
+BRIBERY                      BRIBERY OF EXECUTIVE OFFICER                                                     19
+                             BRIBERY OF WITNESSES                                                            317
+                             CONCEAL CRIME OR WITHHOLD EVIDENCE, ACCEPTING PAYMENT TO                         18
+                             DISSUADING WITNESS, VICTIM                                                      319
+BURGLARY                     BURGLARY OF APARTMENT HOUSE, ATT FORCIBLE ENTRY                                1480
+                             BURGLARY OF APARTMENT HOUSE, FORCIBLE ENTRY                                    6101
+                             BURGLARY OF APARTMENT HOUSE, UNLAWFUL ENTRY                                   10615
+                             BURGLARY OF FLAT, ATTEMPTED FORCIBLE ENTRY                                      220
+                             BURGLARY OF FLAT, FORCIBLE ENTRY                                                832
+                             BURGLARY OF FLAT, UNLAWFUL ENTRY                                               1515
+                             BURGLARY OF HOTEL ROOM, ATTEMPTED FORCIBLE ENTRY                                 32
+                             BURGLARY OF HOTEL ROOM, FORCIBLE ENTRY                                          250
+                             BURGLARY OF HOTEL ROOM, UNLAWFUL ENTRY                                         1438
+                             BURGLARY OF RESIDENCE, ATTEMPTED FORCIBLE ENTRY                                1370
+                             BURGLARY OF RESIDENCE, FORCIBLE ENTRY                                          5988
+                             BURGLARY OF RESIDENCE, UNLAWFUL ENTRY                                          6585
+                             BURGLARY OF STORE, ATTEMPTED FORCIBLE ENTRY                                     386
+                             BURGLARY OF STORE, FORCIBLE ENTRY                                              3149
+                             BURGLARY OF STORE, UNLAWFUL ENTRY                                              4872
+                             BURGLARY OF WAREHOUSE, ATTEMPTED FORCIBLE ENTRY                                  65
+                             BURGLARY OF WAREHOUSE, FORCIBLE ENTRY                                           382
+                             BURGLARY OF WAREHOUSE, UNLAWFUL ENTRY                                           274
+                             BURGLARY, ATTEMPTED FORCIBLE ENTRY                                              896
+                             BURGLARY, FORCIBLE ENTRY                                                       5680
+                             BURGLARY, HOT PROWL, ATTEMPTED FORCIBLE ENTRY                                   598
+                             BURGLARY, HOT PROWL, FORCIBLE ENTRY                                            1654
+                             BURGLARY, HOT PROWL, UNLAWFUL ENTRY                                            3764
+                             BURGLARY, UNLAWFUL ENTRY                                                       6845
+                             BURGLARY, VEHICLE (ARREST MADE)                                                1662
+                             BURGLARY, VEHICLE, ATT. (ARREST MADE)                                           125
+                             BURGLARY,APT UNDER CONSTRUCTION, ATT. FORCIBLE                                   17
+                             BURGLARY,APT UNDER CONSTRUCTION, FORCIBLE ENTRY                                 123
+                             BURGLARY,APT UNDER CONSTRUCTION, UNLAWFUL ENTRY                                 179
+                             BURGLARY,BLDG. UNDER CONSTRUCTION, ATT. FORCIBLE                                 50
+                             BURGLARY,BLDG. UNDER CONSTRUCTION, FORCIBLE ENTRY                               652
+                             BURGLARY,BLDG. UNDER CONSTRUCTION, UNLAWFUL ENTRY                               757
+                             BURGLARY,FLAT UNDER CONSTRUCTION, ATT. FORCIBLE                                  11
+                             BURGLARY,FLAT UNDER CONSTRUCTION, FORCIBLE ENTRY                                128
+                             BURGLARY,FLAT UNDER CONSTRUCTION, UNLAWFUL ENTRY                                128
+                             BURGLARY,HOTEL UNDER CONSTRUCTION, ATT. FORCIBLE                                  1
+                             BURGLARY,HOTEL UNDER CONSTRUCTION, FORCIBLE ENTRY                                21
+                             BURGLARY,HOTEL UNDER CONSTRUCTION, UNLAWFUL ENTRY                                40
+                             BURGLARY,RESIDENCE UNDER CONSTRT, ATT. FORCIBLE                                  87
+                             BURGLARY,RESIDENCE UNDER CONSTRT, FORCIBLE ENTRY                                798
+                             BURGLARY,RESIDENCE UNDER CONSTRT, UNLAWFUL ENTRY                                564
+                             BURGLARY,STORE UNDER CONSTRUCTION, ATT. FORCIBLE                                564
+                             BURGLARY,STORE UNDER CONSTRUCTION, FORCIBLE ENTRY                              4201
+                             BURGLARY,STORE UNDER CONSTRUCTION, UNLAWFUL ENTRY                              3371
+                             BURGLARY,WAREHOUSE UNDER CONSTRT, ATT. FORCIBLE                                   2
+                             BURGLARY,WAREHOUSE UNDER CONSTRT, FORCIBLE ENTRY                                 20
+                             BURGLARY,WAREHOUSE UNDER CONSTRT, UNLAWFUL ENTRY                                 11
+                             SAFE BURGLARY                                                                   156
+                             SAFE BURGLARY OF A FLAT                                                           8
+                             SAFE BURGLARY OF A HOTEL                                                         18
+                             SAFE BURGLARY OF A RESIDENCE                                                     78
+                             SAFE BURGLARY OF A RESIDENCE WITH EXPLOSIVES                                      1
+                             SAFE BURGLARY OF A STORE                                                        197
+                             SAFE BURGLARY OF A WAREHOUSE                                                     15
+                             SAFE BURGLARY OF A WAREHOUSE WITH EXPLOSIVES                                      3
+                             SAFE BURGLARY OF AN APARTMENT                                                    16
+                             SAFE BURGLARY WITH EXPLOSIVES                                                     2
+DISORDERLY CONDUCT           COMMITTING PUBLIC NUISANCE                                                     2768
+                             DISTURBANCE OF NON-RELIGIOUS, NON-POLITICAL ASSEMBLY                              1
+                             DISTURBING RELIGIOUS MEETINGS                                                     9
+                             DISTURBING THE PEACE                                                           2006
+                             DISTURBING THE PEACE, COMMOTION                                                 364
+                             DISTURBING THE PEACE, FIGHTING                                                 1034
+                             DISTURBING THE PEACE, SWEARING                                                  342
+                             MAINTAINING A PUBLIC NUISANCE                                                   831
+                             MAINTAINING A PUBLIC NUISANCE AFTER NOTIFICATION                               1638
+DRIVING UNDER THE INFLUENCE  DRIVING WHILE UNDER THE INFLUENCE OF ALCOHOL                                   4314
+                             DRIVING WHILE UNDER THE INFLUENCE OF ALCOHOL, W/INJURY                          122
+                             DRIVING WHILE UNDER THE INFLUENCE OF DRUGS                                      504
+                             DRIVING WHILE UNDER THE INFLUENCE OF DRUGS, W/INJURY                             18
+DRUG/NARCOTIC                CONTROLLED SUBSTANCE VIOLATION, LOITERING FOR                                  1081
+                             DRUG LAB APPARATUS, POSSESSION                                                    4
+                             ENCOURAGE MINOR TO USE AMPHETAMINE                                                1
+                             ENCOURAGE MINOR TO USE BARBITUATES                                                8
+                             ENCOURAGE MINOR TO USE CONTROLLED SUBSTANCE                                       5
+                             ENCOURAGE MINOR TO USE HALLUCINOGENIC                                             1
+                             ENCOURAGE MINOR TO USE HEROIN                                                     1
+                             ENCOURAGE MINOR TO USE METH-AMPHETAMINE                                           1
+                             ENCOURAGE MINOR TO USE OPIATES                                                    1
+                             ENCOURAGING MINOR TO USE COCAINE                                                 10
+                             ENCOURAGING MINOR TO USE MARIJUANA                                               22
+                             FAILURE TO REGISTER AS NARCOTICS ADDICT                                          33
+                             FORGE OR ALTER PRESCRIPTION                                                     221
+                             FURNISHING MARIJUANA                                                            159
+                             HYPODERMIC NEEDLE OR SYRINGE, POSSESSION                                        131
+                             LOITERING WHERE NARCOTICS ARE SOLD/USED                                         607
+                             MAINTAINING PREMISE WHERE NARCOTICS ARE SOLD/USED                               843
+                             MONEY OFFENSE RELATED TO NARCOTICS TRAFFICKING                                   56
+                             PLANTING/CULTIVATING MARIJUANA                                                  579
+                             PLANTING/CULTIVATING PEYOTE                                                       1
+                             POSSESSION OF AMPHETAMINE                                                       293
+                             POSSESSION OF AMPHETAMINE FOR SALES                                             568
+                             POSSESSION OF BARBITUATES                                                         8
+                             POSSESSION OF BARBITUATES FOR SALES                                               5
+                             POSSESSION OF BASE/ROCK COCAINE                                               14150
+                             POSSESSION OF BASE/ROCK COCAINE FOR SALE                                       7430
+                             POSSESSION OF COCAINE                                                          3015
+                             POSSESSION OF COCAINE FOR SALES                                                1322
+                             POSSESSION OF CONTROLLED SUBSTANCE                                             4287
+                             POSSESSION OF CONTROLLED SUBSTANCE FOR SALE                                    2223
+                             POSSESSION OF HALLUCINOGENIC                                                    293
+                             POSSESSION OF HALLUCINOGENIC FOR SALES                                          236
+                             POSSESSION OF HEROIN                                                           4157
+                             POSSESSION OF HEROIN FOR SALES                                                 1848
+                             POSSESSION OF MARIJUANA                                                       11392
+                             POSSESSION OF MARIJUANA FOR SALES                                              5695
+                             POSSESSION OF METH-AMPHETAMINE                                                 7722
+                             POSSESSION OF METH-AMPHETAMINE FOR SALE                                        2426
+                             POSSESSION OF METHADONE                                                         173
+                             POSSESSION OF METHADONE FOR SALES                                                95
+                             POSSESSION OF NARCOTICS PARAPHERNALIA                                         20786
+                             POSSESSION OF OPIATES                                                           292
+                             POSSESSION OF OPIATES FOR SALES                                                 122
+                             POSSESSION OF OPIUM                                                              68
+                             POSSESSION OF OPIUM DERIVATIVE                                                   60
+                             POSSESSION OF OPIUM DERIVATIVE FOR SALES                                         15
+                             POSSESSION OF OPIUM FOR SALES                                                    11
+                             PRESCRIPTION, FORGE OR ALTER (4390 B&P)                                          25
+                             SALE OF AMPHETAMINE                                                             201
+                             SALE OF BARBITUATES                                                               4
+                             SALE OF BASE/ROCK COCAINE                                                      8830
+                             SALE OF COCAINE                                                                 634
+                             SALE OF CONTROLLED SUBSTANCE                                                   1570
+                             SALE OF HALLUCINOGENIC                                                           51
+                             SALE OF HEROIN                                                                 1209
+                             SALE OF MARIJUANA                                                              2911
+                             SALE OF METH-AMPHETAMINE                                                        326
+                             SALE OF METHADONE                                                                24
+                             SALE OF OPIATES                                                                  38
+                             SALE OF OPIUM                                                                     3
+                             SALE OF OPIUM DERIVATIVE                                                          5
+                             SALES COCAINE BASE/SCHOOLYARD TRAFFICKING ACT VIO                                45
+                             TRANSPORTAION OF CONTROLLED SUBSTANCE                                           157
+                             TRANSPORTATION OF AMPHETAMINE                                                     7
+                             TRANSPORTATION OF COCAINE                                                       541
+                             TRANSPORTATION OF HALLUCINOGENIC                                                 12
+                             TRANSPORTATION OF HEROIN                                                        116
+                             TRANSPORTATION OF MARIJUANA                                                     694
+                             TRANSPORTATION OF METH-AMPHETAMINE                                              416
+                             TRANSPORTATION OF METHADONE                                                      10
+                             TRANSPORTATION OF OPIATES                                                        13
+                             TRANSPORTATION OF OPIUM                                                           1
+                             UNDER INFLUENCE OF DRUGS IN A PUBLIC PLACE                                      587
+                             UNDER THE INFLUENCE OF CONTROLLED SUBSTANCES                                    421
+                             VISITING WHERE DRUGS ARE USED OR SMOKED                                         146
+DRUNKENNESS                  UNDER INFLUENCE OF ALCOHOL IN A PUBLIC PLACE                                   9036
+EMBEZZLEMENT                 EMBEZZLED VEHICLE                                                               352
+                             EMBEZZLEMENT (GENERAL)                                                          166
+                             EMBEZZLEMENT, GRAND THEFT                                                       691
+                             EMBEZZLEMENT, GRAND THEFT BY BROOKERS/AGENTS                                     49
+                             EMBEZZLEMENT, GRAND THEFT BY COLLECTOR                                            7
+                             EMBEZZLEMENT, GRAND THEFT BY EMPLOYEE                                           936
+                             EMBEZZLEMENT, GRAND THEFT BY PROPERTY CARRIER                                     4
+                             EMBEZZLEMENT, GRAND THEFT LEASED PROPERTY                                        36
+                             EMBEZZLEMENT, GRAND THEFT PRIVATE PROPERTY                                       18
+                             EMBEZZLEMENT, GRAND THEFT PUBLIC/PRIVATE OFFICIAL                                 9
+                             EMBEZZLEMENT, PETTY THEFT                                                       101
+                             EMBEZZLEMENT, PETTY THEFT BY BROOKERS/AGENTS                                      5
+                             EMBEZZLEMENT, PETTY THEFT BY COLLECTOR                                            1
+                             EMBEZZLEMENT, PETTY THEFT BY EMPLOYEE                                           199
+                             EMBEZZLEMENT, PETTY THEFT OF LEASED PROPERTY                                      2
+                             EMBEZZLEMENT, PETTY THEFT PRIVATE PROPERTY                                        6
+                             EMBEZZLEMENT, PETTY THEFT PUBLIC/PRIVATE OFFICIAL                                 5
+EXTORTION                    ATTEMPTED EXTORTION                                                             307
+                             EXTORTION                                                                       313
+FAMILY OFFENSES              ABANDONMENT OF CHILD                                                            201
+                             CHILDREN, ABANDONMENT & NEGLECT OF (GENERAL)                                    237
+                             CONCEALMENT/REMOVAL OF CHILD WITHOUT CONSENT                                     32
+                             DESERTION OF CHILD                                                              269
+                             FAILURE TO PROVIDE FOR CHILD                                                     84
+                             FAILURE TO PROVIDE FOR PARENTS                                                    3
+                             HARASSING CHILD OR WARD BECAUSE OF PERSON'S EMPLOYMENT                            1
+                             IMMORAL ACTS OR DRUNK IN PRESENCE OF CHILD                                       38
+                             MINOR WITHOUT PROPER PARENTAL CARE                                              218
+FORGERY/COUNTERFEITING       CHECKS OR LEGAL INSTRUMENTS, UTTERING FORGED                                    655
+                             CHECKS, FORGERY (FELONY)                                                       5410
+                             CHECKS, FORGERY (MISDEMEANOR)                                                   237
+                             CHECKS, MAKE OR PASS FICTITIOUS                                                3542
+                             CHECKS, POSSESSION WITH INTENT TO PASS                                          809
+                             CITIZENSHIP DOCUMENT, USING FALSE                                                 2
+                             CITIZENSHIP OR ALIEN REGISTRATION, MAKING FALSE DOCUMENT                          6
+                             COUNTERFEITING, COINS OR NOTES                                                 2215
+                             COUNTERFEITING, PLATES OR DIES                                                    5
+                             COUNTERFEITING, POSSESSION COINS OR NOTES                                       731
+                             FALSIFICATION OF MEDICAL RECORDS                                                  6
+                             FALSIFYING JUDICIAL & PUBLIC RECORDS & DOCUMENTS                                 39
+                             FINANCIAL STATEMENTS, FALSE                                                      16
+                             FORGERY & COUNTERFEITING (GENERAL)                                              378
+                             FORGERY, DRIVERS LICENSE OR ID-CARD                                            3124
+                             FORGERY, FALSE ENTRIES IN RECORDS OR RETURNS                                   1177
+                             FORGERY, GOVERNMENT OR CORPORATE SEALS                                           61
+                             FORGERY, NOTES                                                                 1595
+                             FORGERY, POSSESSION DRIVERS LICENSE OR ID-CARD                                  126
+                             IDENTIFICATION, GOVERNMENT, POSSESS, MAKE OR SELL FALSE                          78
+                             MANUFACTURE OR SALE OF COUNTERFEIT GOODS                                         74
+                             MONEY, CHANGING FACE AMOUNT                                                    1506
+                             TELEPHONE OR TELEGRAPH MESSAGE, SENDING FALSE                                    14
+FRAUD                        ACCESS CARD INFORMATION, PUBLICATION OF                                          13
+                             ACCESS CARD INFORMATION, THEFT OF                                               763
+                             AUDIOVISUAL (VIDEO OR SOUND) RECORDINGS, UNAUTHORIZED                            18
+                             CABLE TV CONNECTION OR DECODING DEVICE, UNAUTHORIZED                              4
+                             CELLULAR OR CORDLESS PHONE COMMUNICATIONS, INTERCEPTING                          44
+                             CREDIT CARD, INCOMPLETE OR COUNTERFEIT                                          100
+                             CREDIT CARD, THEFT BY USE OF                                                  19330
+                             CREDIT CARD, THEFT OF                                                           932
+                             CRIMES AGAINST REVENUE & PROPERTY OF STATE                                        6
+                             CRIMES INVOLVING RECEIPTS OR TITLES                                               1
+                             DEFRAUDING AN INNKEEPER                                                        1423
+                             DEFRAUDING OF VEHICLE REPAIRMAN                                                  24
+                             EAVESDROPPING DEVICES, SALE OR USE                                                5
+                             FALSE CLAIMS, PRESENTING TO GOVERNMENT                                           91
+                             FALSE ID TO PEACE OFFICER                                                      3127
+                             FALSE PRETENSES, GRAND THEFT                                                   1405
+                             FALSE PRETENSES, PETTY THEFT                                                    561
+                             FALSE REPORT OF EMERGENCY                                                       158
+                             FALSE REPORT OF POLICE MISCONDUCT                                                 3
+                             FALSE REPRESENTATION TO SECONDHAND DEALER                                         1
+                             FORGERY, CREDIT CARD                                                           1125
+                             FRAUDULENT AUCTION                                                               20
+                             FRAUDULENT CREDIT APPLICATION                                                  2118
+                             FRAUDULENT USE OF AUTOMATED TELLER CARD                                        3006
+                             IMPERSONATING A POLICE OFFICER                                                  197
+                             IMPERSONATING FIRE DEPARTMENT MEMBER                                              2
+                             IMPERSONATING PUBLIC UTILITY MEMBER                                              11
+                             MERCHANDISE TITLE DOCUMENT FRAUD                                                  1
+                             PRIVACY, INVASION OF  (GENERAL)                                                  34
+                             PUBLIC UTILITY INFORMATION, FRAUDULENTLY OBTAINING                                1
+                             PUTTING SLUGS IN COIN OPERATED MACHINES                                          10
+                             PUTTING SLUGS IN PARKING METERS                                                   4
+                             PUTTING SLUGS IN TELEPHONE BOX                                                   10
+                             REAL ESTATE FRAUD                                                                39
+                             SHORT CHANGE, GRAND THEFT                                                         7
+                             SHORT CHANGE, PETTY THEFT                                                        59
+                             TELEPHONE OR TELEGRAPH MESSAGES, ALTERING                                         3
+                             TRICK AND DEVICE, ATTEMPTED                                                     166
+                             TRICK AND DEVICE, GRAND THEFT                                                   742
+                             TRICK AND DEVICE, PETTY THEFT                                                   451
+                             VETERAN OR EX-SERVICEMAN, FALSE REPRESENTATION AS                                 1
+                             WIRETAPS, UNAUTHORIZED                                                            2
+GAMBLING                     BOOKMAKING                                                                        4
+                             GAMBLING                                                                        218
+                             GAMING & HORSE RACING (GENERAL)                                                   2
+                             POSSESSION OF GAMBLING DEVICES                                                   42
+                             POSSESSION OF GAMBLING PARAPHERNALIA                                             43
+KIDNAPPING                   ATTEMPTED KIDNAPPING, ADULT VICTIM                                              122
+                             ATTEMPTED KIDNAPPING, JUVENILE VICTIM                                            83
+                             CHILD STEALING                                                                  598
+                             FALSE IMPRISONMENT                                                             2898
+                             KIDNAPPER, POSING AS                                                              4
+                             KIDNAPPING DURING CARJACKING                                                     13
+                             KIDNAPPING DURING ROBBERY                                                        83
+                             KIDNAPPING, ADULT VICTIM                                                        862
+                             KIDNAPPING, JUVENILE VICTIM                                                     190
+LARCENY/THEFT                ATTEMPTED AUTO STRIP                                                            130
+                             ATTEMPTED GRAND THEFT FROM PERSON                                               197
+                             ATTEMPTED GRAND THEFT PICKPOCKET                                                 77
+                             ATTEMPTED GRAND THEFT PURSESNATCH                                                78
+                             ATTEMPTED MOTORCYCLE STRIP                                                        8
+                             ATTEMPTED PETTY THEFT OF PROPERTY                                               328
+                             ATTEMPTED SHOPLIFTING                                                           477
+                             ATTEMPTED THEFT COIN OPERATED MACHINE                                            48
+                             ATTEMPTED THEFT FROM A BUILDING                                                 439
+                             ATTEMPTED THEFT FROM LOCKED VEHICLE                                            4736
+                             ATTEMPTED THEFT FROM UNLOCKED VEHICLE                                           272
+                             ATTEMPTED THEFT OF A BICYCLE                                                    192
+                             ATTEMPTED THEFT PHONE BOOTH                                                       3
+                             EMBEZZLEMENT FROM DEPENDENT OR ELDER ADULT BY CARETAKER                         298
+                             GRAND THEFT AUTO STRIP                                                         1305
+                             GRAND THEFT BICYCLE                                                            5400
+                             GRAND THEFT BY PROSTITUTE                                                        96
+                             GRAND THEFT COIN OPERATED MACHINE                                                81
+                             GRAND THEFT FROM A BUILDING                                                   20177
+                             GRAND THEFT FROM LOCKED AUTO                                                 135171
+                             GRAND THEFT FROM PERSON                                                       15155
+                             GRAND THEFT FROM UNLOCKED AUTO                                                10490
+                             GRAND THEFT MOTORCYCLE STRIP                                                     85
+                             GRAND THEFT OF PROPERTY                                                       24123
+                             GRAND THEFT PHONE BOOTH                                                          15
+                             GRAND THEFT PICKPOCKET                                                        11982
+                             GRAND THEFT PURSESNATCH                                                        1500
+                             GRAND THEFT SHOPLIFTING                                                        4600
+                             LICENSE PLATE OR TAB, THEFT OF                                                  288
+                             LOOTING DURING STATE OF EMERGENCY                                                 2
+                             LOST PROPERTY, GRAND THEFT                                                     1382
+                             LOST PROPERTY, PETTY THEFT                                                     2885
+                             PETTY THEFT AUTO STRIP                                                         1162
+                             PETTY THEFT BICYCLE                                                            3456
+                             PETTY THEFT COIN OPERATED MACHINE                                               169
+                             PETTY THEFT FROM A BUILDING                                                   21864
+                             PETTY THEFT FROM LOCKED AUTO                                                  43152
+                             PETTY THEFT FROM UNLOCKED AUTO                                                 5659
+                             PETTY THEFT MOTORCYCLE STRIP                                                     54
+                             PETTY THEFT OF PROPERTY                                                       35867
+                             PETTY THEFT PHONE BOOTH                                                          42
+                             PETTY THEFT SHOPLIFTING                                                       20679
+                             PETTY THEFT WITH PRIOR                                                         8196
+                             THEFT FROM MERCHANT OR LIBRARY                                                  862
+                             THEFT OF ANIMALS (GENERAL)                                                      150
+                             THEFT OF CHECKS OR CREDIT CARDS                                                 628
+                             THEFT OF COMPUTERS OR CELL PHONES                                              1475
+                             THEFT OF TELECOMMUNICATION SERVICES, INCL. CLONE PHONE                           29
+                             THEFT OF UTILITY SERVICES                                                        92
+                             THEFT OF WRITTEN INSTRUMENT                                                      15
+                             THEFT, ANIMAL, ATT.                                                               2
+                             THEFT, BICYCLE, <$50, NO SERIAL NUMBER                                           77
+                             THEFT, BICYCLE, <$50, SERIAL NUMBER KNOWN                                        46
+                             THEFT, BOAT                                                                      19
+                             THEFT, DRUNK ROLL, $200-$400                                                     34
+                             THEFT, DRUNK ROLL, $50-$200                                                      23
+                             THEFT, DRUNK ROLL, <$50                                                          20
+                             THEFT, DRUNK ROLL, >$400                                                         23
+                             THEFT, DRUNK ROLL, ATT.                                                           3
+                             THEFT, GRAND, AGRICULTURAL                                                        3
+                             THEFT, GRAND, BY FIDUCIARY, >$400 IN 12 MONTHS                                   31
+                             THEFT, GRAND, OF FIREARM                                                        102
+                             TRADE SECRETS, THEFT OR UNAUTHORIZED COPYING                                     12
+LIQUOR LAWS                  ALCOHOLIC BEVERAGE, PROCURING SALE OF                                             2
+                             CONSUMING ALCOHOL IN PUBLIC VIEW                                               1991
+                             FALSE EVIDENCE OF AGE BY MINOR                                                   21
+                             LICENSE REQUIRED TO SELL ALCOHOL                                                 61
+                             MINOR ON ON-SALE LICENSED PREMISE                                                35
+                             MINOR PURCHASING ALCOHOL                                                         20
+                             MISCELLANEOUS LIQOUR LAW VIOLATION                                              545
+                             POSSESSION OF ALCOHOL BY MINOR                                                  665
+                             SALE OF ALCOHOL AFTER HOURS                                                      37
+                             SALE OF ALCOHOL BY MINOR                                                         13
+                             SALE OF ALCOHOL TO MINOR                                                        391
+                             SALE OF ALCOHOL TO MINOR IN BAR                                                  10
+                             SELL OR FURNISH ALCOHOL TO INTOXICATED PERSON                                    21
+                             UNLAWFUL TRANSPORTATION OF ALCOHOL                                               52
+LOITERING                    BEGGING                                                                         876
+                             CASH DISPENSING MACHINES (ATM), LOITERING PROHIBI                                63
+                             INCITING TO RIOT                                                                 51
+                             LODGING IN PARK                                                                  17
+                             LOITERING                                                                       767
+                             LOITERING ABOUT SCHOOL/PLAYGROUND                                                66
+                             LOITERS AROUND PUBLIC TOILET FOR LEWD ACT                                        37
+                             OBSTRUCTING HEALTH FACILITY, PLACE OF WORSHIP, OR SCHOOL                          3
+                             OBSTRUCTING PUBLIC THOROUGHFARE                                                 321
+                             REFUSING TO DISPERSE UPON LAWFUL COMMAND                                         39
+                             REMAINING ON CAMPUS WITHOUT CONSENT                                              33
+                             UNLAWFUL ASSEMBLY                                                                84
+MISSING PERSON               FOUND PERSON                                                                  20315
+                             MISSING ADULT                                                                 17312
+                             MISSING JUVENILE                                                              17972
+NON-CRIMINAL                 ACCIDENTAL BURNS                                                                  7
+                             ACCIDENTAL SHOOTING                                                              24
+                             AIDED CASE                                                                    11781
+                             AIDED CASE -PROPERTY FOR DESTRUCTION                                           1918
+                             AIDED CASE, DOG BITE                                                           2943
+                             AIDED CASE, INJURED PERSON                                                     2247
+                             AIDED CASE, MENTAL DISTURBED                                                  46912
+                             AIDED CASE, SICK PERSON                                                         531
+                             AUTO IMPOUNDED                                                                   18
+                             CASE CLOSURE                                                                   5254
+                             CIVIL SIDEWALKS, BOOKING                                                        105
+                             CIVIL SIDEWALKS, CITATION                                                      2729
+                             CIVIL SIDEWALKS, VIOLATION                                                       62
+                             CIVIL SIDEWALKS, WARNING                                                       2062
+                             COURTESY REPORT                                                                2074
+                             DEATH REPORT, CAUSE UNKNOWN                                                    9228
+                             DEATH REPORT, IN CUSTODY                                                         12
+                             DEATH REPORT, NATURAL CAUSES                                                   2069
+                             DEATH, ACCIDENTAL                                                                36
+                             DEATH, NON-MANSLAUGHTER AUTO ACCIDENT                                            29
+                             DEMONSTRATION, VIDEO EVIDENCE, MISC. INVESTIGATION                               25
+                             FIRE REPORT                                                                    1712
+                             FOUND PROPERTY                                                                26922
+                             IMPOUNDED VEHICLE                                                               653
+                             LICENSE PLATE, FOUND                                                            241
+                             LICENSE PLATE, RECOVERED                                                        287
+                             LOCATED PROPERTY                                                               1581
+                             LOST PROPERTY                                                                 67815
+                             MEGAN'S LAW NOTIFICATION                                                         18
+                             MISPLACED VEHICLE                                                               123
+                             PROPERTY FOR IDENTIFICATION                                                    2568
+                             SEARCH WARRANT SERVICE                                                         1305
+                             SHELTER                                                                         750
+                             STAY AWAY OR COURT ORDER, NON-DV RELATED                                       3499
+                             TARASOFF REPORT                                                                1436
+                             TRAFFIC ACCIDENT                                                                919
+                             TRUANT, HABITUAL                                                                 61
+                             TURNED IN GUN                                                                  1064
+                             YOUTH COURT                                                                      22
+OTHER OFFENSES               ABORTION                                                                         13
+                             ACTS AGAINST PUBLIC TRANSIT                                                     641
+                             ADVERTISING DISTRIBUTORS PERMIT VIOLATION                                        67
+                             AFFIXING ADVERTISMENTS TO POLES                                                   8
+                             AGGRESSIVE SOLICITING                                                           330
+                             AID OR HARBOR FELON                                                              49
+                             ANIMAL, FIGHTING                                                                 13
+                             ANIMAL, WITHOUT PROPER CARE OR ATTENTION                                         28
+                             BATHROOM HOLE, LOOKING THROUGH                                                   10
+                             BEYOND PARENTAL CONTROL                                                         553
+                             CHOP SHOP, OWN OR OPERATE                                                         2
+                             COMPUTER SYSTEM, ACCESSING, COPYING, OR DAMAGING                                 96
+                             CONSPIRACY                                                                     6545
+                             CONTRIBUTING TO THE DELINQUENCY OF MINOR                                        487
+                             CRUELTY TO ANIMALS                                                              308
+                             CURFEW VIOLATION                                                                 14
+                             DANGER OF LEADING IMMORAL LIFE                                                  939
+                             DEFRAUDING TAXI DRIVER                                                          452
+                             DESTITUTE MINOR                                                                   6
+                             DISCHARGING OFFENSIVE OR INJURIOUS SUBSTANCE IN PUBLIC AREA                       9
+                             DISPLAY & SALE OF SPRAY PAINT & MARKER PENS                                      26
+                             DISRUPTS SCHOOL ACTIVITIES                                                      452
+                             DOG OR CAT, ABANDONMENT OF                                                        5
+                             DOG, BARKING                                                                     41
+                             DOG, FIGHTING;  OWNING, FIGHTING, OR ATTENDING FIGHT                              3
+                             DOG, STRAY OR VICIOUS                                                            98
+                             DRIVERS LICENSE, SUSPENDED OR REVOKED                                         57494
+                             DRIVES VEHICLE ALONG TRACK OF RAILROAD                                           39
+                             DRIVING, DRAG RACING                                                              8
+                             DRIVING, RECKLESS, WITH INJURY                                                   24
+                             DRUG OFFENDER, PRESENCE  NEAR SCHOOL GROUNDS                                      8
+                             DUMPING OF OFFENSIVE MATTER                                                     138
+                             ENCOUNTER STUDIO ORDINANCE VIOLATION                                              2
+                             ESCAPE FROM HOSPITAL WITH FORCE                                                   2
+                             ESCAPE FROM JAIL                                                                 38
+                             ESCAPE OF PRISONER WHILE HOSPITALIZED                                            11
+                             ESCAPE OR ASSISTING ESCAPE                                                       18
+                             ESCAPEE, JUVENILE                                                                34
+                             ESCAPES                                                                           7
+                             EVADING A POLICE OFFICER RECKLESSLY                                             614
+                             EVADING A POLICE OFFICER, INJURY OR DEATH                                        18
+                             EVADING A POLICE VEHICLE OR BICYCLE                                             137
+                             EVADING PAYMENT OF RAILROAD FARE                                                 65
+                             FAILURE TO HEED RED LIGHT AND SIREN                                             139
+                             FAILURE TO REGISTER AS SEX OFFENDER                                            1458
+                             FALSE EVIDENCE OF VEHICLE REGISTRATION                                         2539
+                             FALSE FIRE ALARM                                                                173
+                             FALSE PERSONATION                                                              3794
+                             FALSE PERSONATION AND CHEAT CRIMES (GENERAL)                                    336
+                             FALSE PERSONATION TO RECEIVE MONEY OR PROPERTY                                 5796
+                             FALSE REPORT OF BOMB                                                            619
+                             FALSE REPORT OF CRIME                                                           247
+                             FIREARMS, SEIZING AT SCENE OF DV                                                 24
+                             FIREWORKS, THROW AT PERSON OR DISCHARGE IN CROWD                                 12
+                             FOOD STAMPS, MISUSE OF                                                            5
+                             FOOD STAMPS, UNLAWFUL USE BY RETAILER                                             2
+                             FORTUNE TELLING                                                                  26
+                             FRAUDULENT GAME OR TRICK, OBTAINING MONEY OR PROPERTY                          2266
+                             GUIDE DOG, INTERFERING WITH                                                       7
+                             HABITUAL TRUANT                                                                 267
+                             HARASSING PHONE CALLS                                                          4578
+                             HAZARDOUS MATERIALS,  DUMP ANY SUBSTANCE INTO WATER                               4
+                             HAZARDOUS MATERIALS, DUMP OIL INTO SEWERS                                         4
+                             HAZARDOUS MATERIALS, DUMPING IN UNAUTHORIZED LOCATION                             6
+                             HAZARDOUS MATERIALS, DUMPING IN UNAUTHORIZED LOCATN                              12
+                             HAZARDOUS MATERIALS, FAILURE TO COMPLY W/REGULATIONS                              2
+                             HAZARDOUS MATERIALS, SPILL LOAD                                                   4
+                             HAZARDOUS MATERIALS, SPILL ON ROADWAY                                             3
+                             HAZARDOUS MATERIALS, STORE WITHOUT PERMIT                                         1
+                             HAZARDOUS MATERIALS, TRANSPORT WITHOUT PERMIT                                     1
+                             HAZARDOUS SUBSTANCES, DEPOSITING                                                 19
+                             HEATING VIOLATION  APT/HOTEL                                                     14
+                             ILLEGAL CHARITABLE SOLICITATIONS                                                  4
+                             INCIDENT ON SCHOOL GROUNDS                                                      206
+                             INDECENT EXPOSURE                                                              1205
+                             INDECENT EXPOSURE (JUVENILE VICTIM)                                              84
+                             INDECENT EXPOSURE WITH PRIOR CONVICTION                                          66
+                             INJURY TO RAILROADS/RAILROAD BRIDGES                                              5
+                             INJURY TO TELEGRAPH/TELEPHONE LINES                                             901
+                             INSURED PROPERTY, DESTRUCTION TO DEFRAUD INSURER                                  5
+                             INTERFERRING WITH A FIREMAN                                                      13
+                             INTERFERRING WITH A POLICE OFFICER                                              170
+                             INTOXICATED JUVENILE                                                            185
+                             JUDGE/JUROR ACCEPTING A BRIBE                                                    11
+                             JUVENILE PAROLE VIOLATOR                                                         24
+                             LICENSE PLATE, STOLEN                                                            70
+                             LOST/STOLEN LICENSE PLATE                                                     14116
+                             LOUDSPEAKER OR SOUND TRUCK PERMIT VIOLATION                                       2
+                             LYNCHING BY RIOT                                                                 20
+                             MASSAGE ESTABLISHMENT PERMIT VIOLATION                                           95
+                             MINOR PURCHASING OR RECEIVING TOBACCO PRODUCT                                    17
+                             MISCELLANEOUS INVESTIGATION                                                   17646
+                             MISCELLANEOUS STATE FELONY                                                      534
+                             MISCELLANEOUS STATE MISDEMEANOR                                                3657
+                             MONEY LAUNDERING                                                                  2
+                             MONEY, PROPERTY OR LABOR, FRAUDULENTLY OBTAINING                                189
+                             OBSCENE PHONE CALLS(S)                                                         5232
+                             OBSTRUCTIONS ON STREETS/SIDEWALKS                                              1518
+                             OPEN CONTAINER OF ALCOHOL IN VEHICLE                                            174
+                             OPERATING TAXI WITHOUT A PERMIT                                                 531
+                             OPERATING WITHOUT CABARET PERMIT                                                 24
+                             OPERATING WITHOUT DANCEHALL PERMIT                                               17
+                             OTHER OFFENSES AGAINST PUBLIC JUSTICE                                            63
+                             OVERCHARGING TAXI FARE                                                           14
+                             PAROLE VIOLATION                                                              10222
+                             PEDDLING WITHOUT A LICENSE                                                     1300
+                             PEEPING TOM                                                                      92
+                             PERJURY                                                                          82
+                             PERMIT VIOLATION, ADVERTISING HANDBILL DISTRIBUTION                               1
+                             PERMIT VIOLATION, ENTERTAINMENT                                                  74
+                             PERMIT VIOLATION, POLICE (GENERAL)                                             1790
+                             PERMIT VIOLATION, SECOND-HAND DEALER                                              3
+                             PERMIT VIOLATION, SIDEWALK SALES                                                 48
+                             PERMIT VIOLATION, VALET PARKING                                                   3
+                             PHONE CALLS IN VIOLATION OF DV COURT ORDER                                       66
+                             PHONE CALLS, HARASSING, TO 911                                                   25
+                             PHONE CALLS, OBSCENE                                                            137
+                             PLACING TRASH ON THE STREET                                                     119
+                             POISONING ANIMALS                                                                19
+                             POLICE BROADCAST, INTERCEPTION TO COMMIT CRIME                                    2
+                             POSSESSION OF ARTICLES WITH IDENTIFICATION REMOVE                                97
+                             POSSESSION OF BURGLARY TOOLS                                                   4647
+                             POSSESSION OF BURGLARY TOOLS W/PRIORS                                           270
+                             POSSESSION OF FIRECRACKERS                                                      159
+                             PROBATION VIOLATION                                                           16453
+                             PROBATION VIOLATION, DV RELATED                                                 102
+                             PUBLIC TRANSIT CRIMES - INFRACTIONS                                             192
+                             PUSH-CART PEDDLER PERMIT VIOLATION                                                3
+                             RECKLESS DRIVING                                                                915
+                             REFUSAL TO IDENTIFY                                                               1
+                             RESCUING PRISONER FROM LAWFUL CUSTODY                                            11
+                             RESISTING ARREST                                                              18732
+                             RESTRAINING ORDER NOTIFICATION/SERVICE OF RESTRAINING ORDER                     679
+                             RIOT                                                                             25
+                             SALE OF SATELLITE TELEPHONE NUMBER                                               23
+                             SCALPING TICKETS                                                                 15
+                             SCHOOL BUS, ENTRY TO COMMIT CRIME OR REFUSAL TO LEAVE                             2
+                             SCHOOL GROUNDS, ENTRY BY SEX OFFENDER                                             2
+                             SCHOOL PROPERTY, DISTURBANCE ON                                                 206
+                             SCHOOL STUDENT OR EMPLOYEE ENTERING  CAMPUS AFTER SUSPENSION OR DISMISSAL         3
+                             SCHOOL, PUBLIC, TRESPASS                                                         40
+                             SELLING RESTRICTED GLUE TO JUVENILES                                              5
+                             SELLING/DISCHARGING OF FIRECRACKERS                                              89
+                             SOLICITING COMMISSION OF A CRIME                                                 29
+                             SOLICITING MINOR TO COMMIT FELONY                                                 3
+                             SPEEDING                                                                        223
+                             SPITTING ON SIDEWALK                                                             61
+                             STAY AWAY ORDER VIOLATION, DV RELATED                                          1264
+                             TAKING CONTRABAND INTO A REFORMATORY                                             18
+                             TAMPERING WITH A VEHICLE                                                       1446
+                             TAMPERING WITH MAIL                                                              36
+                             THROWING INJURIOUS SUBSTANCE ON HIGHWAY                                          17
+                             THROWING OBJECT AT COMMON CARRIER, PASSENGER OR FREIGHT                          13
+                             THROWING SUBSTANCE AT VEHICLE                                                   261
+                             TOBACCO PRODUCTS, SELLING OR FURNISHING TO MINOR                                172
+                             TRAFFIC COLLISION, HIT & RUN, INJURY                                            210
+                             TRAFFIC COLLISION, HIT & RUN, PROPERTY DAMAGE                                   427
+                             TRAFFIC VIOLATION                                                             34349
+                             TRAFFIC VIOLATION ARREST                                                      11789
+                             UNAUTHORIZED USE OF LOUD SPEAKERS                                                10
+                             UNKNOWN COMPLAINT                                                               469
+                             UNSOLICITED FAX ADVERTISING                                                       1
+                             VEHICLE ALARM CODE GRABBING DEVICE, POSSESS OR USE                               26
+                             VEHICLE, DISABLED PLACARD VIOLATION                                              93
+                             VIN SWITCH                                                                        8
+                             VIN, ALTER OR REMOVE                                                             28
+                             VIOLATION OF CALIF UNEMPLOYMENT INSURANCE ACT                                     1
+                             VIOLATION OF CIVIL GANG INJUNCTION                                               25
+                             VIOLATION OF EMERGENCY PROTECTIVE ORDER                                         137
+                             VIOLATION OF FEDERAL STATUTE                                                     90
+                             VIOLATION OF FIRE CODE                                                           68
+                             VIOLATION OF MUNICIPAL CODE                                                    4863
+                             VIOLATION OF MUNICIPAL POLICE CODE                                             3877
+                             VIOLATION OF PARK CODE                                                          921
+                             VIOLATION OF RESTRAINING ORDER                                                12165
+                             VIOLATION OF STATE LABOR CODE                                                    14
+                             VIOLATION OF STAY AWAY ORDER                                                    537
+                             WEARING MASK OR DISGUISE FOR UNLAWFUL PURPOSE                                     8
+                             WEARING THE APPAREL OF OPPOSITE SEX TO DECEIVE                                    2
+PORNOGRAPHY/OBSCENE MAT      OBSCENE MOVIES/ACTS                                                               7
+                             OBSCENE OR LEWD PLAYS/PERFORMANCES                                                9
+                             POSSESSION OF OBSCENE MATTER FOR SALE                                            31
+PROSTITUTION                 DISORDERLY HOUSE, KEEPING                                                         4
+                             ENGAGING IN LEWD CONDUCT - PROSTITUTION RELATED                                 302
+                             HUMAN TRAFFICKING                                                               266
+                             INDECENT EXPOSURE - PROSTITUTION RELATED                                         94
+                             INMATE/KEEPER OF HOUSE OF PROSTITUTION                                           65
+                             LOITERING FOR PURPOSE OF PROSTITUTION                                          2508
+                             PANDERING                                                                       146
+                             PIMPING                                                                         199
+                             PLACING WIFE IN HOUSE OF PROSTITUTION                                            12
+                             PROCUREMENT, PIMPING, & PANDERING                                                 2
+                             PURCHASE FEMALE FOR THE PURPOSE OF PROSTITUTION                                   2
+                             SOLICITS FOR ACT OF PROSTITUTION                                               6882
+                             SOLICITS LEWD ACT                                                                83
+                             SOLICITS TO VISIT HOUSE OF PROSTITUTION                                        5092
+RECOVERED VEHICLE            RECOVERED VEHICLE - STOLEN OUTSIDE SF                                          5891
+                             STOLEN AND RECOVERED VEHICLE                                                      5
+                             VEHICLE, RECOVERED, AUTO                                                        377
+                             VEHICLE, RECOVERED, CAMPER-HOUSE CAR-MOTOR HOME                                  37
+                             VEHICLE, RECOVERED, MOBILE HOME-TRAILER                                           1
+                             VEHICLE, RECOVERED, MOTORCYCLE                                                   32
+                             VEHICLE, RECOVERED, OTHER VEHICLE                                                 3
+ROBBERY                      ASSAULT TO ROB BANK WITH A GUN                                                    1
+                             ASSAULT TO ROB ON THE STREET W/DEADLY WEAPON                                      1
+                             ASSAULT TO ROB WITH BODILY FORCE                                                  1
+                             ATTEMPTED ROBBERY CHAIN STORE WITH A GUN                                         48
+                             ATTEMPTED ROBBERY CHAIN STORE WITH A KNIFE                                       12
+                             ATTEMPTED ROBBERY CHAIN STORE WITH BODILY FORCE                                 112
+                             ATTEMPTED ROBBERY CHAIN STORE WITH DEADLY WEAPON                                 31
+                             ATTEMPTED ROBBERY COMM. ESTAB. WITH BODILY FORCE                                147
+                             ATTEMPTED ROBBERY COMM. ESTAB. WITH DEADLY WEAPON                                61
+                             ATTEMPTED ROBBERY COMM. ESTABLISHMENT W/KNIFE                                    33
+                             ATTEMPTED ROBBERY COMM. ESTABLISHMENT WITH A GUN                                110
+                             ATTEMPTED ROBBERY OF A BANK WITH A DEADLY WEAPON                                 36
+                             ATTEMPTED ROBBERY OF A BANK WITH A GUN                                           29
+                             ATTEMPTED ROBBERY OF A BANK WITH A KNIFE                                          8
+                             ATTEMPTED ROBBERY OF A BANK WITH BODILY FORCE                                    54
+                             ATTEMPTED ROBBERY ON THE STREET W/DEADLY WEAPON                                 373
+                             ATTEMPTED ROBBERY ON THE STREET WITH A GUN                                      692
+                             ATTEMPTED ROBBERY ON THE STREET WITH A KNIFE                                    351
+                             ATTEMPTED ROBBERY ON THE STREET WITH BODILY FORCE                              2365
+                             ATTEMPTED ROBBERY RESIDENCE WITH A DEADLY WEAPON                                 20
+                             ATTEMPTED ROBBERY RESIDENCE WITH A GUN                                           63
+                             ATTEMPTED ROBBERY RESIDENCE WITH A KNIFE                                         18
+                             ATTEMPTED ROBBERY RESIDENCE WITH BODILY FORCE                                    64
+                             ATTEMPTED ROBBERY SERVICE STATION W/BODILY FORCE                                  9
+                             ATTEMPTED ROBBERY SERVICE STATION W/DEADLY WEAPON                                 7
+                             ATTEMPTED ROBBERY SERVICE STATION WITH A GUN                                     12
+                             ATTEMPTED ROBBERY SERVICE STATION WITH A KNIFE                                    6
+                             ATTEMPTED ROBBERY WITH A DEADLY WEAPON                                          216
+                             ATTEMPTED ROBBERY WITH A GUN                                                    364
+                             ATTEMPTED ROBBERY WITH A KNIFE                                                  260
+                             ATTEMPTED ROBBERY WITH BODILY FORCE                                            1642
+                             CARJACKING WITH A DANGEROUS WEAPON                                               50
+                             CARJACKING WITH A GUN                                                           504
+                             CARJACKING WITH A KNIFE                                                          55
+                             CARJACKING WITH BODILY FORCE                                                    335
+                             ROBBERY OF A BANK WITH A DANGEROUS WEAPON                                       176
+                             ROBBERY OF A BANK WITH A GUN                                                    208
+                             ROBBERY OF A BANK WITH A KNIFE                                                   12
+                             ROBBERY OF A BANK WITH BODILY FORCE                                             227
+                             ROBBERY OF A CHAIN STORE WITH A DANGEROUS WEAPON                                168
+                             ROBBERY OF A CHAIN STORE WITH A GUN                                             230
+                             ROBBERY OF A CHAIN STORE WITH A KNIFE                                           111
+                             ROBBERY OF A CHAIN STORE WITH BODILY FORCE                                      742
+                             ROBBERY OF A COMMERCIAL ESTABLISHMENT W/ A KNIFE                                176
+                             ROBBERY OF A COMMERCIAL ESTABLISHMENT W/ WEAPON                                 110
+                             ROBBERY OF A COMMERCIAL ESTABLISHMENT WITH A GUN                                697
+                             ROBBERY OF A COMMERCIAL ESTABLISHMENT, STRONGARM                                889
+                             ROBBERY OF A RESIDENCE WITH A DANGEROUS WEAPON                                   80
+                             ROBBERY OF A RESIDENCE WITH A GUN                                               326
+                             ROBBERY OF A RESIDENCE WITH A KNIFE                                              94
+                             ROBBERY OF A RESIDENCE WITH BODILY FORCE                                        489
+                             ROBBERY OF A SERVICE STATION W/DANGEROUS WEAPON                                  21
+                             ROBBERY OF A SERVICE STATION WITH A GUN                                         190
+                             ROBBERY OF A SERVICE STATION WITH A KNIFE                                        14
+                             ROBBERY OF A SERVICE STATION WITH BODILY FORCE                                   52
+                             ROBBERY ON THE STREET WITH A DANGEROUS WEAPON                                  1389
+                             ROBBERY ON THE STREET WITH A GUN                                               4327
+                             ROBBERY ON THE STREET WITH A KNIFE                                             1557
+                             ROBBERY ON THE STREET, STRONGARM                                              14015
+                             ROBBERY,  ATM, FORCE, ATT.                                                       74
+                             ROBBERY,  ATM, GUN                                                               22
+                             ROBBERY,  ATM, GUN, ATT.                                                          2
+                             ROBBERY,  ATM, KNIFE                                                             15
+                             ROBBERY,  ATM, KNIFE, ATT.                                                        6
+                             ROBBERY,  ATM, OTHER WEAPON                                                      31
+                             ROBBERY, ARMED WITH A DANGEROUS WEAPON                                          865
+                             ROBBERY, ARMED WITH A GUN                                                      2366
+                             ROBBERY, ARMED WITH A KNIFE                                                    1141
+                             ROBBERY, BODILY FORCE                                                          9661
+                             ROBBERY, VEHICLE FOR HIRE, ATT., W/ FORCE                                         7
+                             ROBBERY, VEHICLE FOR HIRE, ATT., W/ GUN                                           3
+                             ROBBERY, VEHICLE FOR HIRE, ATT., W/ KNIFE                                         1
+                             ROBBERY, VEHICLE FOR HIRE, ATT., W/ OTHER WEAPON                                  4
+                             SHOPLIFTING, FORCE AGAINST AGENT                                                146
+RUNAWAY                      RUNAWAY                                                                        3999
+SECONDARY CODES              ASSAULT BY JUVENILE SUSPECT                                                      18
+                             ATM RELATED CRIME                                                               603
+                             BATTERY BY JUVENILE SUSPECT                                                      53
+                             DOMESTIC VIOLENCE                                                             15903
+                             GANG ACTIVITY                                                                  1664
+                             JUVENILE INVOLVED                                                              1963
+                             PREJUDICE-BASED INCIDENT                                                       1412
+                             SHOOTING BY JUVENILE SUSPECT                                                      2
+                             WEAPONS POSSESSION BY JUVENILE SUSPECT                                           26
+SEX OFFENSES, FORCIBLE       ANNOY OR MOLEST CHILDREN                                                        318
+                             ASSAULT TO COMMIT MAYHEM OR SPECIFIC SEX OFFENSES                                48
+                             ASSAULT TO RAPE WITH A DANGEROUS WEAPON                                          31
+                             ASSAULT TO RAPE WITH A GUN                                                       11
+                             ASSAULT TO RAPE WITH A SHARP INSTRUMENT                                          20
+                             ASSAULT TO RAPE WITH BODILY FORCE                                               627
+                             ATTEMPTED RAPE WITH A GUN                                                         8
+                             ATTEMPTED RAPE, ARMED WITH A DANGEROUS WEAPON                                     9
+                             ATTEMPTED RAPE, ARMED WITH A SHARP INSTRUMENT                                    16
+                             ATTEMPTED RAPE, BODILY FORCE                                                    290
+                             BIGAMY, INCEST, AND THE CRIME AGAINST NATURE (GENERAL)                            1
+                             CHILD ABUSE SEXUAL                                                              970
+                             CHILD ABUSE, EXPLOITATION                                                       135
+                             CHILD ABUSE, PORNOGRAPHY                                                        289
+                             ENGAGING IN LEWD ACT                                                            132
+                             FORCIBLE RAPE, ARMED WITH A DANGEROUS WEAPON                                     76
+                             FORCIBLE RAPE, ARMED WITH A GUN                                                  38
+                             FORCIBLE RAPE, ARMED WITH A SHARP INSTRUMENT                                    123
+                             FORCIBLE RAPE, BODILY FORCE                                                    1522
+                             ORAL COPULATION                                                                 346
+                             ORAL COPULATION, UNLAWFUL (ADULT VICTIM)                                        275
+                             PENETRATION, FORCED, WITH OBJECT                                                231
+                             RAPE, SPOUSAL                                                                    26
+                             SEXUAL ASSAULT, ADMINISTERING DRUG TO COMMIT                                    132
+                             SEXUAL ASSAULT, AGGRAVATED, OF CHILD                                            188
+                             SEXUAL BATTERY                                                                 3216
+                             SODOMY                                                                          211
+                             SODOMY (ADULT VICTIM)                                                           262
+SEX OFFENSES, NON FORCIBLE   INCEST                                                                           23
+                             OBSCENE MATTER, DISTRIBUTION TO MINORS                                           13
+                             SEXUAL CONTACT WITH PATIENT, FORMER PATIENT                                      15
+                             UNLAWFUL SEXUAL INTERCOURSE                                                     284
+STOLEN PROPERTY              RECEIVING STOLEN PROPERTY                                                      4631
+                             STOLEN ACCESS CARD, POSSESSION                                                  132
+                             STOLEN CELLULAR PHONE, NON-CLONED, POSSESSION                                   107
+                             STOLEN CHECKS, POSSESSION                                                       149
+                             STOLEN COMPUTER, POSSESSION                                                      74
+                             STOLEN ELECTRONICS, POSSESSION                                                   84
+                             STOLEN METALS, RECEIVING                                                         14
+                             STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING                          4905
+SUICIDE                      ATTEMPTED SUICIDE                                                               289
+                             ATTEMPTED SUICIDE BY ASPHYXIATION                                                25
+                             ATTEMPTED SUICIDE BY DROWNING                                                     2
+                             ATTEMPTED SUICIDE BY FIRE                                                         3
+                             ATTEMPTED SUICIDE BY FIREARMS                                                    19
+                             ATTEMPTED SUICIDE BY INGESTION                                                  125
+                             ATTEMPTED SUICIDE BY JUMPING                                                     63
+                             ATTEMPTED SUICIDE BY LACERATION                                                  98
+                             ATTEMPTED SUICIDE BY STRANGULATION                                               39
+                             SUICIDE                                                                          54
+                             SUICIDE BY ASPHYXIATION                                                          29
+                             SUICIDE BY DROWNING                                                               5
+                             SUICIDE BY FIRE                                                                   2
+                             SUICIDE BY FIREARMS                                                              89
+                             SUICIDE BY INGESTION                                                             12
+                             SUICIDE BY JUMPING                                                              122
+                             SUICIDE BY LACERATION                                                            17
+                             SUICIDE BY STRANGULATION                                                        138
+SUSPICIOUS OCC               INVESTIGATIVE DETENTION                                                       13597
+                             SUSPICIOUS ACT TOWARDS CHILD                                                    587
+                             SUSPICIOUS ACT TOWARDS FEMALE                                                  1611
+                             SUSPICIOUS AUTO, POSSIBLY SEX                                                   358
+                             SUSPICIOUS OCCURRENCE                                                         46401
+                             SUSPICIOUS OCCURRENCE, POSSIBLE SHOTS FIRED                                     819
+                             SUSPICIOUS PERSON                                                              4061
+                             UNUSUAL OCCURENCE                                                               384
+TREA                         TRESPASSING OR LOITERING NEAR POSTED INDUSTRIAL PROPERTY                         10
+TRESPASS                     DISASTER AREA, ENTERING OR REMAINING IN                                           3
+                             LODGING WITHOUT PERMISSION                                                     1315
+                             LOITERING WITHOUT LAWFUL BUSINESS WITH OWNER OR OCCUPANT                         33
+                             TRESPASSING                                                                   14425
+                             TRESPASSING ON RAILROAD TRAINS                                                   30
+VANDALISM                    AEROSOL CONTAINER; SALE, PURCHASE OR POSSESSION OF                               46
+                             BALLOONS, ELECTRICALLY CONDUCTIVE                                                 3
+                             DAMAGE TO FIRE ALARM APPARATUS                                                   74
+                             DAMAGE TO MAIL BOX                                                               51
+                             DAMAGE TO PARKING METERS                                                         18
+                             DAMAGE/DESTRUCTION OF MAIL                                                       29
+                             DESTROYING JAIL PROPERTY-$200 OR UNDER                                            6
+                             DESTROYING JAIL PROPERTY-OVER $200                                                2
+                             ELECTRICAL  OR GAS LINES, INTERFERING WITH                                       31
+                             GRAFFITI ON GOVERNMENT VEHICLES OR PUBLIC TRANSPORTATION                        126
+                             MALICIOUS MISCHIEF                                                              968
+                             MALICIOUS MISCHIEF, ADULT SUSPECT                                               538
+                             MALICIOUS MISCHIEF, BREAKING WINDOWS                                          10549
+                             MALICIOUS MISCHIEF, BREAKING WINDOWS WITH BB GUN                                535
+                             MALICIOUS MISCHIEF, BUILDING UNDER CONSTRUCTION                                  91
+                             MALICIOUS MISCHIEF, FICTITIOUS PHONE CALLS                                      120
+                             MALICIOUS MISCHIEF, GRAFFITI                                                   7870
+                             MALICIOUS MISCHIEF, JUVENILE SUSPECT                                            163
+                             MALICIOUS MISCHIEF, STREET CARS/BUSES                                           610
+                             MALICIOUS MISCHIEF, TIRE SLASHING                                               691
+                             MALICIOUS MISCHIEF, VANDALISM                                                 34824
+                             MALICIOUS MISCHIEF, VANDALISM OF VEHICLES                                     38336
+                             VANDALISM OR GRAFFITI ON OR WITHIN 100 FT OF HIGHWAY                            125
+                             VANDALISM OR GRAFFITI TOOLS, POSSESSION                                         564
+                             VANDALISM WITH NOXIOUS CHEMICAL                                                  18
+VEHICLE THEFT                ATTEMPTED STOLEN VEHICLE                                                       1054
+                             AUTO, GRAND THEFT OF                                                            129
+                             RECOVERED VEHICLE - STOLEN OUTSIDE SF                                          3243
+                             STOLEN AND RECOVERED VEHICLE                                                   4821
+                             STOLEN AUTOMOBILE                                                             58077
+                             STOLEN BUS                                                                       17
+                             STOLEN MISCELLANEOUS VEHICLE                                                    386
+                             STOLEN MOTORCYCLE                                                              5284
+                             STOLEN TRAILER                                                                  110
+                             STOLEN TRUCK                                                                  18355
+                             TAMPERING WITH A VEHICLE                                                        484
+                             VEHICLE, RECOVERED, AUTO                                                      16263
+                             VEHICLE, RECOVERED, BUS                                                           3
+                             VEHICLE, RECOVERED, CAMPER-HOUSE CAR-MOTOR HOME                                  76
+                             VEHICLE, RECOVERED, MOBILE HOME-TRAILER                                          25
+                             VEHICLE, RECOVERED, MOTORCYCLE                                                  850
+                             VEHICLE, RECOVERED, OTHER VEHICLE                                              5091
+                             VEHICLE, RENTAL, FAILURE TO RETURN                                               22
+WARRANTS                     ENROUTE TO ADULT AUTHORITY                                                     1919
+                             ENROUTE TO DEPARTMENT OF CORRECTIONS                                           6513
+                             ENROUTE TO OUTSIDE JURISDICTION                                               24670
+                             ENROUTE TO PAROLE OFFICER                                                      4422
+                             ENROUTE TO PROBATION OFFICER                                                    503
+                             ENROUTE TO U.S. MARSHALL                                                        400
+                             PAROLE SEARCH                                                                    96
+                             POST RELEASE COMMUNITY SUPERVISION                                              203
+                             PROBATION SEARCH                                                                617
+                             WARRANT ARREST                                                                50464
+WEAPON LAWS                  AMMUNITION, POSS. BY PROHIBITED PERSON                                          329
+                             ARMOR PENETRATING AMMUNITION, POSSESSION                                          2
+                             BOMBING OF POLICE BUILDING                                                        1
+                             CARRYING A CONCEALED WEAPON                                                    2031
+                             CARRYING OF CONCEALED WEAPON BY CONVICTED FELON                                 351
+                             COMMISSION OF FELONY WHILE ARMED                                                 26
+                             DESTRUCTION OF PROPERTY WITH EXPLOSIVES                                          39
+                             DESTRUCTIVE DEVICE, POSSESSION OF MATERIALS                                       5
+                             DISCHARGE FIREARM AT AN INHABITED DWELLING                                     1183
+                             DISCHARGE FIREARM WITHIN CITY LIMITS                                            642
+                             EXHIBITING DEADLY WEAPON IN A THREATING MANNER                                 2064
+                             FIREARM POSSESSION IN SCHOOL ZONE                                                40
+                             FIREARM WITH ALTERED IDENTIFICATION                                             129
+                             FIREARM, ARMED WHILE POSSESSING CONTROLLED SUBSTANCE                            176
+                             FIREARM, CARRYING LOADED WITH INTENT TO COMMIT FELONY                            90
+                             FIREARM, LOADED, IN VEHICLE, POSSESSION OR USE                                  513
+                             FIREARM, NEGLIGENT DISCHARGE                                                     45
+                             FIREARM, POSSESSION OF WHILE WEARING MASK                                        11
+                             FLAMMABLE OR EXPLOSIVE DEVICE, POSSESSION                                        59
+                             ILLEGAL TRANSPORTAION OF EXPLOSIVES                                               6
+                             LOCATED EXPLOSIVE DEVICE                                                        165
+                             LOITERING WHILE CARRYING CONCEALED WEAPON                                       737
+                             POSS OF DEADLY WEAPON WITH INTENT TO ASSAULT                                    531
+                             POSS OF FIRE BOMB                                                                38
+                             POSS OF FIREARM BY CONVICTED FELON/ADDICT/ALIEN                                1571
+                             POSS OF FIREARM SILENCER                                                          6
+                             POSS OF LOADED FIREARM                                                         4135
+                             POSS OF PROHIBITED WEAPON                                                      1414
+                             POSS OF TEAR GAS WEAPON                                                         132
+                             POSSESSION OF AIR GUN                                                           877
+                             POSSESSION OF CAUSTIC CHEMICAL                                                   51
+                             POSSESSION OF EXPLOSIVE DEVICE                                                   58
+                             POSSESSION OF MACHINE GUN                                                        29
+                             SNIPER SCOPE, POSSESSION OF                                                       1
+                             SUSPICIOUS PACKAGE                                                               83
+                             SWITCHBLADE KNIFE, POSSESSION                                                   192
+                             TAMPERING WITH MARKS ON FIREARM                                                  76
+                             VIOLATION OF RESTRICTIONS ON A FIREARM TRANSFER                                  34
+                             WEAPON, ASSAULT, POSSESSION, MANUFACTURE, OR SALE                               146
+                             WEAPON, ASSAULT, REGISTRATION OR TRANSFER VIOLATION                               9
+                             WEAPON, DEADLY, CARRYING WITH INTENT TO COMMIT ASSAULT                          154
+                             WEAPON, DEADLY, EXHIBITING TO RESIST ARREST                                      68
+                             WEAPON, DEADLY, POSSESSION OF TO VIOLATE 136.1 PC                                 2
+                             WEAPON, POSSESS OR BRING OTHER ON SCHOOL GROUNDS                                236
+                             WEAPON, POSSESSING IN PUBLIC BUILDING OR OPEN MEETING                            32
+                             WEAPON, TAKING OR ATTEMPTING TO TAKE FROM PEACE OFFICER                          19
