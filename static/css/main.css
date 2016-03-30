@@ -27,3 +27,6 @@ Author's custom styles
     -webkit-filter: brightness(33%) contrast(75%);
     filter: brightness(33%) contrast(75%);
 }
+.img-filler {
+    max-height: 250px;
+}
