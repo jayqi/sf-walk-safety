@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Example row of columns -->
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Walking in San Francisco</h2>
+        <p>Walking is a common part of living in San Francisco. <a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">According to the SFMTA</a>, over one million walking trips happen in the city each day&mdash;over a quarter of all trips. Walking is an important component to a healthy lifestyle, and it is a great way to get to know the city intimately.</p>
+        <p>
+        </p>
+        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. We present interactive maps that visualize the data in intuitive ways. We also analyze this data with machine learning, using kernal density estimation to probe the data for its underlying patterns.
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/blankmap.png') }}" class="img-responsive img-circle img-filler center-block"  />
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Robberies</h2>
+        <p>Street robberies going back to 2003, supplied by the SF Police Department.</p>
+        <p><a class="btn btn-default" href="robbery-street-proto/robbery-street-cluster-static.html" role="button">Incident map &raquo;</a></p>
+        <p><a class="btn btn-default" href="robbery-street-proto/robbery-street-choropleth-static.html" role="button">Choropleth map &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Thefts</h2>
+        <p>Coming soon!</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Traffic Collisions</h2>
+        <p>Coming soon!</p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>About the data</h3>
+        <p>Learn more about the data we use. Coming soon!</p>
+    </div>
+    <div class="col-md-4">
+        <h3>View project source</h3>
+        <p>View the source code for this project, including this website, on GitHub. </p>
+        <p><a class="btn btn-default" href="https://github.com/jayqi/sf-walk-safety" role="button">View on GitHub &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>More walking resources</h3>
+        <p>Other resources for pedestrians, created by the San Francisco community. Coming soon!</p>
+    </div>
+</div>
+{% endblock %}

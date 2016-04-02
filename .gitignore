@@ -1,11 +1,5 @@
-.ipynb_checkpoints
-rawdata/*.csv
-rawdata/*.json
-rawdata/*.geojson
-rawdata/traffic/*.csv
-rawdata/traffic/*.json
-rawdata/traffic/*.geojson
-geodata/*.csv
-geodata/*.json
-geodata/*.geojson
 .env
+*.pyc
+.ipynb_checkpoints
+rawdata
+geodata
