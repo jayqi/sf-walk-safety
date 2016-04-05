@@ -84,7 +84,7 @@ def get_police_districts():
     download_geo_data(filename,url)
     return 0
 
-def get_historical_police_districts():
+def get_hist_police_districts():
 
     filename = r'hist-police-districts.geojson'
     url = r"https://data.sfgov.org/api/geospatial/embj-38bg?method=export&format=GeoJSON"
