@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import datetime as dt
 import json
 from shapely.geometry import shape, Point
@@ -151,4 +152,29 @@ def process_theft_street():
     __counter__ = 0
     path = r'../data/theft-street.p'
     add_regions(open_raw_theft_street()).to_pickle(path)
+    return 0
+
+
+##########################################
+########## Process Weather Data ##########
+##########################################
+
+def open_raw_weather():
+    path = r"../rawdata/noaa-weather-downtown-sf.csv"
+    conv = {
+        'DATE' : lambda x: dt.datetime.strptime(str(x),"%Y%m%d").date(),
+        }
+    return pd.read_csv(path,converters = conv)
+
+def process_weather():
+    # Get data and clean up
+    df = open_raw_weather()[['DATE','PRCP','TMAX','TMIN']].copy()
+    df.loc[2243,'TMAX'] = np.mean([df.TMAX[2242],df.TMAX[2244]])
+    df.PRCP = df.PRCP.astype(float)/10.
+    df.TMAX = df.TMAX.astype(float)/10.
+    df.TMIN = df.TMIN.astype(float)/10.
+
+    # Pickle
+    path = r'../data/noaa-weather-downtown-sf.p'
+    df.to_pickle(path)
     return 0
