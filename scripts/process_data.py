@@ -150,5 +150,5 @@ def process_theft_street():
     global __counter__
     __counter__ = 0
     path = r'../data/theft-street.p'
-    add_regions(open_raw_robbery_street()).to_pickle(path)
+    add_regions(open_raw_theft_street()).to_pickle(path)
     return 0
