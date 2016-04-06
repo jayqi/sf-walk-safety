@@ -135,11 +135,13 @@
 <script>
 var data = {{ data | tojson }}
 </script>
-<!-- Script for marker cluster map or for choropleth map -->
+
+<!-- Machinery for creating map -->
 {% if maptype == 'markers' %}
     <script>{% include 'leaflet_markers.js' %}</script>
 {% elif maptype == 'choropleth' %}
     <script>{% include 'leaflet_choropleth.js' %}</script>
 {% endif %}
+
 
 {% endblock %}

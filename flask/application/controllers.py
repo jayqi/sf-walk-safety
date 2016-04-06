@@ -36,7 +36,7 @@ def theft_markers_map():
 def theft_choropleth_map():
     return render_template('map.html',
         title='Theft &ndash; Choropleth',
-        maptype='markers',
+        maptype='choropleth',
         data=models.robbery_markers_geojson()
         )
 

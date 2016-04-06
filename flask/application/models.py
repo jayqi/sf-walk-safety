@@ -1,6 +1,5 @@
 import os
 from paths import *
-from df_to_geojson import *
 import pandas as pd
 import json
 
@@ -40,11 +39,6 @@ def robbery_choropleth_geojson(region_type):
     # Convert dataframe to geojson js variable
     return geodata
 
-
-
-
-
-
 def theft_markers_geojson():
     # Get data from pickle
     df = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
@@ -60,3 +54,23 @@ def theft_markers_geojson():
 
     # Convert dataframe to geojson js variable
     return df_to_geojson(df, cols, lat='y', lon='x')
+
+
+
+
+
+####
+
+# http://geoffboeing.com/2015/10/exporting-python-data-geojson/
+def df_to_geojson(df, properties, lat='latitude', lon='longitude'):
+    geojson = {'type':'FeatureCollection', 'features':[]}
+    for _, row in df.iterrows():
+        feature = {'type':'Feature',
+                   'properties':{},
+                   'geometry':{'type':'Point',
+                               'coordinates':[]}}
+        feature['geometry']['coordinates'] = [row[lon],row[lat]]
+        for prop in properties:
+            feature['properties'][prop] = row[prop]
+        geojson['features'].append(feature)
+    return geojson
