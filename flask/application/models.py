@@ -1,0 +1,62 @@
+import os
+from paths import *
+from df_to_geojson import *
+import pandas as pd
+import json
+
+def robbery_markers_geojson():
+    # Get data from pickle
+    df = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
+    # Apply filters
+
+    # Convert date and time columns to strings
+    df['date'] = df['date'].apply(lambda x: x.isoformat())
+    df['time'] = df['time'].apply(lambda x: x.strftime("%H:%M"))
+
+    # Columns to pass
+    cols = ['address', 'date', 'dayofweek', 'descript', 'time',
+            'nhood', 'tractce10', 'police_district', 'hist_police_district']
+
+    # Convert dataframe to geojson js variable
+    return df_to_geojson(df, cols, lat='y', lon='x')
+
+
+def robbery_choropleth_geojson(region_type):
+    # Get data from pickle
+    df = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
+    # Apply filters
+
+    # Counts
+    counts = df[region_type].value_counts()
+
+    # Read geojson file for region_type
+    geofilename = region_type + '.geojson'
+    with open(os.path.join(APP_DATA, geofilename)) as data_file:
+        geodata = json.load(data_file)
+
+    for feature in geodata['features']:
+        feature['properties']['count'] = counts[feature['properties'][region_type]]
+
+    # Convert dataframe to geojson js variable
+    return geodata
+
+
+
+
+
+
+def theft_markers_geojson():
+    # Get data from pickle
+    df = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
+    # Apply filters
+
+    # Convert date and time columns to strings
+    df['date'] = df['date'].apply(lambda x: x.isoformat())
+    df['time'] = df['time'].apply(lambda x: x.strftime("%H:%M"))
+
+    # Columns to pass
+    cols = ['address', 'date', 'dayofweek', 'descript', 'time',
+            'nhood', 'tractce10', 'police_district', 'hist_police_district']
+
+    # Convert dataframe to geojson js variable
+    return df_to_geojson(df, cols, lat='y', lon='x')

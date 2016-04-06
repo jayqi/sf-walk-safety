@@ -2,7 +2,7 @@
 
 L.mapbox.accessToken = 'pk.eyJ1IjoianlxaSIsImEiOiJjaW01ZG11MjcwMWl0dGttM2R2c2JvbThiIn0.eE6Xt0dMIl7Y2tOT8e6dyQ';
 var map = L.mapbox.map('map', 'mapbox.light')
-.setView([37.7833, -122.4167], 12);
+.setView([37.7680, -122.4367], 12);
 
 function getColor(d) {
     return d > 1500 ? '#800026' :
@@ -16,7 +16,7 @@ function getColor(d) {
 }
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.robcount),
+        fillColor: getColor(feature.properties.count),
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -25,7 +25,14 @@ function style(feature) {
     };
 }
 
+
+
+
+
+
 var geojson;
+
+
 
 var info = L.control();
 info.onAdd = function (map) {
@@ -35,9 +42,9 @@ info.onAdd = function (map) {
 };
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Robbery Counts by Neighborhood</h4>' +  (props ?
-        '<b>' + props.nhood + '</b><br />' + props.robcount + ' robberies'
-        : 'Hover over a neighborhood');
+    this._div.innerHTML = '<h4>Robbery Counts by {{region_type}}</h4>' +  (props ?
+        '<b>' + props.{{region_type}} + '</b><br />' + props.count + ' robberies'
+        : 'Hover over a {{region_type}}');
 };
 
 
