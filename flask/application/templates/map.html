@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Example row of columns -->
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{ title }}</h2>
+        <div class="container mapbound">
+            <div id='map'></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Filtering -->
+<br />
+<div class="panel panel-default">
+    <div class="panel-heading">Filtering options</div>
+    <div class="panel-body">
+        <form>
+
+            <!-- Categories -->
+            <div class="col-md-2">
+                Categories:
+                <div class="form group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Robberies
+                        </label>
+                    </div>
+                    <div class="checkbox disabled">
+                        <label>
+                            <input type="checkbox" value="" disabled>
+                            Thefts
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates -->
+            <div class="col-md-4">
+                Date Range:
+                <div class="form-group">
+                    <label>Start date</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label>End date</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+
+            <!-- Days of Week -->
+            <div class="col-md-2">
+                Days of Week:
+                <div class="form group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Monday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Tuesday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Wednesday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Thursday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Friday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Saturday
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked>
+                            Sunday
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Time of Day Range -->
+            <div class="col-md-4">
+                Time of Day Range:
+                <div class="form-group">
+                    <label>Start Time</label>
+                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label>End Time</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Mapbox.js and its stylesheet -->
+<script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+
+<!-- Leaflet Markercluster plugin -->
+{% if maptype == 'markers' %}
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+{% endif %}
+
+<!-- Geojson data -->
+<script>
+var data = {{ data | tojson }}
+</script>
+<!-- Script for marker cluster map or for choropleth map -->
+{% if maptype == 'markers' %}
+    <script>{% include 'leaflet_markers.js' %}</script>
+{% elif maptype == 'choropleth' %}
+    <script>{% include 'leaflet_choropleth.js' %}</script>
+{% endif %}
+
+{% endblock %}
