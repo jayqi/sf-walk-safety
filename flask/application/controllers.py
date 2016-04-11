@@ -6,7 +6,11 @@ import models
 def index():
     return render_template('index.html')
 
-@app.route("/robbery_markers")
+@app.route("/robberies/")
+def robbery_main():
+    return render_template('robberies.html')
+
+@app.route("/robberies/mapmarkers/")
 def robbery_markers_map():
     return render_template('map.html',
         title='Robberies &ndash; Individual Incidents',
@@ -14,8 +18,8 @@ def robbery_markers_map():
         data=models.robbery_markers_geojson()
         )
 
-@app.route("/robbery_choropleth")
-def robbery_choroplethmap():
+@app.route("/robberies/mapchoropleth/")
+def robbery_choropleth_map():
     region_type = 'nhood'
     return render_template('map.html',
         title='Robberies &ndash; Choropleth',
@@ -24,7 +28,7 @@ def robbery_choroplethmap():
         data=models.robbery_choropleth_geojson(region_type)
         )
 
-@app.route("/theft_markers")
+@app.route("/theft_markers/")
 def theft_markers_map():
     return render_template('map.html',
         title='Theft &ndash; Individual Incidents',
@@ -32,7 +36,7 @@ def theft_markers_map():
         data=models.robbery_markers_geojson()
         )
 
-@app.route("/theft_choropleth")
+@app.route("/theft_choropleth/")
 def theft_choropleth_map():
     return render_template('map.html',
         title='Theft &ndash; Choropleth',

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Example row of columns -->
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Street Robberies</h2>
+        <p>
+            Robberies are crimes of taking possessions by force or threat of force. Using open data from the San Francisco Police department, we visualize robbery incidents since 2003 and examine their prevalence.
+        </p>
+    </div>
+    <div class="col-md-4">
+        [[[Time series of robberies by month goes here.]]]
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Visualizing the data</h2>
+    <div>
+    <div class="col-md-4">
+        <h3>Choropleth Map</h3>
+        <p><a href="/robberies/mapchoropleth/">[[Image]]</a><p>
+        <p>A map showing aggregated counts of robberies by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
+        <p><a class="btn btn-default" href="/robberies/mapchoropleth/" role="button">See map &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Incidents Map</h3>
+        <p><a href="/robberies/mapmarkers/">[[Image]]</a><p>
+        <p>A map showing markers of individual robbery incidents. </p>
+        <p><a class="btn btn-default" href="/robberies/mapmarkers/" role="button">See map &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Histograms</h3>
+        <p><a href="/robberies/histograms/">[[Image]]</a><p>
+        <p>See histograms of robbery incidents against different variables, including by time of day, day of week, month, or weather. </p>
+        <p><a class="btn btn-default" href="/robberies/histograms/" role="button">See plots &raquo;</a></p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>About the data</h3>
+        <p>Learn more about the data we use. Coming soon!</p>
+    </div>
+    <div class="col-md-4">
+        <h3>See also</h3>
+        <p>Thefts</p>
+        <p>Traffic collisions</p>
+    </div>
+</div>
+{% endblock %}

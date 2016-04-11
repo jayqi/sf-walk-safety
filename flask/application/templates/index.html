@@ -8,7 +8,7 @@
         <p>Walking is a common part of living in San Francisco. <a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">According to the SFMTA</a>, over one million walking trips happen in the city each day&mdash;over a quarter of all trips. Walking is an important component to a healthy lifestyle, and it is a great way to get to know the city intimately.</p>
         <p>
         </p>
-        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. We present interactive maps that visualize the data in intuitive ways. We also analyze this data with machine learning, using kernal density estimation to probe the data for its underlying patterns.
+        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. We present interactive maps and plots that visualize the data in intuitive ways. We also model this data with machine learning, using kernal density estimation to probe the data for its underlying patterns.
     </div>
     <div class="col-md-4">
         <img src="{{ url_for('static', filename='img/blankmap.png') }}" class="img-responsive img-circle img-filler center-block"  />
@@ -18,19 +18,54 @@
 <hr>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Robberies</h2>
-        <p>Street robberies going back to 2003, supplied by the SF Police Department.</p>
-        <p><a class="btn btn-default" href="robbery-street-proto/robbery-street-cluster-static.html" role="button">Incident map &raquo;</a></p>
-        <p><a class="btn btn-default" href="robbery-street-proto/robbery-street-choropleth-static.html" role="button">Choropleth map &raquo;</a></p>
-    </div>
+
     <div class="col-md-4">
         <h2>Thefts</h2>
-        <p>Coming soon!</p>
+        <p>Street thefts going back to 2003&mdash;data supplied by the San Francisco Police Department.</p>
+        <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
+        <p>Visualizations:
+        <ul>
+            <li><a href="/thefts/mapchoropleth/">Choropleth map</a></li>
+            <li><a href="/thefts/mapmarkers/">Incidents map</a></li>
+            <li><a href="/thefts/histogram/">Histograms</a></li>
+        </ul></p>
+        <p>Modeling:
+        <ul>
+            <li><a href="/thefts/kde/">Kernal density estimation</a></li>
+        <ul>
+        </p>
     </div>
+
+    <div class="col-md-4">
+        <h2>Robberies</h2>
+        <p>Street robberies going back to 2003&mdash;data supplied by the San Francisco Police Department.</p>
+        <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
+        <p>Visualizations:
+        <ul>
+            <li><a href="/thefts/mapchoropleth/">Choropleth map</a></li>
+            <li><a href="/thefts/mapmarkers/">Incidents map</a></li>
+            <li><a href="/thefts/histogram/">Histograms</a></li>
+        </ul></p>
+        <p>Modeling:
+        <ul>
+            <li><a href="/thefts/kde/">Kernal density estimation</a></li>
+        <ul>
+        </p>
+    </div>
+
     <div class="col-md-4">
         <h2>Traffic Collisions</h2>
-        <p>Coming soon!</p>
+        <p>Traffic collisions involving pedestrians since 2003&mdash;data supplied by the California Highway Patrol.</p>
+        <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
+        <p>Visualizations:
+        <ul>
+            <li><a href="/thefts/histogram/">Histograms</a></li>
+        </ul></p>
+        <p>Modeling:
+        <ul>
+            <li><a href="/thefts/kde/">Kernal density estimation</a></li>
+        <ul>
+        </p>
     </div>
 </div>
 
