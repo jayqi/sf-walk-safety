@@ -19,42 +19,18 @@
     <div class="panel-body">
         <form>
 
-            <!-- Categories -->
-            <div class="col-md-2">
-                Categories:
-                <div class="form group">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="" checked>
-                            Robberies
-                        </label>
-                    </div>
-                    <div class="checkbox disabled">
-                        <label>
-                            <input type="checkbox" value="" disabled>
-                            Thefts
-                        </label>
-                    </div>
-                </div>
-            </div>
-
             <!-- Dates -->
-            <div class="col-md-4">
-                Date Range:
+            <div class="col-md-3">
                 <div class="form-group">
-                    <label>Start date</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                </div>
-                <div class="form-group">
-                    <label>End date</label>
-                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    <label>Date Range:</label>
+                    <input type="text" class="form-control" id="datefilter" value="foo">
                 </div>
             </div>
 
             <!-- Days of Week -->
             <div class="col-md-2">
-                Days of Week:
                 <div class="form group">
+                    <label>Days of Week:</label>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" value="" checked>
@@ -101,17 +77,29 @@
             </div>
 
             <!-- Time of Day Range -->
-            <div class="col-md-4">
-                Time of Day Range:
+            <div class="col-md-2">
                 <div class="form-group">
-                    <label>Start Time</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                </div>
-                <div class="form-group">
-                    <label>End Time</label>
-                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    <label>Time of Day Range:</label><br />
+                    Start time: <input type="text" class="form-control" id="startTime" placeholder="foo">
+                    End time: <input type="text" class="form-control" id="endTime" placeholder="bar">
                 </div>
             </div>
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label>Weather:</label><br />
+                    Daily high: <input id="hiTemp" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
+                    <br /><br /><br />
+                    Daily low: <input id="loTemp" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
+                    <br /><br /><br />
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" checked> Rained
+                        </label>
+                    </div>
+                </div>
+            </div>
+
 
 
         </form>
@@ -142,6 +130,17 @@ var data = {{ data | tojson }}
 {% elif maptype == 'choropleth' %}
     <script>{% include 'leaflet_choropleth.js' %}</script>
 {% endif %}
+
+<!-- Scripts for Bootstrap Datepicker -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.19/moment.min.js'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.19/daterangepicker.min.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.19/daterangepicker.min.js'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.11/jquery.timepicker.min.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.11/jquery.timepicker.min.js'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.0/css/bootstrap-slider.min.css' rel='stylesheet' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.0/bootstrap-slider.min.js'></script>
+<script>{% include 'data_filters.js' %}</script>
+
 
 
 {% endblock %}
