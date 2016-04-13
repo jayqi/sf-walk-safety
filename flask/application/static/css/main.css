@@ -28,7 +28,7 @@ Author's custom styles
     filter: brightness(33%) contrast(75%);
 }
 .img-filler {
-    max-height: 250px;
+    max-height: 240px;
 }
 body {
     padding-top: 50px;

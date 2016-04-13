@@ -2,10 +2,38 @@ from flask import Flask, render_template, request, redirect
 from application import app
 import models
 
+#from bokeh.embed import components
+
 @app.route("/")
 def index():
     return render_template('index.html')
 
+##############################################
+################### THEFTS ###################
+##############################################
+
+@app.route("/thefts/mapmarkers/")
+def theft_markers_map():
+    return render_template('map.html',
+        title='Theft &ndash; Individual Incidents Map',
+        maptype='markers',
+        data=models.markers_geojson(app.df_thefts)
+        )
+
+@app.route("/thefts/mapchoropleth/")
+def theft_choropleth_map():
+    region_type = 'nhood'
+    return render_template('map.html',
+        title='Theft &ndash; Choropleth Map',
+        maptype='choropleth',
+        region_type=region_type,
+        data=models.choropleth_geojson(app.df_thefts,region_type)
+        )
+
+
+###############################################
+################## ROBBERIES ##################
+###############################################
 @app.route("/robberies/")
 def robbery_main():
     return render_template('robberies.html')
@@ -13,37 +41,45 @@ def robbery_main():
 @app.route("/robberies/mapmarkers/")
 def robbery_markers_map():
     return render_template('map.html',
-        title='Robberies &ndash; Individual Incidents',
+        title='Robberies &ndash; Individual Incidents Map',
         maptype='markers',
-        data=models.robbery_markers_geojson()
+        data=models.markers_geojson(app.df_robberies)
         )
 
 @app.route("/robberies/mapchoropleth/")
 def robbery_choropleth_map():
     region_type = 'nhood'
     return render_template('map.html',
-        title='Robberies &ndash; Choropleth',
+        title='Robberies &ndash; Choropleth Map',
         maptype='choropleth',
         region_type=region_type,
-        data=models.robbery_choropleth_geojson(region_type)
+        data=models.choropleth_geojson(app.df_robberies,region_type)
         )
 
-@app.route("/theft_markers/")
-def theft_markers_map():
-    return render_template('map.html',
-        title='Theft &ndash; Individual Incidents',
-        maptype='markers',
-        data=models.robbery_markers_geojson()
-        )
+########################################################
+################## TRAFFIC COLLISIONS ##################
+########################################################
 
-@app.route("/theft_choropleth/")
-def theft_choropleth_map():
-    return render_template('map.html',
-        title='Theft &ndash; Choropleth',
-        maptype='choropleth',
-        data=models.robbery_markers_geojson()
-        )
 
+
+
+
+
+###############################################
+#################### OTHER ####################
+###############################################
+
+@app.route("/highlights/")
+def highlights():
+    return render_template('highlights.html')
+
+@app.route("/aboutdata/")
+def aboutdata():
+    return render_template('aboutdata.html')
+
+@app.route("/resources/")
+def resources():
+    return render_template('resources.html')
 
 
 @app.errorhandler(404)
