@@ -12,6 +12,10 @@ def index():
 ################### THEFTS ###################
 ##############################################
 
+@app.route("/thefts/")
+def theft_main():
+    return render_template('thefts.html')
+
 @app.route("/thefts/mapmarkers/")
 def theft_markers_map():
     return render_template('map.html',

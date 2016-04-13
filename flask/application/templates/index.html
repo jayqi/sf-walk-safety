@@ -8,16 +8,17 @@
         <p>Walking is a common part of living in San Francisco. <a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">According to the SFMTA</a>, over one million walking trips happen in the city each day&mdash;over a quarter of all trips. Walking is an important component to a healthy lifestyle, and it is a great way to get to know the city intimately.</p>
         <p>
         </p>
-        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. We present interactive maps and visualizations to inform residents about these incidents in their city. We also use machine learning techniques such as kernel density estimation to gain deeper insights and model the patterns underlying these incidents.</p>
+        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. Three classes of incidents are examined: thefts, robberies, and traffic collisions. We present interactive maps and visualizations to inform residents about these incidents in their city. We also use machine learning techniques such as kernel density estimation to gain deeper insights and model the patterns underlying these incidents.</p>
         <p>See the highlights of our study by following the link in the next section. You can also find more exhaustive visualizations and analyses by following the links for each incident category further below.</p>
     </div>
     <div class="col-md-4">
         <img src="{{ url_for('static', filename='img/blankmap.png') }}" class="img-responsive img-circle img-filler center-block"  />
     </div>
     <div class="clearfix visible-md-block"></div>
+    <hr>
     <div class="col-md-12">
         <h2>Analysis Highlights</h2>
-        <p>To see the highlights of the project, follow the link below:</p>
+        <p>The thefts, robberies, and traffic collision datasets are rich and have many interesting ways to both visualize and model. To see the highlights of the project, follow the link below:</p>
         <p><a class="btn btn-default" href="/highlights/" role="button">See highlights &raquo;</a></p>
     </div>
 </div>
@@ -45,16 +46,16 @@
     <div class="col-md-4">
         <h2>Robberies</h2>
         <p>Street robberies going back to 2003&mdash;data supplied by the San Francisco Police Department.</p>
-        <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
+        <p><a class="btn btn-default" href="/robberies/" role="button">See details &raquo;</a></p>
         <p>Visualizations:
         <ul>
-            <li><a href="/thefts/mapchoropleth/">Choropleth map</a></li>
-            <li><a href="/thefts/mapmarkers/">Incidents map</a></li>
-            <li><a href="/thefts/histogram/">Histograms</a></li>
+            <li><a href="/robberies/mapchoropleth/">Choropleth map</a></li>
+            <li><a href="/robberies/mapmarkers/">Incidents map</a></li>
+            <li><a href="/robberies/histogram/">Histograms</a></li>
         </ul></p>
         <p>Modeling:
         <ul>
-            <li><a href="/thefts/kde/">Kernal density estimation</a></li>
+            <li><a href="/robberies/kde/">Kernal density estimation</a></li>
         <ul>
         </p>
     </div>
@@ -65,11 +66,11 @@
         <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
         <p>Visualizations:
         <ul>
-            <li><a href="/thefts/histogram/">Histograms</a></li>
+            <li>Coming soon</li>
         </ul></p>
         <p>Modeling:
         <ul>
-            <li><a href="/thefts/kde/">Kernal density estimation</a></li>
+            <li>Coming soon</li>
         <ul>
         </p>
     </div>

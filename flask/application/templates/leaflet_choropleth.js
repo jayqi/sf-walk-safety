@@ -5,13 +5,13 @@ var map = L.mapbox.map('map', 'mapbox.light')
 .setView([37.7680, -122.4367], 12);
 
 function getColor(d) {
-    return d > 1500 ? '#800026' :
-    d > 1250  ? '#BD0026' :
-    d > 1000  ? '#E31A1C' :
-    d > 750  ? '#FC4E2A' :
-    d > 500   ? '#FD8D3C' :
-    d > 250   ? '#FEB24C' :
-    d > 100   ? '#FED976' :
+    return d > 1750 ? '#800026' :
+    d > 1500  ? '#BD0026' :
+    d > 1250  ? '#E31A1C' :
+    d > 1000  ? '#FC4E2A' :
+    d > 750   ? '#FD8D3C' :
+    d > 500   ? '#FEB24C' :
+    d > 250   ? '#FED976' :
                 '#FFEDA0';
 }
 function style(feature) {
@@ -102,7 +102,7 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'mapinfo maplegend'),
-        grades = [0, 100, 250, 500, 750, 1000, 1250, 1500],
+        grades = [0, 250, 500, 750, 1000, 1250, 1500, 1750],
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval

@@ -6,11 +6,14 @@
     <div class="col-md-8">
         <h2>Street Robberies</h2>
         <p>
-            Robberies are crimes of taking possessions by force or threat of force. Using open data from the San Francisco Police department, we visualize robbery incidents since 2003 and examine their prevalence.
+            Robberies are crimes of taking possessions by force or threat of force. Using open data from the San Francisco Police department, we visualize street robbery incidents since 2003 and examine their prevalence.
+        </p>
+        <p>
+            In the adjacent figure, we see the total number of reported street robbery incidents from 2003 to 2015.
         </p>
     </div>
     <div class="col-md-4">
-        [[[Time series of robberies by month goes here.]]]
+        <img src="{{ url_for('static', filename='img/temp/robbery-yearlycounts.png') }}" class="img-responsive center-block"/>
     </div>
 </div>
 
@@ -18,17 +21,17 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2>Visualizing the data</h2>
+        <h2>Visualizations and Analyses</h2>
     <div>
     <div class="col-md-4">
         <h3>Choropleth Map</h3>
-        <p><a href="/robberies/mapchoropleth/">[[Image]]</a><p>
+        <p><a href="/robberies/mapchoropleth/"><img src="{{ url_for('static', filename='img/robbery-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
         <p>A map showing aggregated counts of robberies by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
         <p><a class="btn btn-default" href="/robberies/mapchoropleth/" role="button">See map &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h3>Incidents Map</h3>
-        <p><a href="/robberies/mapmarkers/">[[Image]]</a><p>
+        <p><a href="/robberies/mapmarkers/"><img src="{{ url_for('static', filename='img/robbery-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
         <p>A map showing markers of individual robbery incidents. </p>
         <p><a class="btn btn-default" href="/robberies/mapmarkers/" role="button">See map &raquo;</a></p>
     </div>

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Example row of columns -->
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Project Highlights</h2>
+        <p>
+            The project is still a work in progress! Here we share some highlights of our visualizations and analyses so far.
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+
+    <div class="col-md-12">
+        <h2>Monthly Average</h2>
+    </div>
+    <div class="col-md-4">
+        <p>
+            Plots showing averaged monthly totals for thefts and robberies, respectively. The envelope shows the standard deviation.
+        </p>
+        <p>
+            Thefts and robberies appear to occur at a higher rate during summer months than winter months.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/theft-monthlyaverage.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/robbery-monthlyaverage.png') }}" class="img-responsive center-block"  />
+    </div>
+
+    <div class="col-md-12">
+        <h2>Time of Day Distribution</h2>
+    </div>
+    <div class="col-md-4">
+        <p>
+            Histograms showing respectively theft incidents and robbery incidents binned by hour of the day. Also plotted are probability density functions estimated using gaussian kernel density estimation. The so-called Silverman's rule for optimal bandwidth choice is used.
+        </p>
+        <p>
+            Thefts are most frequent in the afternoon and evening, with a smaller second peak at late hours of the night. Their least frequent time is the early hours of the morning.
+        </p>
+        <p>
+            In contrast, robberies are at their least frequent in the late morning and at their most frequent in the late hours of the night.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/theft-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/robbery-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+    </div>
+
+
+
+    <div class="col-md-12">
+        <h2>Spatial Distribution</h2>
+    </div>
+    <div class="col-md-4">
+        <p>
+            Contour plots of spatial probability density functions from kernel density estimates for thefts and robberies, respectively. Red means that a higher probability that a theft or robbery incident would be at that geographic location. Kernel density estimates were generated with Gaussian kernels and a bandwidth chosen by Silverman's Rule.
+        </p>
+        <p>
+            Heat map overlaid on a map of the city coming soon!
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/theft-spatialkdeheatmap.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/temp/robbery-spatialkdeheatmap.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
