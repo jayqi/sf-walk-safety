@@ -64,7 +64,9 @@ def robbery_choropleth_map():
 ################## TRAFFIC COLLISIONS ##################
 ########################################################
 
-
+@app.route("/trafficcollisions/")
+def traffic_collision_main():
+    return render_template('trafficcollisions.html')
 
 
 
