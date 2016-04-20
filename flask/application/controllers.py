@@ -236,9 +236,9 @@ def traffic_collision_main():
 
 @app.route("/highlights/")
 def highlights():
-    foo = models.time_of_day_plot(app.df_robberies,'Robberies')
-    plots = {'robbery-time' : foo}
-    return render_template('highlights.html', plots=plots)
+    #foo = models.time_of_day_plot(app.df_robberies,'Robberies')
+    #plots = {'robbery-time' : foo}
+    return render_template('highlights.html')
 
 @app.route("/about/")
 def aboutdata():
