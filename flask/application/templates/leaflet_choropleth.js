@@ -4,23 +4,24 @@ L.mapbox.accessToken = 'pk.eyJ1IjoianlxaSIsImEiOiJjaW01ZG11MjcwMWl0dGttM2R2c2Jvb
 var map = L.mapbox.map('map', 'mapbox.light')
 .setView([37.7680, -122.4367], 12);
 
+map.scrollWheelZoom.disable();
+
 function getColor(d) {
-    return d > 1750 ? '#800026' :
-    d > 1500  ? '#BD0026' :
-    d > 1250  ? '#E31A1C' :
-    d > 1000  ? '#FC4E2A' :
-    d > 750   ? '#FD8D3C' :
-    d > 500   ? '#FEB24C' :
-    d > 250   ? '#FED976' :
-                '#FFEDA0';
+    return d > {{mapdata['colorbar'][7] | safe}} ? '#b10026' :
+    d > {{mapdata['colorbar'][6] | safe}}  ? '#e31a1c' :
+    d > {{mapdata['colorbar'][5] | safe}}  ? '#fc4e2a' :
+    d > {{mapdata['colorbar'][4] | safe}}  ? '#fd8d3c' :
+    d > {{mapdata['colorbar'][3] | safe}}   ? '#feb24c' :
+    d > {{mapdata['colorbar'][2] | safe}}   ? '#fed976' :
+    d > {{mapdata['colorbar'][1] | safe}}   ? '#ffeda0' :
+                '#ffffcc';
 }
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.count),
         weight: 2,
         opacity: 1,
-        color: 'white',
-        dashArray: '3',
+        color: '#CCCCCC',
         fillOpacity: 0.7
     };
 }
@@ -42,9 +43,9 @@ info.onAdd = function (map) {
 };
 // method that we will use to update the control based on feature properties passed
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Robbery Counts by {{region_type}}</h4>' +  (props ?
-        '<b>' + props.{{region_type}} + '</b><br />' + props.count + ' robberies'
-        : 'Hover over a {{region_type}}');
+    this._div.innerHTML = '<h4>{{pageopts['uppercase'] | safe}} Counts by {{ regionopts["uppercase"] | safe }}</h4>' +  (props ?
+        '<b>' + props.{{ regionopts["key"] | safe }} + '</b><br />' + props.count + ' {{pageopts['lowercase'] | safe}}'
+        : 'Hover over a {{regionopts["lowercase"] | safe}}');
 };
 
 
@@ -102,14 +103,15 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'mapinfo maplegend'),
-        grades = [0, 250, 500, 750, 1000, 1250, 1500, 1750],
+        grades = {{ mapdata['colorbar'] | safe }},
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
+    for (var i = 0; i < grades.length-1; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+            grades[i] + '&ndash;' + grades[i + 1] + '<br>';
+            //grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
     }
 
     return div;

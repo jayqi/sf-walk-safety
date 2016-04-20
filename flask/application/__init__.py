@@ -1,17 +1,36 @@
 from flask import Flask
-from paths import *
+from application.paths import *
 import pandas as pd
 #from flask_debugtoolbar import DebugToolbarExtension
 
 def initialize_application():
     app = Flask('application')
-    #app.debug = True
+    app.debug = True
 
     # Read data from file
-    app.df_robberies = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
-    app.df_thefts = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
+    df_robberies = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
+    df_thefts = pd.read_pickle(os.path.join(APP_DATA, 'theft-street.p'))
+    weather = pd.read_pickle(os.path.join(APP_DATA, 'noaa-weather-downtown-sf.p'))
+
+    # Add month and year
+    df_robberies['month'] = df_robberies.date.apply(lambda x: x.month)
+    df_robberies['year'] = df_robberies.date.apply(lambda x: x.year)
+    df_thefts['month'] = df_thefts.date.apply(lambda x: x.month)
+    df_thefts['year'] = df_thefts.date.apply(lambda x: x.year)
+
+
+    # Change celsius to fahrenheit
+    weather.TMAX = weather.TMAX.apply(celsius2fahrenheit)
+    weather.TMIN = weather.TMIN.apply(celsius2fahrenheit)
+
+    # Join with weather
+    app.df_robberies = df_robberies.merge(weather,how="inner",left_on="date",right_on="DATE")
+    app.df_thefts = df_thefts.merge(weather,how="inner",left_on="date",right_on="DATE")
 
     return app
+
+def celsius2fahrenheit(T):
+    return T*1.8 + 32.
 
 app = initialize_application()
 

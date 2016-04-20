@@ -1,36 +1,24 @@
 // Date filter
-$('#datefilter').daterangepicker({
+$('#daterange').daterangepicker({
     "showDropdowns": true,
     "autoApply": true,
     "ranges": {
-        "Today": [
-            "2016-04-10T23:17:55.572Z",
-            "2016-04-10T23:17:55.572Z"
+        "All Data (2003-2015)": [
+            "2003-01-01",
+            "2015-12-31"
         ],
-        "Yesterday": [
-            "2016-04-09T23:17:55.572Z",
-            "2016-04-09T23:17:55.572Z"
+        "Last Five Years (2011-2015)": [
+            "2011-01-01",
+            "2015-12-31"
         ],
-        "Last 7 Days": [
-            "2016-04-04T23:17:55.572Z",
-            "2016-04-10T23:17:55.572Z"
+        "Last Year (2015)": [
+            "2015-01-01",
+            "2015-12-31"
         ],
-        "Last 30 Days": [
-            "2016-03-13T00:17:55.572Z",
-            "2016-04-10T23:17:55.572Z"
-        ],
-        "This Month": [
-            "2016-04-01T07:00:00.000Z",
-            "2016-05-01T06:59:59.999Z"
-        ],
-        "Last Month": [
-            "2016-03-01T08:00:00.000Z",
-            "2016-04-01T06:59:59.999Z"
-        ]
     },
     "linkedCalendars": false,
-    "startDate": "01/01/2003",
-    "endDate": "03/01/2016",
+    "startDate": "{{ filtersdisplay['startDate'] }}",
+    "endDate": "{{ filtersdisplay['endDate'] }}",
     "minDate": "01/01/2003",
     "maxDate": "03/01/2016"
 }, function(start, end, label) {
@@ -38,8 +26,16 @@ $('#datefilter').daterangepicker({
 });
 
 // Time filter
-$('#startTime').timepicker();
-$('#endTime').timepicker();
+$('#startTime').timepicker({
+    'timeFormat' : 'H:i',
+    'show2400' : true,
+    'step' : 60
+});
+$('#endTime').timepicker({
+    'timeFormat' : 'H:i',
+    'show2400' : true,
+    'step' : 60
+});
 
 // Temperature filters (sliders)
 $("#hiTemp").slider({

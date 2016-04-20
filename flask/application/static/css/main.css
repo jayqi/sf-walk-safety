@@ -35,6 +35,9 @@ Author's custom styles
     margin-left: auto;
     margin-right: auto;
 }
+.form-filter {
+    width: 90%;
+}
 body {
     padding-top: 50px;
     padding-bottom: 20px;

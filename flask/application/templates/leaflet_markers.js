@@ -4,6 +4,8 @@ L.mapbox.accessToken = 'pk.eyJ1IjoianlxaSIsImEiOiJjaW01ZG11MjcwMWl0dGttM2R2c2Jvb
 var map = L.mapbox.map('map', 'mapbox.streets')
 .setView([37.7680, -122.4367], 12);
 
+map.scrollWheelZoom.disable();
+
 var geoJsonLayer = L.geoJson(data, {
    onEachFeature: function(feature, layer) {
       layer.bindPopup(

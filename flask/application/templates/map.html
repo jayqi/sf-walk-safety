@@ -4,7 +4,11 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2>{{ title | safe}}</h2>
+        <h2>{{ pageopts['uppercase'] | safe}} &ndash; {{ pageopts['maptype'] | safe}}
+            {% if maptype == 'choropleth' %}
+             ({{regionopts['title'] | safe}})
+            {% endif %}
+        </h2>
     </div>
     <div class="col-md-12">
     <div class="container mapbound">
@@ -14,33 +18,27 @@
 </div>
 <br />
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="alert alert-dismissible alert-info">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Sorry! These options below aren't quite hooked up yet. Coming soon!
-</div>
-    </div>
-</div>
 
-<!-- Regions Type -->
+<!-- Filtering -->
 <div class="row">
 <div class="well">
-<form class="form-horizontal">
+<form class="form-horizontal" action="." method="POST">
     <fieldset>
-        <div class="col-md-2">
-            <legend>Region Type</legend>
-        </div>
-        <div class="col-md-4">
+
+        <!-- Regions Type -->
+
+{% if maptype == 'choropleth' %}
+<h3>Region Type</h3>
+        <div class="col-md-4 col-md-offset-2">
             <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            <input type="radio" name="region_type" value="nhood" {{ regionopts['radio_check']['nhood'] | safe }}>
             Neighborhoods
           </label>
         </div>
             <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            <input type="radio" name="region_type" value="tractce10" {{ regionopts['radio_check']['tractce10'] | safe }}>
             Census Tracts (from 2010 Census)
           </label>
         </div>
@@ -48,85 +46,77 @@
         <div class="col-md-4">
             <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            <input type="radio" name="region_type" value="police_district" {{ regionopts['radio_check']['police_district'] | safe }}>
             Police Districts
           </label>
         </div>
             <div class="radio">
           <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            <input type="radio" name="region_type" value="hist_police_district" {{ regionopts['radio_check']['hist_police_district'] | safe }}>
             Historical Police Districts (before July 2015)
           </label>
         </div>
         </div>
-        <div class="col-md-2">
-            <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+        <div class="row">
         </div>
-    <fieldset>
-</form>
-</div>
-</div>
+{% endif %}
 
-<!-- Filtering -->
 
-<div class="row">
-<div class="well">
-<form class="form-horizontal">
-    <fieldset>
-        <legend>Filter Data</legend>
+
+
+
+        <h3>Filter Data</h3>
         <!-- Dates -->
         <div class="col-md-3">
             <div class="form-group">
-                <label>Date Range:</label>
-                <input type="text" class="form-control" id="datefilter" value="foo">
+                <h4>Date Range:</h4>
+                <input type="text" class="form-control form-filter" id="daterange" name="daterange">
             </div>
         </div>
 
         <!-- Days of Week -->
         <div class="col-md-2">
             <div class="form group">
-                <label>Days of Week:</label>
+                <h4>Days of Week:</h4>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Monday" {{ filtersdisplay['Monday'] | safe}}>
                         Monday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Tuesday" {{ filtersdisplay['Tuesday'] | safe}}>
                         Tuesday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Wednesday" {{ filtersdisplay['Wednesday'] | safe}}>
                         Wednesday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Thursday" {{ filtersdisplay['Thursday'] | safe}}>
                         Thursday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Friday" {{ filtersdisplay['Friday'] | safe}}>
                         Friday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Saturday" {{ filtersdisplay['Saturday'] | safe}}>
                         Saturday
                     </label>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked>
+                        <input type="checkbox" name="weekdayfilter" value="Sunday" {{ filtersdisplay['Sunday'] | safe}}>
                         Sunday
                     </label>
                 </div>
@@ -134,24 +124,34 @@
         </div>
 
         <!-- Time of Day Range -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="form-group">
-                <label>Time of Day Range:</label><br />
-                Start time: <input type="text" class="form-control" id="startTime" placeholder="foo">
-                End time: <input type="text" class="form-control" id="endTime" placeholder="bar">
+                <h4>Time of Day Range:</h4>
+                Start time: <input type="text" class="form-control form-filter" id="startTime" name="startTime" value="{{ filtersdisplay['startTime'] }}">
+                <br />
+                End time: <input type="text" class="form-control form-filter" id="endTime" name="endTime" value="{{ filtersdisplay['endTime'] }}">
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="form-group">
-                <label>Weather:</label><br />
-                Daily high: <input id="hiTemp" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
+                <h4>Weather:</h4>
+                Daily high (&deg;F):
                 <br /><br /><br />
-                Daily low: <input id="loTemp" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/>
+                <input id="hiTemp" name="hiTemp" type="text" class="span2" value="" data-slider-min="40" data-slider-max="100" data-slider-step="1" data-slider-value="[{{ filtersdisplay['minHiTemp'] }},{{ filtersdisplay['maxHiTemp'] }}]"/>
+                <br /><br /><br />
+                Daily low (&deg;F):
+                <br /><br /><br />
+                <input id="loTemp" name="loTemp" type="text" class="span2" value="" data-slider-min="35" data-slider-max="70" data-slider-step="1" data-slider-value="[{{ filtersdisplay['minLoTemp'] }},{{ filtersdisplay['maxLoTemp'] }}]"/>
                 <br /><br /><br />
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value="" checked> Rained
+                        <input type="checkbox" name="norain" value=true {{ filtersdisplay['norain'] | safe }}> No Rain
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="rained" value=true {{ filtersdisplay['rained'] | safe }}> Rained
                     </label>
                 </div>
             </div>
@@ -183,7 +183,7 @@
 
 <!-- Geojson data -->
 <script>
-var data = {{ data | tojson }}
+var data = {{ mapdata['geojson'] | tojson }}
 </script>
 
 <!-- Machinery for creating map -->
