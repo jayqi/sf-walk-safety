@@ -15,9 +15,9 @@ def process_batch(filename):
         location = g.geocode(address)
         result = (item[0],item[1],item[2],location.latitude, location.longitude)
         out.append(result)
-        f.write(str(result)+'\n')
+        f.write("%s\n" % str(result))
         counter += 1
-        print counter, out[-1]
-        time.sleep(1)
-
+        print counter, result
+        time.sleep(2)
+    f.close()
     pickle.dump( batch, open( filename+"-out.p", "wb" ) )
