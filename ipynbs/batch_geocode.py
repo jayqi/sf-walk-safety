@@ -9,7 +9,7 @@ def process_batch(filename):
     g = GoogleV3()
     out = []
     counter = 0
-    f = open('geocode_out.txt','w')
+    f = open('geocode_out.txt','a',0)
     for item in batch.itertuples():
         address = item[1]+' at '+item[2]+', San Francisco, CA'
         location = g.geocode(address)
