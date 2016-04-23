@@ -1,87 +1,248 @@
 {% extends "layout.html" %}
+{% block headscripts %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
+{% endblock %}
 {% block content %}
-<!-- Example row of columns -->
-
 <div class="row">
     <div class="col-md-8">
-        <h2>Walking in San Francisco</h2>
+        <h2 class="text-center">Walking in San Francisco</h2>
         <p>Walking is a common part of living in San Francisco. <a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">According to the SFMTA</a>, over one million walking trips happen in the city each day&mdash;over a quarter of all trips. Walking is an important component to a healthy lifestyle, and it is a great way to get to know the city intimately.</p>
         <p>
         </p>
-        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. Three classes of incidents are examined: thefts, robberies, and traffic collisions. We present interactive maps and visualizations to inform residents about these incidents in their city. We also use machine learning techniques such as kernel density estimation to gain deeper insights and model the patterns underlying these incidents.</p>
-        <p>See the highlights of our study by following the link in the next section. You can also find more exhaustive visualizations and analyses by following the links for each incident category further below.</p>
+        <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. Three classes of incidents are examined: thefts, robberies, and traffic collisions. We present interactive maps and visualizations to inform residents about these incidents in their city. We also use statistical analysis and machine learning to gain deeper insights and model the patterns underlying these incidents.</p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/blankmap.png') }}" class="img-responsive img-circle img-filler center-block"  />
-    </div>
-    <div class="clearfix visible-md-block"></div>
-    <hr>
-    <div class="col-md-12">
-        <h2>Analysis Highlights</h2>
-        <p>The thefts, robberies, and traffic collision datasets are rich and have many interesting ways to both visualize and model. To see the highlights of the project, follow the link below:</p>
-        <p><a class="btn btn-default" href="/highlights/" role="button">See highlights &raquo;</a></p>
+        <img src="{{ url_for('static', filename='img/circle.jpg') }}" class="img-responsive img-circle img-filler center-block"  />
     </div>
 </div>
+
+
+
 <hr>
 
-<div class="row">
 
+<h2 class="text-center">In-Depth Looks</h2>
+<div class="row row-flex row-flex-wrap">
     <div class="col-md-4">
         <div class="well">
-        <h2>Thefts</h2>
-        <p>Street thefts going back to 2003&mdash;data supplied by the San Francisco Police Department.</p>
-        <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
-        <p>Visualizations:
-        <ul>
-            <li><a href="/thefts/mapchoropleth/">Choropleth map</a></li>
-            <li><a href="/thefts/mapmarkers/">Incidents map</a></li>
-            <li><a href="/thefts/histogram/">Histograms</a></li>
-        </ul></p>
-    </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="well">
-        <h2>Robberies</h2>
-        <p>Street robberies going back to 2003&mdash;data supplied by the San Francisco Police Department.</p>
-        <p><a class="btn btn-default" href="/robberies/" role="button">See details &raquo;</a></p>
-        <p>Visualizations and Analyses:
-        <ul>
-            <li><a href="/robberies/mapchoropleth/">Choropleth map</a></li>
-            <li><a href="/robberies/mapmarkers/">Incidents map</a></li>
-            <li><a href="/robberies/histogram/">Histograms</a></li>
-        </ul></p>
+            <h3 class="text-center">Thefts</h3>
+            <p>Visualizations and analysis for street-level thefts&mdash;crimes where property was stolen off a pedestrian. Data from January 2003 to present comes from the San Francisco Police Department via the SF Open Data portal.
+            <p><a class="btn btn-default" href="/thefts/" role="button">See details &raquo;</a></p>
         </div>
     </div>
 
     <div class="col-md-4">
         <div class="well">
-        <h2>Traffic Collisions</h2>
-        <p>Traffic collisions involving pedestrians since 2003&mdash;data supplied by the California Highway Patrol.</p>
-        <p><a class="btn btn-default" href="/trafficcollisions/" role="button">See details &raquo;</a></p>
-        <p>Visualizations and Analyses:
-        <ul>
-            <li>Coming soon</li>
-        </ul></p>
+            <h3 class="text-center">Robberies</h3>
+            <p>Visualizations and analysis for street-level robberies&mdash;crimes where force or intimidation were used to take property. Data from January 2003 to present comes from the San Francisco Police Department via the SF Open Data portal.
+            <p><a class="btn btn-default" href="/robberies/" role="button">See details &raquo;</a></p>
+        </div>
     </div>
+
+    <div class="col-md-4">
+        <div class="well">
+            <h3 class="text-center">Traffic Collisions</h3>
+            <p>Visualizations and analysis for traffic collisions involving pedestrians. Data from January 2003 to present supplied by the California Highway Patrol.</p>
+            <p><a class="btn btn-default" href="/trafficcollisions/" role="button">See details &raquo;</a></p>
+        </div>
+    </div>
+    <div class="clearfix visible-md-block"></div>
+</div>
+
+
+<h2 class="text-center">Analysis Highlights</h2>
+<div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="well">
+
+            <p>The thefts, robberies, and traffic collision datasets are rich and have many interesting ways to both visualize and model. To see the highlights of the project, follow the link below:</p>
+            <p><a class="btn btn-default" href="/highlights/" role="button">See highlights &raquo;</a></p>
+        </div>
     </div>
 </div>
+
+
 
 <hr>
 
-<div class="row">
-    <div class="col-md-4">
-        <h3>About the data</h3>
-        <p>Learn more about the data we use. Coming soon!</p>
+
+
+<section id="aboutdata">
+    <h2 class="text-center">About the Data</h2>
+    <div class="row row-flex row-flex-wrap">
+
+
+        <div class="clearfix visible-md-block"></div>
+
+        <div class="col-md-5 col-md-offset-1">
+            <div class="well">
+                <h3 class="text-center">Police Reports</h3>
+                <p><a href="https://data.sfgov.org/Public-Safety/SFPD-Incidents-from-1-January-2003/cuks-n6tp"><img src="{{ url_for('static', filename='img/sfopendata_sfpdincidents.png') }}" class="img-responsive center-block img-thumbnail img-previewthumb" /></a><p>
+                <p>Crime reports from the San Francisco Police Department Incident Reporting system, available on the SF Open Data portal. This project filters for thefts and robberies with descriptions that indicate they occur on the street.</p>
+                <p>
+                    <ul>
+                        <li><a href="https://data.sfgov.org/Public-Safety/SFPD-Incidents-from-1-January-2003/cuks-n6tp">SFPD Incidents - from 1 January 2003, via SF Open Data</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="well">
+                <h3 class="text-center">Traffic Accidents</h3>
+                <p><a href="http://iswitrs.chp.ca.gov/Reports/jsp/RawData.jsp"><img src="{{ url_for('static', filename='img/chp_collisions.png') }}" class="img-responsive center-block img-thumbnail img-previewthumb" /></a><p>
+                <p>Collision records from the California Highway Patrol's Statewide Integrated Traffic Records System.</p>
+                <p>
+                    <ul>
+                        <li><a href="http://iswitrs.chp.ca.gov/Reports/jsp/RawData.jsp">Statewide Integrated Traffic Records System Raw Data, California Highway Patrol</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h3>View project source</h3>
-        <p>View the source code for this project, including this website, on GitHub. </p>
-        <p><a class="btn btn-default" href="https://github.com/jayqi/sf-walk-safety" role="button">View on GitHub &raquo;</a></p>
+    <div class="row row-flex row-flex-wrap">
+
+        <div class="col-md-5 col-md-offset-1">
+            <div class="well">
+                <h3 class="text-center">Weather</h3>
+                <p><a href="https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00023272/detail"><img src="{{ url_for('static', filename='img/noaa_sfdowntown.png') }}" class="img-responsive center-block img-thumbnail img-previewthumb" /></a><p>
+                <p>Daily weather summaries from the San Francisco Downtown (GHCND:USW00023272) weather station. </p>
+                <p>
+                    <ul>
+                        <li><a href="https://www.ncdc.noaa.gov/cdo-web/datasets/GHCND/stations/GHCND:USW00023272/detail">Climate Data Online, National Oceanic and Atmospheric Administration (NOAA)</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-5 ">
+            <div class="well">
+                <h3 class="text-center">Region Boundaries</h3>
+                <p><img src="{{ url_for('static', filename='img/sfopendata_neighborhoods.png') }}" class="img-responsive center-block img-thumbnail img-previewthumb" /><p>
+                <p>Shape data for various administrative or analysis regions in San Francisco, available on the SF Open Data portal. </p>
+                <p>
+                    <ul>
+                        <li><a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods/p5b7-5n3h">Analysis Neighborhoods, via SF Open Data</a></li>
+                        <li><a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods-census-tracts-assigned-to-n/bwbp-wk3r">Census Tracts, via SF Open Data</a></li>
+                        <li><a href="https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf">Current Police Districts, via SF Open Data</a></li>
+                        <li><a href="https://data.sfgov.org/Public-Safety/Historic-Police-Districts/embj-38bg">Historic Police Districts, via SF Open Data</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h3>More walking resources</h3>
-        <p>Other resources for pedestrians, created by the San Francisco community. Coming soon!</p>
+</section>
+
+
+
+<hr>
+
+
+
+<section id="additionalresources">
+    <h2 class="text-center">Additional Walking Resources</h2>
+    <div class="row row-flex row-flex-wrap">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h3 class="text-center">Government</h3>
+                <p>
+                    <ul class="noindent">
+                        <li><a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">San Francisco Municipal Transportation Agency - Pedestrian Resources</a></li>
+                        <li><a href="http://catsip.berkeley.edu/">California Active Transportation Safety Information Pages (CATSIP)</a></li>
+                        <li><a href="http://visionzerosf.org/">Vision Zero SF</a></li>
+                        <li><a href="http://walkfirst.sfplanning.org/index.php/">WalkFirst</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="well">
+                <h3 class="text-center">Advocacy</h3>
+                <p>
+                    <ul class="noindent">
+                        <li><a href="http://walksf.org/">Walk San Francisco</a> - pedestrian advocacy organization</li>
+                        <li><a href="http://sfsaferoutestoschool.org/">Safe Routes to School</a></li>
+                        <li><a href="http://shapeupsfcoalition.org/">Shape Up San Francisco Coalition</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="well">
+                <h3 class="text-center">Research</h3>
+                <p>
+                    <ul class="noindent">
+                        <li><a href="http://safetrec.berkeley.edu/">Safe Transportation Research and Education Center (SafeTREC) at UC Berkeley</a></li>
+                        <ul>
+                            <li><a href="http://safetrec.berkeley.edu/crash-analysis/psip">Pedestrian Safety Improvement Program (PSIP)</a></li>
+                        </ul>
+                        <li><a href="http://www.trb.org/Main/Home.aspx">Transportation Research Board</a>, a part of the National Academies of Sciences, Engineering, and Medicine</li>
+                        <ul>
+                            <li><a href="http://www.trb.org/PedestriansandBicyclists/PedestriansandBicyclists2.aspx">Pedestrian and Bicyclist Research</a></li>
+                        </ul>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
     </div>
+</section>
+
+
+
+<hr>
+
+
+<h2 class="text-center">About</h2>
+<div class="row row-flex row-flex-wrap">
+    <div class="col-md-4">
+        <div class="well">
+            <h3 id="aboutproject" class="linkanchor text-center">About the Project</h3>
+            <p>
+                Being new to San Francisco and planning to walk around a lot by himself, Jay wanted to learn more about walking in the city. A wealth of relevant open government data was available, but there was still room for tools and analysis targeted at pedestrian issues.
+            </p>
+            <p>
+                This project was developed as part of <a href="https://www.thedataincubator.com/">the Data Incubator</a>, an eight-week data science fellowship program for training advanced-degree graduates to enter industry.</p>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="well">
+            <h3 class="text-center">View Project Source</h3>
+            <p>The source code of this project, including both this website and all analysis, is available on GitHub. Please take a look if you are interested.</p>
+            <p><a class="btn btn-default" href="https://github.com/jayqi/sf-walk-safety" role="button">View Source on GitHub &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="well">
+            <h3 id="aboutjay" class="linkanchor text-center">About Jay</h3>
+            <p>
+                Jay Qi is a data scientist currently living in San Francisco. Trained as a mechanical and aerospace engineer, Jay uses data analysis, machine learning, and computational modeling to solve problems and learn new things about the world.
+            </p>
+            <p>
+                To find out more about Jay, you can visit his <a href="https://jayqi.com">homepage</a> or connect with him on one of the following services.
+            </p>
+            <p class="text-center">
+                <a class="btn btn-social-icon btn-twitter" href="https://twitter.com/jayyqi"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                &nbsp;&nbsp;
+                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jayqi"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                &nbsp;&nbsp;
+                <a class="btn btn-social-icon btn-github" href="https://github.com/jayqi"><span class="fa fa-github" aria-hidden="true"></span></a>
+            </p>
+        </div>
+    </div>
+
 </div>
+
+
+
 {% endblock %}

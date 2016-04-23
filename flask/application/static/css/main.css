@@ -31,14 +31,66 @@ Author's custom styles
     max-height: 240px;
 }
 .img-previewthumb {
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 .form-filter {
     width: 90%;
 }
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+section {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+ul.noindent {
+    padding: 19px;
+}
+
+
+
+
+/* http://www.bootply.com/126437 */
+
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
 }

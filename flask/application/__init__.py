@@ -28,6 +28,8 @@ def initialize_application():
     app.df_robberies = df_robberies.merge(weather,how="inner",left_on="date",right_on="DATE")
     app.df_thefts = df_thefts.merge(weather,how="inner",left_on="date",right_on="DATE")
 
+
+
     return app
 
 def celsius2fahrenheit(T):

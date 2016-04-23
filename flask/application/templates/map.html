@@ -174,23 +174,24 @@
 <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
 
-<!-- Leaflet Markercluster plugin -->
+<!-- Geojson data -->
+{% if maptype != 'heat' %}
+    <script>
+        var data = {{ mapdata['geojson'] | tojson }}
+    </script>
+{% endif %}
+
+<!-- Machinery for creating map -->
 {% if maptype == 'markers' %}
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
-{% endif %}
-
-<!-- Geojson data -->
-<script>
-var data = {{ mapdata['geojson'] | tojson }}
-</script>
-
-<!-- Machinery for creating map -->
-{% if maptype == 'markers' %}
     <script>{% include 'leaflet_markers.js' %}</script>
 {% elif maptype == 'choropleth' %}
     <script>{% include 'leaflet_choropleth.js' %}</script>
+{% elif maptype == 'heat' %}
+    <script src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
+    <script>{% include 'leaflet_heat.js' %}</script>
 {% endif %}
 
 <!-- Scripts for Bootstrap Datepicker -->

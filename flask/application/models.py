@@ -22,15 +22,74 @@ def datetime2string(df):
     df['time'] = df['time'].apply(lambda x: x.strftime("%H:%M"))
     pass
 
+def get_defaultfilters():
+    return {
+        'startDate' : '01/01/2003',
+        'endDate' : '03/01/2016',
+        'startTime' : '00:00',
+        'endTime' : '24:00',
+        'weekdays': [u'Monday', u'Tuesday', u'Wednesday', u'Thursday', u'Friday', u'Saturday', u'Sunday'],
+        'minHiTemp' : '40',
+        'maxHiTemp' : '100',
+        'minLoTemp' : '35',
+        'maxLoTemp' : '70',
+        'norain' : True,
+        'rained' : True
+    }
+
+def get_userfilters(form):
+    userfilters = {}
+    userfilters['startDate'], userfilters['endDate'] = map(lambda x: x.strip(),form['daterange'].split('-'))
+    userfilters['startTime'] = form['startTime']
+    userfilters['endTime'] = form['endTime']
+    userfilters['minHiTemp'], userfilters['maxHiTemp'] = map(lambda x: x.strip(),form['hiTemp'].split(','))
+    userfilters['minLoTemp'], userfilters['maxLoTemp'] = map(lambda x: x.strip(),form['loTemp'].split(','))
+    userfilters['weekdays'] = form.getlist('weekdayfilter')
+    if form.get("norain"):
+        userfilters['norain'] = True
+    else:
+        userfilters['norain'] = False
+    if form.get("rained"):
+        userfilters['rained'] = True
+    else:
+        userfilters['rained'] = False
+    return userfilters
+
+def build_filtersdisplay(filters):
+    filtersdisplay = {}
+    filtersdisplay['startDate'] = filters['startDate']
+    filtersdisplay['endDate'] = filters['endDate']
+    filtersdisplay['startTime'] = filters['startTime']
+    filtersdisplay['startTime'] = filters['startTime']
+    filtersdisplay['endTime'] = filters['endTime']
+    filtersdisplay['minHiTemp'] = filters['minHiTemp']
+    filtersdisplay['maxHiTemp'] = filters['maxHiTemp']
+    filtersdisplay['minLoTemp'] = filters['minLoTemp']
+    filtersdisplay['maxLoTemp'] = filters['maxLoTemp']
+    for weekday in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']:
+        if weekday in filters['weekdays']:
+            filtersdisplay[weekday] = 'checked'
+        else:
+            filtersdisplay[weekday] = ''
+    if filters['norain']:
+        filtersdisplay['norain'] = 'checked'
+    else:
+        filtersdisplay['norain'] = ''
+    if filters['rained']:
+        filtersdisplay['rained'] = 'checked'
+    else:
+        filtersdisplay['rained'] = ''
+    return filtersdisplay
+
 def applyfilters(df,filters):
 
     # Date (both inclusive)
     startDate = datetime.strptime(filters['startDate'],"%m/%d/%Y").date()
     endDate = datetime.strptime(filters['endDate'],"%m/%d/%Y").date()
-    df = df[(df.date >= startDate) & (df.date <= endDate)]
+    df = df[(df.date >= startDate) & (df.date <= endDate)].copy()
 
     # Weekdays
-    df = df[df['dayofweek'].apply(lambda x: x in filters['weekdays'])]
+    df = df[df['dayofweek'].apply(lambda x: x in filters['weekdays'])].copy()
 
     # Time (left inclusive)
     startTime = datetime.strptime(filters['startTime'],"%H:%M").time()
@@ -38,14 +97,14 @@ def applyfilters(df,filters):
         endTime = time.max
     else:
         endTime = datetime.strptime(filters['endTime'],"%H:%M").time()
-    df = df[(df.time >= startTime) & (df.time < endTime)]
+    df = df[(df.time >= startTime) & (df.time < endTime)].copy()
 
     # Weather
-    df = df[(df.TMAX >= float(filters['minHiTemp'])) & (df.TMAX < float(filters['maxHiTemp']))]
-    df = df[(df.TMIN >= float(filters['minLoTemp'])) & (df.TMIN < float(filters['maxLoTemp']))]
+    df = df[(df.TMAX >= float(filters['minHiTemp'])) & (df.TMAX < float(filters['maxHiTemp']))].copy()
+    df = df[(df.TMIN >= float(filters['minLoTemp'])) & (df.TMIN < float(filters['maxLoTemp']))].copy()
 
     # Rain
-    df = df[((df.PRCP == 0) & filters['norain']) | ((df.PRCP > 0) & filters['rained'])]
+    df = df[((df.PRCP == 0) & filters['norain']) | ((df.PRCP > 0) & filters['rained'])].copy()
 
     return df
 
@@ -69,23 +128,52 @@ def df_to_geojson(df, properties, lat='latitude', lon='longitude'):
     return geojson
 
 
-# Output geojson for markers map
-def markers_geojson(df,filters):
 
-    df = df.copy()
+def get_region_radio_check(region_type):
+    D = {}
+    for item in ['nhood', 'tractce10', 'police_district', 'hist_police_district']:
+        if item == region_type:
+            D[item] = 'checked'
+        else:
+            D[item] = ''
+    return D
 
-    # Convert date and time to strings
-    datetime2string(df)
 
-    # Apply filters
-    pass
+def get_regionopts():
+    return {
+        'nhood' : {
+            'key' : 'nhood',
+            'radio_check' : get_region_radio_check('nhood'),
+            'title' : 'Neighborhoods',
+            'uppercase' : 'Neighborhood',
+            'lowercase' : 'neighborhood'
+        },
+        'tractce10' : {
+            'key' : 'tractce10',
+            'radio_check' : get_region_radio_check('tractce10'),
+            'title' : 'Census Tract - 2010 Census',
+            'uppercase' : 'Census Tract (2010 Census)',
+            'lowercase' : 'census tract'
+            },
+        'police_district' : {
+            'key' : 'district',
+            'radio_check' : get_region_radio_check('police_district'),
+            'title' : 'Police Districts',
+            'uppercase' : 'Police District',
+            'lowercase' : 'police distrct'
+        },
+        'hist_police_district' : {
+            'key' : 'district',
+            'radio_check' : get_region_radio_check('hist_police_district'),
+            'title' : 'Historical Police Districts - before July 2015',
+            'uppercase' : 'Historical Police Distrct (before July 2015)',
+            'lowercase' : 'police district'
+        }
+    }
 
-    # Columns to pass
-    cols = ['address', 'date', 'dayofweek', 'descript', 'time',
-            'nhood', 'tractce10', 'police_district', 'hist_police_district']
 
-    # Convert dataframe to geojson js variable
-    return { 'geojson' : df_to_geojson(df, cols, lat='y', lon='x') }
+
+
 
 # Output geojson for choropleth map
 def choropleth_geojson(df,region_type,filters):
@@ -130,71 +218,61 @@ def choropleth_geojson(df,region_type,filters):
 
 
 
+# Output geojson for markers map
+def markers_geojson(df,filters):
+
+    df = df.copy()
+
+    # Convert date and time to strings
+    datetime2string(df)
+
+    # Apply filters
+    pass
+
+    # Columns to pass
+    cols = ['address', 'date', 'dayofweek', 'descript', 'time',
+            'nhood', 'tractce10', 'police_district', 'hist_police_district']
+
+    # Convert dataframe to geojson js variable
+    return { 'geojson' : df_to_geojson(df, cols, lat='y', lon='x') }
+
+
+
 ########################################################
-######################### PLOTS ########################
+########################## KDE #########################
 ########################################################
-def time2num(t):
-    ts = t.hour * 60 + t.minute
-    return ts
 
-def scott_bw(S):
-    iqr = np.subtract(*np.percentile(S, [75, 25]))
-    sigma = min(S.std(),iqr)
-    return 1.06*sigma*S.count()**(-0.2)
+def silverman_bwxy(df):
+    count = df['x'].count()
+    stdx = df['x'].std()
+    stdy = df['y'].std()
+    iqrx = np.subtract(*np.percentile(df['x'], [75, 25]))
+    iqry = np.subtract(*np.percentile(df['y'], [75, 25]))
+    sigma = min(stdx,stdy,iqrx,iqry)
+    return 0.9*sigma*count**(-0.2)
 
-def silverman_bw(S):
-    iqr = np.subtract(*np.percentile(S, [75, 25]))
-    sigma = min(S.std(),iqr)
-    return 0.9*sigma*S.count()**(-0.2)
+def build_spatial_kde(df):
+    spacekde = KernelDensity(bandwidth = silverman_bwxy(df[['x','y']]),metric='haversine')
+    spacekde.fit(df[['x','y']])
 
-class WrappedKDE:
+    xmin = -122.5237517
+    xmax = -122.3602017
+    ymin = 37.7040012
+    ymax = 37.8341382
 
-    def __init__(self,S):
-        # S is a pandas series
-        self.bandwidth = silverman_bw(S)
-        self.model = KernelDensity(bandwidth=self.bandwidth)
-        return None
+    xv, yv = np.meshgrid(np.linspace(xmin,xmax,num=100),np.linspace(ymin,ymax,num=100))
 
-    def fit(self,data):
-        self.model.fit(data.reshape(-1,1))
-        return self
+    X_grid = np.vstack([xv.ravel(), yv.ravel()]).transpose()
 
-    def pdf(self,grid):
-        grid = grid.reshape(-1,1)
-        griddelta = grid[1]-grid[0]
-        gridmax = grid[-1]+griddelta
-        out = np.exp(self.model.score_samples(grid))
-        out += np.exp(self.model.score_samples(grid-gridmax))
-        out += np.exp(self.model.score_samples(grid+gridmax))
-        return out
+    Z = np.exp(spacekde.score_samples(X_grid))
 
-def time_of_day_plot(df,uppercase):
+    Z = Z/Z.max()
 
-    df = df[df.year < 2016]
+    tol = 1e-1
+    Z[abs(Z) < tol] = 0.0
 
-    # Grid by minute
-    timegrid = np.arange(1,1440,1)
+    return [[point[1], point[0], point[2]] for point in zip(X_grid[:,0],X_grid[:,1],Z)]
 
-    # Initialize and fit KDE
-    timekde = WrappedKDE(df.time.apply(time2num))
-    timekde.fit(df.time.apply(time2num))
-
-    # Plot histogram and KDE
-    sns.distplot(df.time.apply(time2num),kde = False,norm_hist=True,bins=24)
-    plt.plot(timegrid,timekde.pdf(timegrid),'-',color='#4C72B0')
-    plt.axis([0,1440,0,0.0015])
-
-    # Fix xtick labels
-    hours = ['0:00','3:00','6:00','9:00','12:00','15:00','18:00','21:00','24:00']
-    plt.xticks(range(0,1440,180), hours)
-
-    # Plot labels
-    plt.xlabel('Time of Day')
-    plt.ylabel('Probability Density')
-    plt.title('Distribution of '+uppercase+' by Time of Day (2003-2015)')
-    plt.legend(['Kernel Density Estimate','Histogram'])
-
-    script = 0
-    div = 0
-
-    return {'script' : script, 'div' : div}
+def drop_zeroes(nparray):
+    df = pd.DataFrame(nparray)
+    return df[df[2]!=0.0].values.tolist()
