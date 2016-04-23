@@ -22,6 +22,8 @@ while current < len(data_roads):
     rd1 = data_roads['PRIMARY_RD'].iloc[current]
     rd2 = data_roads['SECONDARY_RD'].iloc[current]
 
+    s  = rd1 + ' at ' + rd2 + ', San Francisco, CA'
+
     g = geocoder.google(s)
     latlng = g.latlng
 
