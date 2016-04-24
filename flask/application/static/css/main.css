@@ -55,8 +55,8 @@ Author's custom styles
 
 
 .jumbotron-narrow:after {
-    -webkit-filter: brightness(33%) contrast(100%);
-    filter: brightness(33%) contrast(100%);
+    -webkit-filter: brightness(33%) contrast(90%);
+    filter: brightness(33%) contrast(90%);
 }
 
 
