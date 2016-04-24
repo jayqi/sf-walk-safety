@@ -5,6 +5,7 @@ Author's custom styles
 ========================================================================== */
 
 
+
 .jumbotron {
     background-color: transparent;
     color: #FEFDF5;
@@ -19,14 +20,48 @@ Author's custom styles
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    background-image: url("../img/bg.jpg");
+    z-index: -2;
+    background-image: url("../img/bg_main.jpg");
     background-position: center center;
     background-size:cover;
     background-repeat: no-repeat;
-    -webkit-filter: brightness(33%) contrast(75%);
-    filter: brightness(33%) contrast(75%);
 }
+
+
+
+
+.jumbotron-full {
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.container-splash-title {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.66);
+}
+.splash-title {
+    font-size: 1.33em;
+}
+
+
+.container-splash-button {
+    position: absolute;
+    bottom: 20vh;
+}
+.splash-button {
+    font-size: 2em;
+}
+
+
+
+.jumbotron-narrow:after {
+    -webkit-filter: brightness(33%) contrast(100%);
+    filter: brightness(33%) contrast(100%);
+}
+
+
+
+
 .img-filler {
     max-height: 240px;
 }

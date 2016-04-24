@@ -4,22 +4,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.12.0/bootstrap-social.min.css">
 {% endblock %}
 {% block content %}
+<section id="intro">
 <div class="row">
     <div class="col-md-8">
         <h2 class="text-center">Walking in San Francisco</h2>
         <p>Walking is a common part of living in San Francisco. <a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">According to the SFMTA</a>, over one million walking trips happen in the city each day&mdash;over a quarter of all trips. Walking is an important component to a healthy lifestyle, and it is a great way to get to know the city intimately.</p>
-        <p>
-        </p>
         <p>This project takes a look at open government crime and traffic collision data relevant to pedestrian safety in the city. Three classes of incidents are examined: thefts, robberies, and traffic collisions. We present interactive maps and visualizations to inform residents about these incidents in their city. We also use statistical analysis and machine learning to gain deeper insights and model the patterns underlying these incidents.</p>
     </div>
     <div class="col-md-4">
         <img src="{{ url_for('static', filename='img/circle.jpg') }}" class="img-responsive img-circle img-filler center-block"  />
     </div>
 </div>
+</section>
 
 
 
 <hr>
+
+<h2 class="text-center">Analysis Highlights</h2>
+<div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="well">
+
+            <p>The thefts, robberies, and traffic collision datasets are rich and have many interesting ways to both visualize and model. To see the highlights of the project, follow the link below:</p>
+            <p><a class="btn btn-default" href="/highlights/" role="button">See highlights &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+
 
 
 <h2 class="text-center">In-Depth Looks</h2>
@@ -51,17 +65,7 @@
 </div>
 
 
-<h2 class="text-center">Analysis Highlights</h2>
-<div class="row">
 
-    <div class="col-md-8 col-md-offset-2">
-        <div class="well">
-
-            <p>The thefts, robberies, and traffic collision datasets are rich and have many interesting ways to both visualize and model. To see the highlights of the project, follow the link below:</p>
-            <p><a class="btn btn-default" href="/highlights/" role="button">See highlights &raquo;</a></p>
-        </div>
-    </div>
-</div>
 
 
 
