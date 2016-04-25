@@ -25,7 +25,7 @@ def datetime2string(df):
 def get_defaultfilters():
     return {
         'startDate' : '01/01/2003',
-        'endDate' : '03/01/2016',
+        'endDate' : '03/21/2016',
         'startTime' : '00:00',
         'endTime' : '24:00',
         'weekdays': [u'Monday', u'Tuesday', u'Wednesday', u'Thursday', u'Friday', u'Saturday', u'Sunday'],
@@ -223,11 +223,11 @@ def markers_geojson(df,filters):
 
     df = df.copy()
 
+    # Apply filters
+    df = applyfilters(df,filters)
+
     # Convert date and time to strings
     datetime2string(df)
-
-    # Apply filters
-    pass
 
     # Columns to pass
     cols = ['address', 'date', 'dayofweek', 'descript', 'time',
@@ -237,6 +237,19 @@ def markers_geojson(df,filters):
     return { 'geojson' : df_to_geojson(df, cols, lat='y', lon='x') }
 
 
+
+# Output geojson for markers map
+def heat_listcoords(df,filters):
+
+    df = df.copy()
+
+    # Apply filters
+    df = applyfilters(df,filters)
+
+    # Dummy intensity
+    df['intensity'] = 0.1
+
+    return df[['y','x','intensity']].values.tolist()
 
 ########################################################
 ########################## KDE #########################

@@ -20,7 +20,7 @@ $('#daterange').daterangepicker({
     "startDate": "{{ filtersdisplay['startDate'] }}",
     "endDate": "{{ filtersdisplay['endDate'] }}",
     "minDate": "01/01/2003",
-    "maxDate": "03/01/2016"
+    "maxDate": "03/21/2016"
 }, function(start, end, label) {
   console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 });

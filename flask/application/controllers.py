@@ -17,28 +17,6 @@ def index():
 def theft_main():
     return render_template('thefts.html')
 
-@app.route("/thefts/mapmarkers/",methods=['GET','POST'])
-def theft_markers_map():
-
-    if request.method == 'POST':
-        userfilters = models.get_userfilters(request.form)
-        filters = userfilters
-    else:
-        filters = models.get_defaultfilters()
-
-    pageopts = {
-        'uppercase' : 'Thefts',
-        'lowercase' : 'thefts',
-        'maptype' : 'Individual Incidents Map',
-    }
-
-    return render_template('map.html',
-        pageopts=pageopts,
-        maptype='markers',
-        mapdata=models.markers_geojson(app.df_thefts,filters),
-        filtersdisplay=models.build_filtersdisplay(filters)
-        )
-
 @app.route("/thefts/mapchoropleth/",methods=['GET','POST'])
 def theft_choropleth_map():
 
@@ -61,6 +39,50 @@ def theft_choropleth_map():
         maptype='choropleth',
         regionopts=models.get_regionopts()[region_type],
         mapdata=models.choropleth_geojson(app.df_thefts,region_type,filters),
+        filtersdisplay=models.build_filtersdisplay(filters)
+        )
+
+@app.route("/thefts/mapmarkers/",methods=['GET','POST'])
+def theft_markers_map():
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+    else:
+        filters = models.get_defaultfilters()
+
+    pageopts = {
+        'uppercase' : 'Thefts',
+        'lowercase' : 'thefts',
+        'maptype' : 'Individual Incidents Map',
+    }
+
+    return render_template('map.html',
+        pageopts=pageopts,
+        maptype='markers',
+        mapdata=models.markers_geojson(app.df_thefts,filters),
+        filtersdisplay=models.build_filtersdisplay(filters)
+        )
+
+@app.route("/thefts/mapheat/",methods=['GET','POST'])
+def theft_heat_map():
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+    else:
+        filters = models.get_defaultfilters()
+
+    pageopts = {
+        'uppercase' : 'Thefts',
+        'lowercase' : 'thefts',
+        'maptype' : 'Heat Map',
+    }
+
+    return render_template('map.html',
+        pageopts=pageopts,
+        maptype='heat',
+        mapdata=models.heat_listcoords(app.df_thefts,filters),
         filtersdisplay=models.build_filtersdisplay(filters)
         )
 
