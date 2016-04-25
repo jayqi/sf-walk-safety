@@ -19,6 +19,7 @@
 <br />
 
 
+{% if maptype in ['choropleth','markers','heat']%}
 <!-- Filtering -->
 <div class="row">
 <div class="well">
@@ -167,6 +168,8 @@
 </form>
 </div>
 </div>
+{% endif %}
+
 {% endblock %}
 
 {% block scripts %}
@@ -175,7 +178,7 @@
 <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
 
 <!-- Geojson data -->
-{% if maptype != 'heat' %}
+{% if maptype in ['choropleth','markers']%}
     <script>
         var data = {{ mapdata['geojson'] | tojson }}
     </script>
@@ -192,6 +195,8 @@
 {% elif maptype == 'heat' %}
     <script src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
     <script>{% include 'leaflet_heat.js' %}</script>
+{% elif maptype == 'kde' %}
+    <script>{% include 'leaflet_kde.js' %}</script>
 {% endif %}
 
 <!-- Scripts for Bootstrap Datepicker -->

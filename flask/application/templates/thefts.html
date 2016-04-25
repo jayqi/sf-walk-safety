@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-8">
-        <h2>Street Thefts</h2>
+        <h2 class="text-center">Thefts</h2>
         <p>
             Thefts are the crime of stealing possessions, including pickpocketing and pursesnatching. Using open data from the San Francisco Police department, we visualize street theft incidents since 2003 and examine their prevalence.
         </p>
@@ -13,33 +13,48 @@
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/theft-yearlycounts.png') }}" class="img-responsive center-block"/>
+        <img src="{{ url_for('static', filename='img/plots/thefts-yearlycounts.png') }}" class="img-responsive center-block"/>
     </div>
 </div>
 
 <hr>
 
-<div class="row">
-    <div class="col-md-12">
-        <h2>Visualizations and Analyses</h2>
-    <div>
+
+<h2 class="text-center">Maps</h2>
+<div class="row row-flex row-flex-wrap">
     <div class="col-md-4">
-        <h3>Choropleth Map</h3>
-        <p><a href="/thefts/mapchoropleth/"><img src="{{ url_for('static', filename='img/theft-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>A map showing aggregated counts of thefts by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
+        <div class = "well">
+        <h3 class="text-center">Choropleth Maps</h3>
+        <p><a href="/thefts/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/thefts-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>Maps showing aggregated counts of thefts by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
         <p><a class="btn btn-default" href="/thefts/mapchoropleth/" role="button">See map &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h3>Incidents Map</h3>
-        <p><a href="/thefts/mapmarkers/"><img src="{{ url_for('static', filename='img/theft-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>A map showing markers of individual theft incidents. </p>
-        <p><a class="btn btn-default" href="/thefts/mapmarkers/" role="button">See map &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h3>Histograms</h3>
-        <p><a href="/thefts/histograms/">[[Image]]</a><p>
+        <div class = "well">
+        <h3 class="text-center">Incidents Map</h3>
+        <p><a href="/thefts/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/thefts-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>A map showing markers of individual theft incidents with detailed information.</p>
+        <p><a class="btn btn-default" href="/thefts/mapmarkers/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class = "well">
+        <h3 class="text-center">Kernal Density Estimate</h3>
+        <p><a href="/thefts/mapkde/"><img src="{{ url_for('static', filename='img/thumbs/thefts-kde-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
         <p>See histograms of theft incidents against different variables, including by time of day, day of week, month, or weather. </p>
-        <p><a class="btn btn-default" href="/thefts/histograms/" role="button">See plots &raquo;</a></p>
+        <p><a class="btn btn-default" href="/thefts/mapkde/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+</div>
+
+<hr>
+
+
+<h2 class="text-center">Analysis</h2>
+<div class="row">
+    <div class="col-md-12">
+        Foo
     </div>
 </div>
 

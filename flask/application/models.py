@@ -109,8 +109,15 @@ def applyfilters(df,filters):
     return df
 
 def build_colorbar(maxcount):
-    delta = int(math.ceil(maxcount / 8.))
-    colorbar = range(0,delta*8+1,delta)
+    colorbar = {}
+
+    # Linear
+    delta = int(math.ceil(maxcount / 9.))
+    colorbar['lin'] = range(0,delta*8+1,delta)
+
+    # Log
+    colorbar['log'] = [int(x) for x in ([0]+(np.logspace(-3,0,8)*maxcount).tolist())]
+
     return colorbar
 
 # http://geoffboeing.com/2015/10/exporting-python-data-geojson/

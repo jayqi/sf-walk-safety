@@ -2,22 +2,25 @@
 
 L.mapbox.accessToken = 'pk.eyJ1IjoianlxaSIsImEiOiJjaW01ZG11MjcwMWl0dGttM2R2c2JvbThiIn0.eE6Xt0dMIl7Y2tOT8e6dyQ';
 var map = L.mapbox.map('map', 'mapbox.light',{
-    minZoom:12
+    minZoom:12,
+    maxZoom:18
 })
     .setView([37.7680, -122.4367], 12);
 
 map.scrollWheelZoom.disable();
 
 function getColor(d) {
-    return d > {{mapdata['colorbar'][7] | safe}} ? '#b10026' :
-    d > {{mapdata['colorbar'][6] | safe}}  ? '#e31a1c' :
-    d > {{mapdata['colorbar'][5] | safe}}  ? '#fc4e2a' :
-    d > {{mapdata['colorbar'][4] | safe}}  ? '#fd8d3c' :
-    d > {{mapdata['colorbar'][3] | safe}}   ? '#feb24c' :
-    d > {{mapdata['colorbar'][2] | safe}}   ? '#fed976' :
-    d > {{mapdata['colorbar'][1] | safe}}   ? '#ffeda0' :
+    return d >= {{mapdata['colorbar']['log'][8] | safe}} ? '#800026' :
+    d >= {{mapdata['colorbar']['log'][7] | safe}} ? '#b10026' :
+    d >= {{mapdata['colorbar']['log'][6] | safe}}  ? '#e31a1c' :
+    d >= {{mapdata['colorbar']['log'][5] | safe}}  ? '#fc4e2a' :
+    d >= {{mapdata['colorbar']['log'][4] | safe}}  ? '#fd8d3c' :
+    d >= {{mapdata['colorbar']['log'][3] | safe}}   ? '#feb24c' :
+    d >= {{mapdata['colorbar']['log'][2] | safe}}   ? '#fed976' :
+    d >= {{mapdata['colorbar']['log'][1] | safe}}   ? '#ffeda0' :
                 '#ffffcc';
 }
+
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.count),
@@ -102,14 +105,46 @@ info.addTo(map);
 
 var legend = L.control({position: 'bottomright'});
 
+
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'mapinfo maplegend'),
-        grades = {{ mapdata['colorbar'] | safe }},
+        grades = {{ mapdata['colorbar']['log'] | safe }},
         labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
+    // lin
+    //for (var i = 0; i < grades.length; i++) {
+    //    div.innerHTML +=
+    //        '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+    //        grades[i] + '&ndash;' + grades[i + 1] + '<br>';
+    //        //grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    //}
+    div.innerHTML = 'Log color scale: <br>'
     for (var i = 0; i < grades.length-1; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            '['+grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + ')' + '<br>' : '');
+    }
+    div.innerHTML += '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' + grades[i]
+
+
+    return div;
+};
+
+
+var legend_lin = L.control({position: 'bottomright'});
+
+legend_lin.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'mapinfo maplegend'),
+        grades = {{ mapdata['colorbar']['log'] | safe }},
+        labels = [];
+
+    div.innerHTML = 'Log color scale: <br>'
+    // loop through our density intervals and generate a label with a colored square for each interval
+
+    for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
             grades[i] + '&ndash;' + grades[i + 1] + '<br>';
@@ -118,5 +153,8 @@ legend.onAdd = function (map) {
 
     return div;
 };
+
+
+
 
 legend.addTo(map);

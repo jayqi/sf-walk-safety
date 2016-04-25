@@ -6,9 +6,9 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2>Project Highlights</h2>
+        <h2 class="text-center">Project Highlights</h2>
         <p>
-            The project is still a work in progress! Here we share some highlights of our visualizations and analyses so far.
+            Here you can see some of the interesting highlights from our analysis and modeling. To see more exhaustive results, visit the main pages for <a href="/thefts/">thefts</a>, <a href="/robberies/">robberies</a>, and <a href="/trafficcollisions/">traffic collisions</a>.
         </p>
     </div>
 </div>
@@ -29,15 +29,15 @@
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/theft-monthlyaverage.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/thefts-monthlyaverage.png') }}" class="img-responsive center-block"  />
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/robbery-monthlyaverage.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/robberies-monthlyaverage.png') }}" class="img-responsive center-block"  />
     </div>
+</div>
 
-    <div class="col-md-12">
-        <h2>Time of Day Distribution</h2>
-    </div>
+<h2 class="text-left">Time of Day Distribution</h2>
+<div class="row">
     <div class="col-md-4">
         <p>
             Histograms showing respectively theft incidents and robbery incidents binned by hour of the day. Also plotted are probability density functions estimated using gaussian kernel density estimation. The so-called Silverman's rule for optimal bandwidth choice is used.
@@ -50,10 +50,10 @@
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/theft-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/thefts-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/robbery-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/robberies-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
     </div>
 
 
@@ -66,10 +66,10 @@
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/theft-tmaxaverage.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/thefts-tminaverage.png') }}" class="img-responsive center-block"  />
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/robbery-tmaxaverage.png') }}" class="img-responsive center-block"  />
+        <img src="{{ url_for('static', filename='img/plots/robberies-tminaverage.png') }}" class="img-responsive center-block"  />
     </div>
 
 
@@ -96,6 +96,32 @@
 
 
 
+<h2 class="text-center">Spatial Kernel Density Estimates</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h3 class="text-center">Thefts</h3>
+    <div class="container mapbound">
+            <div id='splitmap1'></div>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <h3 class="text-center">Robberies</h3>
+    <div class="container mapbound">
+            <div id='splitmap2'></div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
 
 
+
+
+
+{% block scripts %}
+<!-- Mapbox.js and its stylesheet -->
+<script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+
+<script>{% include 'leaflet_kde_split.js' %}</script>
 {% endblock %}

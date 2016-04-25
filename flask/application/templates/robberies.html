@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-8">
-        <h2>Street Robberies</h2>
+        <h2>Robberies</h2>
         <p>
             Robberies are crimes of taking possessions by force or threat of force. Using open data from the San Francisco Police department, we visualize street robbery incidents since 2003 and examine their prevalence.
         </p>
@@ -13,7 +13,7 @@
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/robbery-yearlycounts.png') }}" class="img-responsive center-block"/>
+        <img src="{{ url_for('static', filename='img/temp/robberies-yearlycounts.png') }}" class="img-responsive center-block"/>
     </div>
 </div>
 
@@ -25,13 +25,13 @@
     <div>
     <div class="col-md-4">
         <h3>Choropleth Map</h3>
-        <p><a href="/robberies/mapchoropleth/"><img src="{{ url_for('static', filename='img/robbery-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p><a href="/robberies/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/robberies-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
         <p>A map showing aggregated counts of robberies by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
         <p><a class="btn btn-default" href="/robberies/mapchoropleth/" role="button">See map &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h3>Incidents Map</h3>
-        <p><a href="/robberies/mapmarkers/"><img src="{{ url_for('static', filename='img/robbery-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p><a href="/robberies/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/robberies-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
         <p>A map showing markers of individual robbery incidents. </p>
         <p><a class="btn btn-default" href="/robberies/mapmarkers/" role="button">See map &raquo;</a></p>
     </div>

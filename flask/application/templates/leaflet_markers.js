@@ -20,6 +20,8 @@ var geoJsonLayer = L.geoJson(data, {
 });
 
 var markers_cluster = new L.MarkerClusterGroup({
+    spiderfyOnMaxZoom: true,
+    spiderLegPolylineOptions: { weight: 3.0, color: '#000', opacity: 0.66 },
     iconCreateFunction: function(cluster){
         var childCount = cluster.getChildCount();
         var c = ' marker-cluster-';
