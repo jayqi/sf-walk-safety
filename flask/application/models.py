@@ -218,10 +218,7 @@ def choropleth_geojson(df,region_type,filters):
     # Create colorbar levels
     colorbar = build_colorbar(maxcount)
 
-    return {
-        'geojson' : geodata,
-        'colorbar' : colorbar
-        }
+    return (geodata,colorbar)
 
 
 
@@ -241,7 +238,7 @@ def markers_geojson(df,filters):
             'nhood', 'tractce10', 'police_district', 'hist_police_district']
 
     # Convert dataframe to geojson js variable
-    return { 'geojson' : df_to_geojson(df, cols, lat='y', lon='x') }
+    return df_to_geojson(df, cols, lat='y', lon='x')
 
 
 

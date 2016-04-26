@@ -180,7 +180,11 @@
 <!-- Geojson data -->
 {% if maptype in ['choropleth','markers']%}
     <script>
+{% if request.method == 'POST'%}
         var data = {{ mapdata['geojson'] | tojson }}
+{% elif request.method == 'GET' %}
+        var data = {% include mapdata['filename'] %}
+{% endif %}
     </script>
 {% endif %}
 

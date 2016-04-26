@@ -8,3 +8,4 @@ data
 *.csv
 ipynbs/plots/*
 scripts/data_geocoded.txt
+*.json

@@ -20,36 +20,38 @@ def theft_main():
 @app.route("/thefts/mapchoropleth/",methods=['GET','POST'])
 def theft_choropleth_map():
 
-    if request.method == 'POST':
-        userfilters = models.get_userfilters(request.form)
-        filters = userfilters
-        region_type = request.form['region_type']
-    else:
-        filters = models.get_defaultfilters()
-        region_type = 'nhood'
-
     pageopts = {
         'uppercase' : 'Thefts',
         'lowercase' : 'thefts',
         'maptype' : 'Choropleth Map',
     }
 
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        region_type = request.form['region_type']
+        mapdata['geojson'], mapdata['colorbar'] = models.choropleth_geojson(app.df_thefts,region_type,filters)
+    else:
+        filters = models.get_defaultfilters()
+        region_type = 'nhood'
+        mapdata['filename'] = 'thefts-choropleth-default.json'
+        mapdata['colorbar'] = {
+            "lin": [0, 1266, 2532, 3798, 5064, 6330, 7596, 8862, 10128],
+            "log": [0, 10, 27, 72, 195, 524, 1407, 3774, 10126]
+            }
+
     return render_template('map.html',
         pageopts=pageopts,
         maptype='choropleth',
         regionopts=models.get_regionopts()[region_type],
-        mapdata=models.choropleth_geojson(app.df_thefts,region_type,filters),
+        mapdata=mapdata,
         filtersdisplay=models.build_filtersdisplay(filters)
         )
 
 @app.route("/thefts/mapmarkers/",methods=['GET','POST'])
 def theft_markers_map():
-
-    if request.method == 'POST':
-        userfilters = models.get_userfilters(request.form)
-        filters = userfilters
-    else:
-        filters = models.get_defaultfilters()
 
     pageopts = {
         'uppercase' : 'Thefts',
@@ -57,10 +59,20 @@ def theft_markers_map():
         'maptype' : 'Individual Incidents Map',
     }
 
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        mapdata['geojson'] = models.markers_geojson(app.df_thefts,filters)
+    else:
+        filters = models.get_defaultfilters()
+        mapdata['filename'] = 'thefts-markers-default.json'
+
     return render_template('map.html',
         pageopts=pageopts,
         maptype='markers',
-        mapdata=models.markers_geojson(app.df_thefts,filters),
+        mapdata=mapdata,
         filtersdisplay=models.build_filtersdisplay(filters)
         )
 
@@ -111,38 +123,8 @@ def thefts_kde_map():
 def robbery_main():
     return render_template('robberies.html')
 
-@app.route("/robberies/mapmarkers/",methods=['GET','POST'])
-def robbery_markers_map():
-
-    if request.method == 'POST':
-        userfilters = models.get_userfilters(request.form)
-        filters = userfilters
-    else:
-        filters = models.get_defaultfilters()
-
-    pageopts = {
-        'uppercase' : 'Robberies',
-        'lowercase' : 'robberies',
-        'maptype' : 'Individual Incidents Map',
-    }
-
-    return render_template('map.html',
-        pageopts=pageopts,
-        maptype='markers',
-        mapdata=models.markers_geojson(app.df_robberies,filters),
-        filtersdisplay=models.build_filtersdisplay(filters)
-        )
-
 @app.route("/robberies/mapchoropleth/",methods=['GET','POST'])
 def robbery_choropleth_map():
-
-    if request.method == 'POST':
-        userfilters = models.get_userfilters(request.form)
-        filters = userfilters
-        region_type = request.form['region_type']
-    else:
-        filters = models.get_defaultfilters()
-        region_type = 'nhood'
 
     pageopts = {
         'uppercase' : 'Robberies',
@@ -150,11 +132,53 @@ def robbery_choropleth_map():
         'maptype' : 'Choropleth Map',
     }
 
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        region_type = request.form['region_type']
+        mapdata['geojson'],mapdata['colorbar'] = models.choropleth_geojson(app.df_robberies,region_type,filters)
+    else:
+        filters = models.get_defaultfilters()
+        region_type = 'nhood'
+        mapdata['filename'] = 'robberies-choropleth-default.json'
+        mapdata['colorbar'] = {
+            "lin": [0, 466, 932, 1398, 1864, 2330, 2796, 3262, 3728],
+            "log": [0, 3, 9, 26, 71, 192, 517, 1388, 3726]
+            }
+
     return render_template('map.html',
         pageopts=pageopts,
         maptype='choropleth',
         regionopts=models.get_regionopts()[region_type],
-        mapdata=models.choropleth_geojson(app.df_robberies,region_type,filters),
+        mapdata=mapdata,
+        filtersdisplay=models.build_filtersdisplay(filters)
+        )
+
+@app.route("/robberies/mapmarkers/",methods=['GET','POST'])
+def robbery_markers_map():
+
+    pageopts = {
+        'uppercase' : 'Robberies',
+        'lowercase' : 'robberies',
+        'maptype' : 'Individual Incidents Map',
+    }
+
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        mapdata['geojson'] = models.markers_geojson(app.df_robberies,filters)
+    else:
+        filters = models.get_defaultfilters()
+        mapdata['filename'] = 'robberies-markers-default.json'
+
+    return render_template('map.html',
+        pageopts=pageopts,
+        maptype='markers',
+        mapdata=mapdata,
         filtersdisplay=models.build_filtersdisplay(filters)
         )
 
@@ -225,3 +249,14 @@ def aboutdata():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+###############################################
+################ MISC FUNCTIONS ###############
+###############################################
+
+def dump_to_jsonfile(data,filename):
+    #dump_to_jsonfile(mapdata,'robberies-choropleth-default.json')
+    import json
+    with open(filename, 'w') as outfile:
+        json.dump(data, outfile)
+    pass
