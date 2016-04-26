@@ -6,10 +6,10 @@
     <div class="col-md-8">
         <h2 class="text-center">Thefts</h2>
         <p>
-            Thefts are the crime of stealing possessions, including pickpocketing and pursesnatching. Using open data from the San Francisco Police department, we visualize street theft incidents since 2003 and examine their prevalence.
+            Thefts are the crime of stealing possessions. Here, we consider street-level cases of theft that involve pedestrians, including pickpocketing and pursesnatching. Using open data from the San Francisco Police department, we visualize street theft incidents since 2003 and examine their prevalence.
         </p>
         <p>
-            In the adjacent figure, we see the total number of reported street theft incidents from 2003 to 2015.
+            In the adjacent figure, we see the total number of reported street theft incidents each year from 2003 to 2015. The number of yearly reports from 2012 onwards are nearly double that of earlier years.
         </p>
     </div>
     <div class="col-md-4">
@@ -26,24 +26,24 @@
         <div class = "well">
         <h3 class="text-center">Choropleth Maps</h3>
         <p><a href="/thefts/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/thefts-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>Maps showing aggregated counts of thefts by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
-        <p><a class="btn btn-default" href="/thefts/mapchoropleth/" role="button">See map &raquo;</a></p>
+        <p>Maps showing aggregated counts of thefts by area in the city. Can view by neighborhood, census tract (2010), or police district. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/thefts/mapchoropleth/" role="button">See map &raquo;</a></p>
     </div>
     </div>
     <div class="col-md-4">
         <div class = "well">
         <h3 class="text-center">Incidents Map</h3>
         <p><a href="/thefts/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/thefts-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>A map showing markers of individual theft incidents with detailed information.</p>
-        <p><a class="btn btn-default" href="/thefts/mapmarkers/" role="button">See map &raquo;</a></p>
+        <p>A map showing markers of individual theft reports. Clicking on a marker shows detailed information about incident. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/thefts/mapmarkers/" role="button">See map &raquo;</a></p>
     </div>
     </div>
     <div class="col-md-4">
         <div class = "well">
         <h3 class="text-center">Kernel Density Estimate</h3>
         <p><a href="/thefts/mapkde/"><img src="{{ url_for('static', filename='img/thumbs/thefts-kde-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>See histograms of theft incidents against different variables, including by time of day, day of week, month, or weather. </p>
-        <p><a class="btn btn-default" href="/thefts/mapkde/" role="button">See map &raquo;</a></p>
+        <p>A spatial probability distribution model for thefts across the city, generated using kernel density estimation. This model predicts where in the city that thefts are likely to happen. </p>
+        <p class="text-center"><a class="btn btn-default" href="/thefts/mapkde/" role="button">See map &raquo;</a></p>
     </div>
     </div>
 </div>
@@ -54,21 +54,91 @@
 <h2 class="text-center">Analysis</h2>
 <div class="row">
     <div class="col-md-12">
-        Foo
+        Below are some detailed analysis of how thefts relate to other variables. Unless otherwise specified, the analysis in this section only considers theft reports from 2003 through 2015, where we have full years.
     </div>
 </div>
+<br />
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">Time of Day</h3>
+            <p>The adjacent histogram shows (normalized) frequency of thefts by hour of the day. We can see that there is quite a strong daily pattern, with the low point happening in the hours before dawn, the maximum happening in the afternoon, and a smaller second peak around midnight.</p>
+            <p>Plotted as a dark blue curve is a temporal probability distribution model for the thefts, generated using kernel density estimation. This distribution predicts the likelihood that, if we consider a theft, when during the day that it occurs.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/thefts-timeofdaydistribution-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='img/plots/thefts-dayofweekaverage.png') }}" class="img-responsive center-block"  />
+        </div>
+        <div class="col-md-7">
+            <h3 class="text-center">By Weekday</h3>
+                <p>In the preceding figure, the average thefts per day for each day of the week is shown. The blue lines show one standard deviation above and below, to give an idea of the amount of variation.</p>
+                <p>We can see that Mondays tend to have fewer thefts, and that thefts increase over the week. The most thefts happen on the weekend, especially Friday and Saturday.</p>
+        </div>
+
+</div>
+
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">By Month</h3>
+            <p>The next plot shows the number of thefts each month, averaged across the years from 2003 to 2015. The envelope is one standard deviation above and below.</p>
+            <p>It seems that there may be more thefts in the late summer, while fewer in the winter. However, the difference is fairly small, especially compared to the amount of variation across years.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/thefts-monthlyaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/plots/precip-hist.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-7">
+        <h3 class="text-center">Rain</h3>
+            <p>The preceding histogram shows frequency of days where it rained a certain amount. Most days in San Francisco are dry, and there are very few days at high amounts of rain over the last thirteen years.</p>
+            <p>The next plot shows the number of thefts per day averaged across days of similar amounts of rain. On the left side where we have bins with many observations, we can see that as it rains more, the number of thefts tends to be a little less. This is also reflected in the linear fit in the following figure. However, the rain only captures a very small amount of the variation, as the correlation coefficient is only 0.011.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5 col-md-offset-1">
+        <img src="{{ url_for('static', filename='img/plots/thefts-precipaverage.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/thefts-preciplinfit.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+<div class="row well">
+    <div class="col-md-10 col-md-offset-1">
+        <h3 class="text-center">Temperature</h3>
+            <p>The next two figures show the number of thefts each day, averaged across days of similar daily low temperature and daily high temperature, respectively. This shows that colder days have progressively fewer thefts than warmer days. Overall, however, this effect is small compared to variation across days. The days at the extremes on either side are not necessarily representative, because there are very few observed days at those temperatures.</p>
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+        <img src="{{ url_for('static', filename='img/plots/thefts-tminaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5 col-md">
+        <img src="{{ url_for('static', filename='img/plots/thefts-tmaxaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
 
 <hr>
 
 <div class="row">
-    <div class="col-md-8">
-        <h3>About the data</h3>
-        <p>Learn more about the data we use. Coming soon!</p>
+    <div class="col-md-7 col-md-offset-1">
+        <h3 class="text-center">About the data</h3>
+        <p>The theft reports come from the San Francisco Police Department Incident Reporting dataset on the SF Open Data portal. Learn more about this dataset as well as the others <a href="/#aboutdata">here</a>.</p>
     </div>
-    <div class="col-md-4">
-        <h3>See also</h3>
-        <p>Thefts</p>
-        <p>Traffic collisions</p>
+    <div class="col-md-3">
+        <h3 class="text-center">See also</h3>
+        <p class="text-center"><a href="/robberies/">Robberies</a></p>
+        <p class="text-center"><a href="/trafficcollisions/">Traffic collisions</a></p>
+        <p class="text-center"><a href="/highlights/">Highlights</a></p>
     </div>
 </div>
 {% endblock %}
