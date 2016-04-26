@@ -13,6 +13,9 @@ var splitmap2 = L.mapbox.map('splitmap2', 'mapbox.light',{
     .setView([37.7680, -122.4367], 12);
 
 
+splitmap1.scrollWheelZoom.disable();
+splitmap2.scrollWheelZoom.disable();
+
 var kde_thefts = L.mapbox.tileLayer('jyqi.3ghnstl4').addTo(splitmap1);
 kde_thefts.setOpacity(0.66)
 

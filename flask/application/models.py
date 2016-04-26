@@ -112,7 +112,7 @@ def build_colorbar(maxcount):
     colorbar = {}
 
     # Linear
-    delta = int(math.ceil(maxcount / 9.))
+    delta = int(math.ceil(maxcount / 8.))
     colorbar['lin'] = range(0,delta*8+1,delta)
 
     # Log

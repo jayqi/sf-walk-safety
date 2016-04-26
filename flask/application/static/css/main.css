@@ -4,6 +4,10 @@
 Author's custom styles
 ========================================================================== */
 
+.vcenter {
+    vertical-align: middle;
+    display: inline-block;
+}
 
 
 .jumbotron {
