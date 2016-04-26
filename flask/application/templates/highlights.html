@@ -14,48 +14,14 @@
 </div>
 
 
-<hr>
 
-<div class="row well">
-    <h2 class="text-center">Time of Day Distribution</h2>
-    <div class="col-md-5 col-md-offset-1">
-        <img src="{{ url_for('static', filename='img/plots/thefts-timeofdaydistribution-transp.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-5">
-        <img src="{{ url_for('static', filename='img/plots/robberies-timeofdaydistribution-transp.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-10 col-md-offset-1">
-        <p>
-            The preceding histograms show respectively theft incidents and robbery incidents binned by hour of the day, for all incidents repoted from 2003 through 2015. Both thefts and robberies show strong daily patterns.
-        </p>
-        <p>
-            Thefts occur the least frequently in the early hours of morning, before dawn. They are most frequent in the late afternoon, with a smaller second peak around midnight.
-        </p>
-        <p>
-            Robberies, in contrast, occur the least frequently during the mornign commute hours. They peak at night, in the hours before and after midnight.
-        </p>
-        <p>
-            The dark blue curves are probability density function models estimated using gaussian kernel density estimation. Silverman's rule for optimal bandwidth choice is used. These models give the probability that, for an incident, it occurs at a certain time of day.
-        </p>
-    </div>
-</div>
 
 
 <hr>
 
 
-
+<div class="well">
 <h2 class="text-center">Spatial Kernel Density Estimates</h2>
-<div class="row">
-    <div class="col-md-12">
-        <p>
-            Below are maps showing spatial probability distributions for thefts and robberies, respectively, computed using kernel density estimation. The way to interpret these distributions is as follows: if a theft or robbery incident occurs, what probability that it occurs in a certain area of the city. The intensity values are scaled to the maximum value of the respective distributions, and the colors have logarithmic scaling to enhance the lower value features. Larger versions with the option for linear color scaling can be found on their respective individual pages (<a href="">thefts</a>, <a href="">robberies</a>).
-        </p>
-        <p>
-            We can see that for both thefts and robberies, downtown along Market Street is where the incidents are most likely to occur. The peaks are not quite in the same place&mdash;the peak for robberies is in Tenderloin while the peak for thefts is shifted more into the Financial District. For both types of incidents, local pockets of higher probability are spread across the city.
-        </p>
-    </div>
-</div>
 <div class="row">
     <div class="col-md-6">
         <h3 class="text-center">Thefts</h3>
@@ -74,11 +40,47 @@
 <div class="row">
     <div class="col-md-12">
         <p>
+            Above are maps showing spatial probability distributions for thefts and robberies, respectively, computed using kernel density estimation. The way to interpret these distributions is as follows: if a theft or robbery incident occurs, what probability that it occurs in a certain area of the city. The intensity values are scaled to the maximum value of the respective distributions, and the colors have logarithmic scaling to enhance the lower value features. Larger versions with the option for linear color scaling can be found on their respective individual pages (<a href="">thefts</a>, <a href="">robberies</a>).
+        </p>
+        <p>
+            We can see that for both thefts and robberies, downtown along Market Street is where the incidents are most likely to occur. The peaks are not quite in the same place&mdash;the peak for robberies is in Tenderloin while the peak for thefts is shifted more into the Financial District. For both types of incidents, local pockets of higher probability are spread across the city.
+        </p>
+        <p>
             Larger versions of these maps with the option for linear color scaling can be found on their respective individual pages: <a href="/thefts/mapkde/">thefts</a>, <a href="/robberies/mapkde/">robberies</a>.
         </p>
     </div>
 </div>
+</div>
 
+
+
+
+
+<hr>
+
+<div class="row">
+    <h2 class="text-center">Time of Day Distribution</h2>
+    <div class="col-md-5 col-md-offset-1">
+        <img src="{{ url_for('static', filename='img/plots/thefts-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/robberies-timeofdaydistribution.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+        <p>
+            The preceding histograms show respectively theft incidents and robbery incidents binned by hour of the day, for all incidents repoted from 2003 through 2015. Both thefts and robberies show strong daily patterns.
+        </p>
+        <p>
+            Thefts occur the least frequently in the early hours of morning, before dawn. They are most frequent in the late afternoon, with a smaller second peak around midnight.
+        </p>
+        <p>
+            Robberies, in contrast, occur the least frequently during the mornign commute hours. They peak at night, in the hours before and after midnight.
+        </p>
+        <p>
+            The dark blue curves are probability density function models estimated using gaussian kernel density estimation. Silverman's rule for optimal bandwidth choice is used. These models give the probability that, for an incident, it occurs at a certain time of day.
+        </p>
+    </div>
+</div>
 
 
 
