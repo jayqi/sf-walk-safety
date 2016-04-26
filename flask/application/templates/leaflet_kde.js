@@ -73,6 +73,7 @@ legend_lin.onAdd = function (map) {
 // Add it to map because it's default
 legend_log.addTo(map);
 
+
 // Toggle legend when baselayer changes
 map.on('baselayerchange', function (eventLayer) {
     // Switch to log legend

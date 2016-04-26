@@ -9,15 +9,27 @@ Author's custom styles
     width: 100%;
 }
 
+.mapbound-split {
+    height: 480px;
+    width: 100%;
+}
+
 #map { position:relative; top:0; bottom:0; width:100%; height:100%}
+#splitmap1 { position:relative; top:0; bottom:0; width:100%; height:100%}
+#splitmap2 { position:relative; top:0; bottom:0; width:100%; height:100%}
 
-#splitmap1 { position:absolute; top:5em; bottom:0; width:95%; height:75%;
+/*
+#splitmap1 { position:absolute; top:0; bottom:0; width:95%; height:100%;
     border:1px solid #021a40;
+    margin-top: 0;
+    margin-bottom: 0;
     }
-#splitmap2 { position:absolute; top:5em; bottom:0; width:95%; height:75%;
+#splitmap2 { position:absolute; top:0; bottom:0; width:95%; height:100%;
     border:1px solid #021a40;
+    margin-top: 0;
+    margin-bottom: 0;
     }
-
+*/
 
 
 .mapinfo {

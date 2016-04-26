@@ -47,3 +47,41 @@ function sync(map, e) {
         reset: true
     });
 }
+
+
+
+
+
+// Define log legend
+var legend_log = L.control({position: 'bottomright'});
+
+
+
+legend_log.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'mapinfo maplegend');
+    div.innerHTML += 'Log color scale:' + '<br>' +
+            '<i style="background: #ffffcc"></i> 0.0' + '<br>' +
+            '<i style="background: #ffeda0"></i> 0.001' + '<br>' +
+            '<i style="background: #fed976"></i> 0.0027' + '<br>' +
+            '<i style="background: #feb24c"></i> 0.0072' + '<br>' +
+            '<i style="background: #fd8d3c"></i> 0.019' + '<br>' +
+            '<i style="background: #fc4e2a"></i> 0.052' + '<br>' +
+            '<i style="background: #e31a1c"></i> 0.14' + '<br>' +
+            '<i style="background: #bd0026"></i> 0.37' + '<br>' +
+            '<i style="background: #800026"></i> 1.0';
+    return div;
+};
+
+
+// Add legend to map
+var legendon = false
+
+L.easyButton( '<strong>L</strong>', function(){
+    if (legendon) {
+        legend_log.removeFrom(splitmap2);
+        legendon = false;
+    } else {
+        legend_log.addTo(splitmap2);
+        legendon = true;
+    }
+}).addTo(splitmap2);

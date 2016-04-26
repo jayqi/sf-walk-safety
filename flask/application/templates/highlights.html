@@ -13,24 +13,44 @@
     </div>
 </div>
 
+
 <hr>
-<h2 class="text-center">Day of Week</h2>
+
+<h2 class="text-center">Spatial Kernel Density Estimates</h2>
+
 <div class="row">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/thefts-dayofweekaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/robberies-dayofweekaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-4">
+    <div class="col-md-12">
         <p>
-            Thefts occur much more frequently on the weekend, especially Friday and Saturday.
+            Below are maps showing spatial probability distributions for thefts and robberies, respectively, computed using kernel density estimation. The way to interpret these distributions is as follows: if a theft or robbery incident occurs, what probability that it occurs in a certain area of the city. The intensity values are scaled to the maximum value of the respective distributions, and the colors have logarithmic scaling to enhance the lower value features. Larger versions with the option for linear color scaling can be found on their respective individual pages (<a href="">thefts</a>, <a href="">robberies</a>).
         </p>
         <p>
-            Robberies also occur more frequently on the weekend, though the effect is much smaller.  
+            We can see that for both thefts and robberies, downtown along Market Street is where the incidents are most likely to occur. The peaks are not quite in the same place&mdash;the peak for robberies is in Tenderloin while the peak for thefts is shifted more into the Financial District. For both types of incidents, local pockets of higher probability are spread across the city.
         </p>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <h3 class="text-center">Thefts</h3>
+    <div class="mapbound-split">
+            <div id='splitmap1'></div>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <h3 class="text-center">Robberies</h3>
+    <div class="mapbound-split">
+            <div id='splitmap2'></div>
+    </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            Larger versions of these maps with the option for linear color scaling can be found on their respective individual pages: <a href="/thefts/mapkde/">thefts</a>, <a href="/robberies/mapkde/">robberies</a>.
+        </p>
+    </div>
+</div>
+
 
 <hr>
 
@@ -55,69 +75,6 @@
     </div>
 </div>
 
-
-<hr>
-
-<h2 class="text-center">Weather</h2>
-<div class="row">
-    <div class="col-md-4 vcenter">
-        <p>
-            Below are plots showing the number of thefts each day against the daily high and low temperatures. It appears that on colder days, there are fewer thefts.
-        </p>
-        <p>
-            The extreme ends of the range do not have many observations (&lt;100 days) so those values are less indicative.
-        </p>
-    </div>
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/thefts-tmaxaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/thefts-tminaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-</div>
-<br /><br /> <br />
-<div class="row">
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/robberies-tmaxaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/plots/robberies-tminaverage.png') }}" class="img-responsive center-block"  />
-    </div>
-    <div class="col-md-4">
-        <p>
-            Interestingly, robberies do not show such a trend. Even though robberies happen overwhelmingly at night, there does not appear to be correlation with temperatures.
-        </p>
-    </div>
-</div>
-
-
-<hr>
-
-<h2 class="text-center">Spatial Kernel Density Estimates</h2>
-
-<div class="row">
-    <div class="col-md12">
-        <p>
-            Below are maps showing spatial probability distributions for thefts and robberies, respectively, computed using kernel density estimation. The way to interpret these distributions is as follows: if a theft or robbery incident occurs, what is the probability it occurs in a certain part of the city. The intensity values are scaled to the maximum value of the respective distributions, and are plotted by default with logarithmic scaling to enhance the lower value features.
-        </p>
-        <p>
-            We can see that for both thefts and robberies, downtown along Market Street is where the incidents are most likely to occur. The peaks are not quite in the same place&mdash;the peak for robberies is in Tenderloin while the peak for thefts is shifted more into the Financial District. For both types of incidents, local pockets of higher probability are spread across the city.
-        </p>
-    </div>
-    <div class="col-md-6">
-        <h3 class="text-center">Thefts</h3>
-    <div class="container mapbound">
-            <div id='splitmap1'></div>
-    </div>
-    </div>
-    <div class="col-md-6">
-        <h3 class="text-center">Robberies</h3>
-    <div class="container mapbound">
-            <div id='splitmap2'></div>
-    </div>
-    </div>
-</div>
-
 {% endblock %}
 
 
@@ -128,6 +85,9 @@
 <!-- Mapbox.js and its stylesheet -->
 <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+
+<script src="{{ url_for('static', filename='js/easy-button.js') }}"></script>
+<link href="{{ url_for('static', filename='css/easy-button.css') }}" rel='stylesheet' />
 
 <script>{% include 'leaflet_kde_split.js' %}</script>
 {% endblock %}
