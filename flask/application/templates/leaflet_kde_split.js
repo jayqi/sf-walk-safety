@@ -16,10 +16,10 @@ var splitmap2 = L.mapbox.map('splitmap2', 'mapbox.light',{
 splitmap1.scrollWheelZoom.disable();
 splitmap2.scrollWheelZoom.disable();
 
-var kde_thefts = L.mapbox.tileLayer('jyqi.3ghnstl4').addTo(splitmap1);
+var kde_thefts = L.mapbox.tileLayer('jyqi.3nj276s8').addTo(splitmap1);
 kde_thefts.setOpacity(0.66)
 
-var kde_robberies = L.mapbox.tileLayer('jyqi.d32de2yt').addTo(splitmap2);
+var kde_robberies = L.mapbox.tileLayer('jyqi.32dcovup').addTo(splitmap2);
 kde_robberies.setOpacity(0.66)
 
 // when either map finishes moving, trigger an update on the other one.

@@ -10,9 +10,9 @@ map.scrollWheelZoom.disable();
 
 // Load log kde tiles and add to map
 {% if '/thefts/' in request.path %}
-    var kde_log = L.mapbox.tileLayer('jyqi.3ghnstl4').addTo(map);
+    var kde_log = L.mapbox.tileLayer('jyqi.3nj276s8').addTo(map);
 {% elif '/robberies/' in request.path %}
-    var kde_log = L.mapbox.tileLayer('jyqi.d32de2yt').addTo(map);
+    var kde_log = L.mapbox.tileLayer('jyqi.32dcovup').addTo(map);
 {% endif %}
 kde_log.setOpacity(0.66)
 
