@@ -6,3 +6,4 @@ geodata
 data
 *.p
 *.csv
+ipynbs/plots/*
