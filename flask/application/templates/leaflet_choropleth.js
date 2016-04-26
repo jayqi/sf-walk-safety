@@ -11,27 +11,27 @@ map.scrollWheelZoom.disable();
 
 // Log version: Function that assigns colors
 function getColor_log(d) {
-    return d >= {{mapdata['colorbar']['log'][8] | safe}} ? '#800026' :
-    d >= {{mapdata['colorbar']['log'][7] | safe}} ? '#b10026' :
-    d >= {{mapdata['colorbar']['log'][6] | safe}}  ? '#e31a1c' :
-    d >= {{mapdata['colorbar']['log'][5] | safe}}  ? '#fc4e2a' :
-    d >= {{mapdata['colorbar']['log'][4] | safe}}  ? '#fd8d3c' :
-    d >= {{mapdata['colorbar']['log'][3] | safe}}   ? '#feb24c' :
-    d >= {{mapdata['colorbar']['log'][2] | safe}}   ? '#fed976' :
-    d >= {{mapdata['colorbar']['log'][1] | safe}}   ? '#ffeda0' :
+    return d >= colorbar['log'][8] ? '#800026' :
+    d >= colorbar['log'][7] ? '#b10026' :
+    d >= colorbar['log'][6]  ? '#e31a1c' :
+    d >= colorbar['log'][5]  ? '#fc4e2a' :
+    d >= colorbar['log'][4]  ? '#fd8d3c' :
+    d >= colorbar['log'][3]   ? '#feb24c' :
+    d >= colorbar['log'][2]   ? '#fed976' :
+    d >= colorbar['log'][1]   ? '#ffeda0' :
                 '#ffffcc';
 };
 
 // Linear version: Function that assigns colors
 function getColor_lin(d) {
-    return d >= {{mapdata['colorbar']['lin'][7] | safe}} ? '#800026' :
-    d >= {{mapdata['colorbar']['lin'][6] | safe}} ? '#b10026' :
-    d >= {{mapdata['colorbar']['lin'][5] | safe}}  ? '#e31a1c' :
-    d >= {{mapdata['colorbar']['lin'][4] | safe}}  ? '#fc4e2a' :
-    d >= {{mapdata['colorbar']['lin'][3] | safe}}  ? '#fd8d3c' :
-    d >= {{mapdata['colorbar']['lin'][2] | safe}}   ? '#feb24c' :
-    d >= {{mapdata['colorbar']['lin'][1] | safe}}   ? '#fed976' :
-    d >= {{mapdata['colorbar']['lin'][0] | safe}}   ? '#ffeda0' :
+    return d >= colorbar['lin'][7] ? '#800026' :
+    d >= colorbar['lin'][6] ? '#b10026' :
+    d >= colorbar['lin'][5]  ? '#e31a1c' :
+    d >= colorbar['lin'][4]  ? '#fc4e2a' :
+    d >= colorbar['lin'][3]  ? '#fd8d3c' :
+    d >= colorbar['lin'][2]   ? '#feb24c' :
+    d >= colorbar['lin'][1]   ? '#fed976' :
+    d >= colorbar['lin'][0]   ? '#ffeda0' :
                 '#ffffcc';
 };
 
@@ -147,7 +147,7 @@ var legend_log = L.control({position: 'bottomright'});
 legend_log.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'mapinfo maplegend'),
-        grades = {{ mapdata['colorbar']['log'] | safe }},
+        grades = colorbar['log'],
         labels = [];
 
     div.innerHTML = 'Log color scale: <br>'
@@ -167,7 +167,7 @@ var legend_lin = L.control({position: 'bottomright'});
 legend_lin.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'mapinfo maplegend'),
-        grades = {{ mapdata['colorbar']['lin'] | safe }},
+        grades = colorbar['lin'],
         labels = [];
 
     div.innerHTML = 'Linear color scale: <br>'

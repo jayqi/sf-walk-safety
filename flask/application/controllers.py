@@ -37,10 +37,7 @@ def theft_choropleth_map():
         filters = models.get_defaultfilters()
         region_type = 'nhood'
         mapdata['filename'] = 'thefts-choropleth-default.json'
-        mapdata['colorbar'] = {
-            "lin": [0, 1266, 2532, 3798, 5064, 6330, 7596, 8862, 10128],
-            "log": [0, 10, 27, 72, 195, 524, 1407, 3774, 10126]
-            }
+        mapdata['colorbar_filename'] = 'thefts-choropleth-default-colorbar.json'
 
     return render_template('map.html',
         pageopts=pageopts,
@@ -143,10 +140,7 @@ def robbery_choropleth_map():
         filters = models.get_defaultfilters()
         region_type = 'nhood'
         mapdata['filename'] = 'robberies-choropleth-default.json'
-        mapdata['colorbar'] = {
-            "lin": [0, 466, 932, 1398, 1864, 2330, 2796, 3262, 3728],
-            "log": [0, 3, 9, 26, 71, 192, 517, 1388, 3726]
-            }
+        mapdata['colorbar_filename'] = 'robberies-choropleth-default-colorbar.json'
 
     return render_template('map.html',
         pageopts=pageopts,
@@ -255,7 +249,7 @@ def page_not_found(e):
 ###############################################
 
 def dump_to_jsonfile(data,filename):
-    #dump_to_jsonfile(mapdata,'robberies-choropleth-default.json')
+    #dump_to_jsonfile(jsondata,'robberies-choropleth-default.json')
     import json
     with open(filename, 'w') as outfile:
         json.dump(data, outfile)

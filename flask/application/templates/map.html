@@ -180,11 +180,17 @@
 <!-- Geojson data -->
 {% if maptype in ['choropleth','markers']%}
     <script>
-{% if request.method == 'POST'%}
-        var data = {{ mapdata['geojson'] | tojson }}
-{% elif request.method == 'GET' %}
-        var data = {% include mapdata['filename'] %}
-{% endif %}
+    {% if request.method == 'POST'%}
+        var data = {{ mapdata['geojson'] | tojson }};
+        {% if maptype == 'choropleth'%}
+            var colorbar = {{ mapdata['colorbar'] | tojson }};
+        {% endif %}
+    {% elif request.method == 'GET' %}
+        var data = {% include mapdata['filename'] %};
+        {% if maptype == 'choropleth'%}
+            var colorbar = {% include mapdata['colorbar_filename'] %};
+        {% endif %}
+    {% endif %}
     </script>
 {% endif %}
 

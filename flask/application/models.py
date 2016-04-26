@@ -24,7 +24,7 @@ def datetime2string(df):
 
 def get_defaultfilters():
     return {
-        'startDate' : '01/01/2003',
+        'startDate' : '01/01/2013',
         'endDate' : '03/21/2016',
         'startTime' : '00:00',
         'endTime' : '24:00',
@@ -117,6 +117,12 @@ def build_colorbar(maxcount):
 
     # Log
     colorbar['log'] = [int(x) for x in ([0]+(np.logspace(-3,0,8)*maxcount).tolist())]
+
+    # Make sure they're strictly increasing
+    for key,bar in colorbar.iteritems():
+        for i in xrange(1,len(bar)):
+            if bar[i] <= bar[i-1]:
+                bar[i] = bar[i-1] + 1
 
     return colorbar
 
