@@ -4,56 +4,141 @@
 
 <div class="row">
     <div class="col-md-8">
-        <h2>Robberies</h2>
+        <h2 class="text-center">Robberies</h2>
         <p>
-            Robberies are crimes of taking possessions by force or threat of force. Using open data from the San Francisco Police department, we visualize street robbery incidents since 2003 and examine their prevalence.
+            Robberies are crimes of taking possessions by force or threat of force. Here, we consider street-level cases of robbery that involve pedestrians, such as muggings. Using open data from the San Francisco Police department, we visualize street robbery incidents since 2003 and examine their prevalence.
         </p>
         <p>
-            In the adjacent figure, we see the total number of reported street robbery incidents from 2003 to 2015.
+            In the adjacent figure, we see the total number of reported street robbery incidents each year from 2003 to 2015. The number of yearly reports of robberies peaked in 2006 and then as since generally been decreasing.
         </p>
     </div>
     <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/temp/robberies-yearlycounts.png') }}" class="img-responsive center-block"/>
+        <img src="{{ url_for('static', filename='img/plots/robberies-yearlycounts.png') }}" class="img-responsive center-block"/>
     </div>
 </div>
 
 <hr>
 
+
+<h2 class="text-center">Maps</h2>
+<div class="row row-flex row-flex-wrap">
+    <div class="col-md-4">
+        <div class = "well">
+        <h3 class="text-center">Choropleth Maps</h3>
+        <p><a href="/robberies/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/robberies-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>Maps showing aggregated counts of robberies by area in the city. Can view by neighborhood, census tract (2010), or police district. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/robberies/mapchoropleth/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class = "well">
+        <h3 class="text-center">Incidents Map</h3>
+        <p><a href="/robberies/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/robberies-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>A map showing markers of individual robbery reports. Clicking on a marker shows detailed information about incident. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/robberies/mapmarkers/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class = "well">
+        <h3 class="text-center">Kernel Density Estimate</h3>
+        <p><a href="/robberies/mapkde/"><img src="{{ url_for('static', filename='img/thumbs/robberies-kde-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>A spatial probability distribution model for robberies across the city, generated using kernel density estimation. This model predicts where in the city that robberies are likely to happen. </p>
+        <p class="text-center"><a class="btn btn-default" href="/robberies/mapkde/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+</div>
+
+<hr>
+
+
+<h2 class="text-center">Analysis</h2>
 <div class="row">
     <div class="col-md-12">
-        <h2>Visualizations and Analyses</h2>
-    <div>
-    <div class="col-md-4">
-        <h3>Choropleth Map</h3>
-        <p><a href="/robberies/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/robberies-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>A map showing aggregated counts of robberies by area in the city. Can view by neighborhood, census tract (2010), or police district.</p>
-        <p><a class="btn btn-default" href="/robberies/mapchoropleth/" role="button">See map &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Incidents Map</h3>
-        <p><a href="/robberies/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/robberies-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
-        <p>A map showing markers of individual robbery incidents. </p>
-        <p><a class="btn btn-default" href="/robberies/mapmarkers/" role="button">See map &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Histograms</h3>
-        <p><a href="/robberies/histograms/">[[Image]]</a><p>
-        <p>See histograms of robbery incidents against different variables, including by time of day, day of week, month, or weather. </p>
-        <p><a class="btn btn-default" href="/robberies/histograms/" role="button">See plots &raquo;</a></p>
+        Below are some detailed analysis of how robberies relate to other variables. Unless otherwise specified, the analysis in this section only considers robbery reports from 2003 through 2015, where we have full years.
     </div>
 </div>
+<br />
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">Time of Day</h3>
+            <p>The adjacent histogram shows (normalized) frequency of robberies by hour of the day. We can see that there is quite a strong daily pattern. The least number of robberies happen during the morning commute hours, while the most happen around midnight.</p>
+            <p>Plotted as a dark blue curve is a temporal probability distribution model for the robberies, generated using kernel density estimation. This distribution predicts the likelihood that, if we consider a robbery, when during the day that it occurs.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/robberies-timeofdaydistribution-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='img/plots/robberies-dayofweekaverage.png') }}" class="img-responsive center-block"  />
+        </div>
+        <div class="col-md-7">
+            <h3 class="text-center">By Weekday</h3>
+                <p>In the preceding figure, the average robberies per day for each day of the week is shown. The blue lines show one standard deviation above and below, to give an idea of the amount of variation.</p>
+                <p>Robbery prevalence appears to be independent of the day of week. </p>
+        </div>
+
+</div>
+
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">By Month</h3>
+            <p>The next plot shows the number of robberies each month, averaged across the years from 2003 to 2015. The envelope is one standard deviation above and below.</p>
+            <p>It seems that there tends to be slightly more robberies in the late summer, while fewer in the winter. However, the difference is fairly small, especially compared to the amount of variation across years.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/robberies-monthlyaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/plots/precip-hist.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-7">
+        <h3 class="text-center">Rain</h3>
+            <p>The preceding histogram shows frequency of days where it rained a certain amount. Most days in San Francisco are dry, and there are very few days at high amounts of rain over the last thirteen years.</p>
+            <p>Unlike thefts, the is no significant relationship between rain and frequency of robberies.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-5 col-md-offset-1">
+        <img src="{{ url_for('static', filename='img/plots/robberies-precipaverage.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/robberies-preciplinfit.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+<div class="row well">
+    <div class="col-md-10 col-md-offset-1">
+        <h3 class="text-center">Temperature</h3>
+            <p>The next two figures show the number of robberies each day, averaged across days of similar daily low temperature and daily high temperature, respectively. Unlike thefts, there appears to be no significant relationship between the daily temperatures and the frequency of robberies.</p>
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+        <img src="{{ url_for('static', filename='img/plots/robberies-tminaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5 col-md">
+        <img src="{{ url_for('static', filename='img/plots/robberies-tmaxaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
 
 <hr>
 
 <div class="row">
-    <div class="col-md-8">
-        <h3>About the data</h3>
-        <p>Learn more about the data we use. Coming soon!</p>
+    <div class="col-md-7 col-md-offset-1">
+        <h3 class="text-center">About the data</h3>
+        <p>The robbery reports come from the San Francisco Police Department Incident Reporting dataset on the SF Open Data portal. Learn more about this dataset as well as the others <a href="/#aboutdata">here</a>.</p>
     </div>
-    <div class="col-md-4">
-        <h3>See also</h3>
-        <p>Thefts</p>
-        <p>Traffic collisions</p>
+    <div class="col-md-3">
+        <h3 class="text-center">See also</h3>
+        <p class="text-center"><a href="/thefts/">Thefts</a></p>
+        <p class="text-center"><a href="/trafficcollisions/">Traffic collisions</a></p>
+        <p class="text-center"><a href="/highlights/">Highlights</a></p>
     </div>
 </div>
 {% endblock %}
