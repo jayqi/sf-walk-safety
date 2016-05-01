@@ -9,33 +9,37 @@
 </div>
 <div id="navbar" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-        <li><a href="/highlights/">Highlights</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Thefts<span class="caret"></span></a>
+        <li{%- if request.path == "/highlights/" %} class="active"{% endif %}><a href="/highlights/">Highlights</a></li>
+        <li class="dropdown{%- if '/thefts/' in request.path %} active{% endif %}"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Thefts<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="/thefts/">Main</a></li>
+                <li{%- if request.path == "/thefts/" %} class="active"{% endif %}><a href="/thefts/">Main</a></li>
                 <li class="divider"></li>
-                <li><a href="/thefts/mapchoropleth/">Choropleth Maps</a></li>
-                <li><a href="/thefts/mapmarkers/">Incidents Map</a></li>
-                <li><a href="/thefts/mapkde/">Kernel Density Estimate</a></li>
+                <li{%- if request.path == "/thefts/mapchoropleth/" %} class="active"{% endif %}><a href="/thefts/mapchoropleth/">Choropleth Maps</a></li>
+                <li{%- if request.path == "/thefts/mapmarkers/" %} class="active"{% endif %}><a href="/thefts/mapmarkers/">Incidents Map</a></li>
+                <li{%- if request.path == "/thefts/mapkde/" %} class="active"{% endif %}><a href="/thefts/mapkde/">Kernel Density Estimate</a></li>
                 <li class="divider"></li>
                 <li><a href="/thefts/#analysis">Analysis</a></li>
             </ul>
         </li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Robberies<span class="caret"></span></a>
+        <li class="dropdown{%- if '/robberies/' in request.path %} active{% endif %}"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Robberies<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="/robberies/">Main</a></li>
+                <li{%- if request.path == "/robberies/" %} class="active"{% endif %}><a href="/robberies/">Main</a></li>
                 <li class="divider"></li>
-                <li><a href="/robberies/mapchoropleth/">Choropleth Map</a></li>
-                <li><a href="/robberies/mapmarkers/">Incidents Map</a></li>
-                <li><a href="/robberies/mapkde/">Kernel Density Estimate</a></li>
+                <li{%- if request.path == "/robberies/mapchoropleth/" %} class="active"{% endif %}><a href="/robberies/mapchoropleth/">Choropleth Map</a></li>
+                <li{%- if request.path == "/robberies/mapmarkers/" %} class="active"{% endif %}><a href="/robberies/mapmarkers/">Incidents Map</a></li>
+                <li{%- if request.path == "/robberies/mapkde/" %} class="active"{% endif %}><a href="/robberies/mapkde/">Kernel Density Estimate</a></li>
                 <li class="divider"></li>
                 <li><a href="/robberies/#analysis">Analysis</a></li>
             </ul>
         </li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Traffic Collisions<span class="caret"></span></a>
+        <li class="dropdown{%- if '/trafficcollisions/' in request.path %} active{% endif %}"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Traffic Collisions<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><a href="/trafficcollisions/">Main</a></li>
+                <li{%- if request.path == "/trafficcollisions/" %} class="active"{% endif %}><a href="/trafficcollisions/">Main</a></li>
                 <li class="divider"></li>
+                <li{%- if request.path == "/trafficcollisions/mapchoropleth/" %} class="active"{% endif %}><a href="/trafficcollisions/mapchoropleth/">Choropleth Map</a></li>
+                <li{%- if request.path == "/trafficcollisions/mapmarkers/" %} class="active"{% endif %}><a href="/trafficcollisions/mapmarkers/">Incidents Map</a></li>
+                <li class="divider"></li>
+                <li><a href="/trafficcollisions/#analysis">Analysis</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
