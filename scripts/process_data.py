@@ -314,7 +314,7 @@ def clean_trafficcollisions(df):
     df['LIGHTING'] = df['LIGHTING'].apply(lambda x: Lighting_Decode[x])
 
     # Alcohol involved
-    df[df['ALCOHOL_INVOLVED'] == 'Y'] = True
+    df.replace(to_replace='Y',value=True,inplace=True)
     df['ALCOHOL_INVOLVED'].fillna(value=False,inplace=True)
 
     # Pedestrians involved
