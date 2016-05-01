@@ -246,7 +246,34 @@ def markers_geojson(df,filters):
     # Convert dataframe to geojson js variable
     return df_to_geojson(df, cols, lat='y', lon='x')
 
+# Output geojson for markers map
+def markers_geojson_traffic(df,filters):
 
+    df = df.copy()
+
+    # Apply filters
+    df = applyfilters(df,filters)
+
+    # Convert date and time to strings
+    datetime2string(df)
+
+    # Columns to pass
+    cols = ['date','time','dayofweek',
+            'location',
+            'PRIMARY_COLLISION_FACTOR',
+            'PED_ACTION',
+            'HIT_AND_RUN',
+            'ALCOHOL_INVOLVED',
+            'COUNT_PED_INJURED',
+            'COUNT_PED_KILLED',
+            'WEATHER',
+            'ROAD_COND',
+            'ROAD_SURFACE',
+            'LIGHTING',
+            'nhood', 'tractce10', 'police_district', 'hist_police_district']
+
+    # Convert dataframe to geojson js variable
+    return df_to_geojson(df, cols, lat='y', lon='x')
 
 # Output geojson for markers map
 def heat_listcoords(df,filters):

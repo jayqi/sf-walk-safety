@@ -220,10 +220,64 @@ def robberies_kde_map():
 ########################################################
 
 @app.route("/trafficcollisions/")
-def traffic_collision_main():
+def collisions_main():
     return render_template('trafficcollisions.html')
 
+@app.route("/trafficcollisions/mapchoropleth/",methods=['GET','POST'])
+def collisions_choropleth_map():
 
+    pageopts = {
+        'uppercase' : 'Traffic Collisions',
+        'lowercase' : 'traffic collisions',
+        'maptype' : 'Choropleth Map',
+    }
+
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        region_type = request.form['region_type']
+        mapdata['geojson'],mapdata['colorbar'] = models.choropleth_geojson(app.df_collisions,region_type,filters)
+    else:
+        filters = models.get_defaultfilters()
+        region_type = 'nhood'
+        mapdata['filename'] = 'collisions-choropleth-default.json'
+        mapdata['colorbar_filename'] = 'collisions-choropleth-default-colorbar.json'
+
+    return render_template('map.html',
+        pageopts=pageopts,
+        maptype='choropleth',
+        regionopts=models.get_regionopts()[region_type],
+        mapdata=mapdata,
+        filtersdisplay=models.build_filtersdisplay(filters)
+        )
+
+@app.route("/trafficcollisions/mapmarkers/",methods=['GET','POST'])
+def collisions_markers_map():
+
+    pageopts = {
+        'uppercase' : 'Traffic Collisions',
+        'lowercase' : 'traffic collisions',
+        'maptype' : 'Individual Incidents Map',
+    }
+
+    mapdata = {}
+
+    if request.method == 'POST':
+        userfilters = models.get_userfilters(request.form)
+        filters = userfilters
+        mapdata['geojson'] = models.markers_geojson_traffic(app.df_collisions,filters)
+    else:
+        filters = models.get_defaultfilters()
+        mapdata['filename'] = 'collisions-markers-default.json'
+
+    return render_template('map.html',
+        pageopts=pageopts,
+        maptype='markers',
+        mapdata=mapdata,
+        filtersdisplay=models.build_filtersdisplay(filters)
+        )
 
 
 ###############################################

@@ -12,12 +12,14 @@ def initialize_application():
     df_robberies = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
     df_thefts = pd.read_pickle(os.path.join(APP_DATA, 'theft-street.p'))
     weather = pd.read_pickle(os.path.join(APP_DATA, 'noaa-weather-downtown-sf.p'))
+    df_collisions = pd.read_pickle(os.path.join(APP_DATA, 'trafficcollisions.p'))
 
     # Add month and year
     df_robberies['month'] = df_robberies.date.apply(lambda x: x.month)
     df_robberies['year'] = df_robberies.date.apply(lambda x: x.year)
     df_thefts['month'] = df_thefts.date.apply(lambda x: x.month)
     df_thefts['year'] = df_thefts.date.apply(lambda x: x.year)
+    df_collisions['month'] = df_thefts.date.apply(lambda x: x.month)
 
 
     # Change celsius to fahrenheit
@@ -27,8 +29,7 @@ def initialize_application():
     # Join with weather
     app.df_robberies = df_robberies.merge(weather,how="inner",left_on="date",right_on="DATE")
     app.df_thefts = df_thefts.merge(weather,how="inner",left_on="date",right_on="DATE")
-
-
+    app.df_collisions = df_collisions.merge(weather,how="inner",left_on="date",right_on="DATE")
 
     return app
 
