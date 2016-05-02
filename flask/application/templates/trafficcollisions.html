@@ -4,12 +4,107 @@
 
 <div class="row">
     <div class="col-md-8">
-        <h2>Traffic Collisions</h2>
+        <h2 class="text-center">Traffic Collisions</h2>
         <p>
-            Coming soon!
+            We examine traffic collisions involving pedestrians. Using open data from the California Highway Patrol, we analyze and visualize accidents since 2003.
         </p>
+        <p>
+            From 2003 through 2015, there were a total of 10,306 traffic collisions in San Francisco involving pedestrians, for an average of 2.2 in the city each day. This resulted in a total of 10,177 pedestrians injured and 228 pedestrians killed. In the adjacent figure, we see the total number of reported collisions each year from 2003 to 2015.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='img/plots/trafficcollisions-yearlycounts.png') }}" class="img-responsive center-block"/>
     </div>
 </div>
 
 
+<hr>
+
+
+<h2 class="text-center">Maps</h2>
+<div class="row row-flex row-flex-wrap">
+    <div class="col-md-4 col-md-offset-2">
+        <div class = "well">
+        <h3 class="text-center">Choropleth Maps</h3>
+        <p><a href="/trafficcollisions/mapchoropleth/"><img src="{{ url_for('static', filename='img/thumbs/trafficcollisions-choropleth-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>Maps showing aggregated counts of traffic collisions by area in the city. Can view by neighborhood, census tract (2010), or police district. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/trafficcollisions/mapchoropleth/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class = "well">
+        <h3 class="text-center">Incidents Map</h3>
+        <p><a href="/trafficcollisions/mapmarkers/"><img src="{{ url_for('static', filename='img/thumbs/trafficcollisions-markers-thumb.png') }}" class="img-responsive img-thumbnail center-block img-previewthumb" /></a><p>
+        <p>A map showing markers of individual accident reports. Clicking on a marker shows detailed information about accident. You can filter the data shown by various attributes.</p>
+        <p class="text-center"><a class="btn btn-default" href="/trafficcollisions/mapmarkers/" role="button">See map &raquo;</a></p>
+    </div>
+    </div>
+
+</div>
+
+
+
+
+<hr>
+
+
+<h2 class="text-center">Analysis</h2>
+<div class="row">
+    <div class="col-md-12">
+        Below are some detailed analysis of how traffic collisions involving pedestrians relate to other variables. Unless otherwise specified, the analysis in this section only considers collision reports from 2003 through 2015, where we have full years of data.
+    </div>
+</div>
+<br />
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">Time of Day</h3>
+            <p>The adjacent histogram shows (normalized) frequency of traffic collisions by hour of the day. We can see that the bulk of collisions happen during waking hours, with peaks at morning and evening commute hours. More collisions occur around the evening than the morning. </p>
+            <p>Plotted as a dark blue curve is a temporal probability distribution model for the traffic collisions, generated using kernel density estimation. This distribution predicts the likelihood that, if we consider a collision, when during the day that it occurs.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/trafficcollisions-timeofdaydistribution-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-5">
+            <img src="{{ url_for('static', filename='img/plots/trafficcollisions-dayofweekaverage.png') }}" class="img-responsive center-block"  />
+        </div>
+        <div class="col-md-7">
+            <h3 class="text-center">By Weekday</h3>
+                <p>In the preceding figure, the average collisions per day for each day of the week is shown. The blue lines show one standard deviation above and below, to give an idea of the amount of variation.</p>
+                <p>We can see that weekdays generally have more accidents than the weekend, with the fewest on Sundays.</p>
+        </div>
+
+</div>
+
+<div class="row well">
+    <div class="col-md-7">
+        <h3 class="text-center">By Month</h3>
+            <p>The next plot shows the number of collisions each month, averaged across the years from 2003 to 2015. The envelope is one standard deviation above and below.</p>
+            <p>There appears to be a seasonal pattern, with fewer collisions in the summer, and more collisions in the late fall and early winter.  </p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/plots/trafficcollisions-monthlyaverage-transp.png') }}" class="img-responsive center-block"  />
+    </div>
+</div>
+
+
+
+
+
+<hr>
+
+<div class="row">
+    <div class="col-md-7 col-md-offset-1">
+        <h3 class="text-center">About the data</h3>
+        <p>The traffic collision reports come from the California Highway Patrol through their Statewide Integrated Traffic Records System. Learn more about this dataset as well as the others <a href="/#aboutdata">here</a>.</p>
+    </div>
+    <div class="col-md-3">
+        <h3 class="text-center">See also</h3>
+        <p class="text-center"><a href="/thefts/">Thefts</a></p>
+        <p class="text-center"><a href="/robberies/">Robberies</a></p>
+        <p class="text-center"><a href="/highlights/">Highlights</a></p>
+    </div>
+</div>
 {% endblock %}
