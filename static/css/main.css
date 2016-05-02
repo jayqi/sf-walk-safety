@@ -1,0 +1,139 @@
+
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+.vcenter {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+.jumbotron {
+    background-color: transparent;
+    color: #FEFDF5;
+    z-index: 10;
+    position: relative;
+    text-shadow: 0 1px 0 black;
+}
+.jumbotron:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url("../img/bg_main.jpg");
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.jumbotron-full {
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.container-splash-title {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.66);
+}
+.splash-title {
+    font-size: 1.33em;
+}
+
+
+.container-splash-button {
+    position: absolute;
+    bottom: 20vh;
+}
+.splash-button {
+    font-size: 2em;
+}
+
+
+
+.jumbotron-narrow:after {
+    -webkit-filter: brightness(33%) contrast(90%);
+    filter: brightness(33%) contrast(90%);
+}
+
+.img-datasourcethumb {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.img-filler {
+    max-height: 240px;
+}
+.img-previewthumb {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-filter {
+    width: 90%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+section {
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+ul.noindent {
+    padding: 19px;
+}
+
+
+
+
+/* http://www.bootply.com/126437 */
+
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+
+.flex-col {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}

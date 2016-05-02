@@ -1,0 +1,213 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SF Walk Safety</title>
+<meta name="description" content="A data-driven examination of pedestrian safety in San Francisco.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/static/favicon.png" />
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/map.css">
+<script src="/static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">SF Walk Safety</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><a href="/highlights/">Highlights</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Thefts<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/thefts/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/thefts/mapchoropleth/">Choropleth Maps</a></li>
+                <li><a href="/thefts/mapmarkers/">Incidents Map</a></li>
+                <li><a href="/thefts/mapkde/">Kernel Density Estimate</a></li>
+                <li class="divider"></li>
+                <li><a href="/thefts/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Robberies<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/robberies/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/robberies/mapchoropleth/">Choropleth Map</a></li>
+                <li><a href="/robberies/mapmarkers/">Incidents Map</a></li>
+                <li><a href="/robberies/mapkde/">Kernel Density Estimate</a></li>
+                <li class="divider"></li>
+                <li><a href="/robberies/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Traffic Collisions<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/trafficcollisions/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/trafficcollisions/mapchoropleth/">Choropleth Map</a></li>
+                <li><a href="/trafficcollisions/mapmarkers/">Incidents Map</a></li>
+                <li class="divider"></li>
+                <li><a href="/trafficcollisions/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/#aboutdata">About the Data</a></li>
+                <li><a href="/#additionalresources">Additional Walking Resources</a></li>
+                <li><a href="/#aboutproject">About the Project</a></li>
+                <li><a href="/#aboutjay">About Jay</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/jayqi/sf-walk-safety" target='_blank'>View Source</a></li>
+    </ul>
+</div>
+        </div>
+    </nav>
+
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-narrow">
+        <div class="container">
+            <h1>SF Walk Safety</h1>
+            <p>A data-driven examination of pedestrian safety in San Francisco.</p>
+        </div>
+    </div>
+    
+
+
+    <div class="container">
+        <!-- Content here -->
+        
+<!-- Example row of columns -->
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>About the Project</h2>
+        <p>
+            Being new to San Francisco and planning to walk around a lot by himself, Jay wanted to learn more about walking in the city. With available open government data, this was a good opportunity to apply data analysis and machine learning.
+        </p>
+        <p>
+            This project was developed as part of <a href="https://www.thedataincubator.com/">the Data Incubator</a>, an eight-week data science fellowship program for training advanced-degree graduates to enter industry.</p>
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>About the Data</h2>
+        <p>
+            Coming soon!
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>About Jay</h2>
+        <p>
+            Jay Qi is a data scientist who is currently spending some time in San Francisco. Trained as a mechanical and aerospace engineer, Jay uses data analysis, machine learning, and computational modeling to solve problems and learn new things about the world.
+        </p>
+        <p>
+            To find out more about Jay, you can visit his <a href="https://jayqi.com">homepage</a> or connect with him on one of the following services.
+
+            [LinkedIn] [GitHub]
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Other Resources</h2>
+        <p>
+            Here you can find links to other relevant resources to pedestrians in San Francisco.
+        </p>
+        <h3>Government</h3>
+        <p>
+            <ul>
+                <li><a href="https://www.sfmta.com/getting-around/walk/pedestrian-safety/safe-streets-sf">San Francisco Municipal Transportation Agency - Pedestrian Resources</a></li>
+                <li><a href="http://catsip.berkeley.edu/">California Active Transportation Safety Information Pages (CATSIP)</a></li>
+                <li><a href="http://visionzerosf.org/">Vision Zero SF</a></li>
+                <li><a href="http://walkfirst.sfplanning.org/index.php/">WalkFirst</a></li>
+            </ul>
+        </p>
+
+        <h3>Advocacy</h3>
+        <p>
+            <ul>
+                <li><a href="http://walksf.org/">Walk San Francisco</a> - pedestrian advocacy organization</li>
+                <li><a href="http://sfsaferoutestoschool.org/">Safe Routes to School</a></li>
+                <li><a href="http://shapeupsfcoalition.org/">Shape Up San Francisco Coalition</a></li>
+            </ul>
+        </p>
+
+        <h3>Research</h3>
+        <p>
+            <ul>
+                <li><a href="http://safetrec.berkeley.edu/">Safe Transportation Research and Education Center (SafeTREC) at UC Berkeley</a></li>
+                <ul><li><a href="http://safetrec.berkeley.edu/crash-analysis/psip">Pedestrian Safety Improvement Program (PSIP)</a></li>
+                </ul>
+                <li><a href="http://www.trb.org/Main/Home.aspx">Transportation Research Board</a>, a part of the National Academies of Sciences, Engineering, and Medicine</li>
+
+                <ul><li><a href="http://www.trb.org/PedestriansandBicyclists/PedestriansandBicyclists2.aspx">Pedestrian and Bicyclist Research</a></li></ul>
+            </ul>
+        </p>
+    </div>
+</div>
+
+
+        <hr>
+        <!-- Footer here -->
+        <footer>
+    <p>
+        &copy; 2016 <a href="https://jayqi.com">Jay Qi</a>
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        View Source on <a href="https://github.com/jayqi/sf-walk-safety">GitHub</a>
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Icon by <a href="http://www.flaticon.com/authors/scott-de-jonge" title="Scott de Jonge">Scott de Jonge</a>
+        on <a href="http://www.flaticon.com" title="Flaticon">Flaticon</a>
+        (<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>)
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Design: <a href="https://bootswatch.com/sandstone/">Bootswatch Sandstone</a>
+    </p>
+</footer>
+    </div> <!-- /container -->
+
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    -->
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="/static/js/vendor/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+    </body>
+    </html>
