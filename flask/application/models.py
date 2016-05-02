@@ -122,7 +122,7 @@ def build_colorbar(maxcount):
     for key,bar in colorbar.iteritems():
         for i in xrange(1,len(bar)):
             if bar[i] <= bar[i-1]:
-                bar[i] = bar[i-1] + 1
+                bar[i] = bar[i-1] + 2
 
     return colorbar
 
