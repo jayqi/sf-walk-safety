@@ -1,0 +1,321 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>SF Walk Safety</title>
+<meta name="description" content="A data-driven examination of pedestrian safety in San Francisco.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/static/favicon.png" />
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/main.css">
+<link rel="stylesheet" href="/static/css/map.css">
+<script src="/static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">SF Walk Safety</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="/highlights/">Highlights</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Thefts<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/thefts/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/thefts/mapchoropleth/">Choropleth Maps</a></li>
+                <li><a href="/thefts/mapmarkers/">Incidents Map</a></li>
+                <li><a href="/thefts/mapkde/">Kernel Density Estimate</a></li>
+                <li class="divider"></li>
+                <li><a href="/thefts/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Robberies<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/robberies/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/robberies/mapchoropleth/">Choropleth Map</a></li>
+                <li><a href="/robberies/mapmarkers/">Incidents Map</a></li>
+                <li><a href="/robberies/mapkde/">Kernel Density Estimate</a></li>
+                <li class="divider"></li>
+                <li><a href="/robberies/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Traffic Collisions<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/trafficcollisions/">Main</a></li>
+                <li class="divider"></li>
+                <li><a href="/trafficcollisions/mapchoropleth/">Choropleth Map</a></li>
+                <li><a href="/trafficcollisions/mapmarkers/">Incidents Map</a></li>
+                <li class="divider"></li>
+                <li><a href="/trafficcollisions/#analysis">Analysis</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/#aboutdata">About the Data</a></li>
+                <li><a href="/#additionalresources">Additional Walking Resources</a></li>
+                <li><a href="/#aboutproject">About the Project</a></li>
+                <li><a href="/#aboutjay">About Jay</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/jayqi/sf-walk-safety" target='_blank'>View Source</a></li>
+    </ul>
+</div>
+        </div>
+    </nav>
+
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-narrow">
+        <div class="container">
+            <h1>SF Walk Safety</h1>
+            <p>A data-driven examination of pedestrian safety in San Francisco.</p>
+        </div>
+    </div>
+    
+
+
+    <div class="container">
+        <!-- Content here -->
+        
+<!-- Example row of columns -->
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">Project Highlights</h2>
+        <p>
+            Here you can see some of the interesting highlights from our analysis and modeling. To see more exhaustive results, visit the main pages for <a href="/thefts/">thefts</a>, <a href="/robberies/">robberies</a>, and <a href="/trafficcollisions/">traffic collisions</a>.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+<hr>
+
+
+<div class="well">
+<h2 class="text-center">Spatial Kernel Density Estimates</h2>
+<div class="row">
+    <div class="col-md-6">
+        <h3 class="text-center">Thefts</h3>
+    <div class="mapbound-split">
+            <div id='splitmap1'></div>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <h3 class="text-center">Robberies</h3>
+    <div class="mapbound-split">
+            <div id='splitmap2'></div>
+    </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            Above are maps showing spatial probability distributions for thefts and robberies, respectively, computed using kernel density estimation. The way to interpret these distributions is as follows: if a theft or robbery incident occurs, what probability that it occurs in a certain area of the city. The intensity values are scaled to the maximum value of the respective distributions, and the colors have logarithmic scaling to enhance the lower value features. Larger versions with the option for linear color scaling can be found on their respective individual pages (<a href="">thefts</a>, <a href="">robberies</a>).
+        </p>
+        <p>
+            We can see that for both thefts and robberies, downtown along Market Street is where the incidents are most likely to occur. The peaks are not quite in the same place&mdash;the peak for robberies is in Tenderloin while the peak for thefts is shifted more into the Financial District. For both types of incidents, local pockets of higher probability are spread across the city.
+        </p>
+        <p>
+            Larger versions of these maps with the option for linear color scaling can be found on their respective individual pages: <a href="/thefts/mapkde/">thefts</a>, <a href="/robberies/mapkde/">robberies</a>.
+        </p>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<hr>
+
+<div class="row">
+    <h2 class="text-center">Time of Day Distribution</h2>
+    <div class="col-md-5 col-md-offset-1">
+        <img src="/static/img/plots/thefts-timeofdaydistribution.png" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-5">
+        <img src="/static/img/plots/robberies-timeofdaydistribution.png" class="img-responsive center-block"  />
+    </div>
+    <div class="col-md-10 col-md-offset-1">
+        <p>
+            The preceding histograms show respectively theft incidents and robbery incidents binned by hour of the day, for all incidents repoted from 2003 through 2015. Both thefts and robberies show strong daily patterns.
+        </p>
+        <p>
+            Thefts occur the least frequently in the early hours of morning, before dawn. They are most frequent in the late afternoon, with a smaller second peak around midnight.
+        </p>
+        <p>
+            Robberies, in contrast, occur the least frequently during the mornign commute hours. They peak at night, in the hours before and after midnight.
+        </p>
+        <p>
+            The dark blue curves are probability density function models estimated using gaussian kernel density estimation. Silverman's rule for optimal bandwidth choice is used. These models give the probability that, for an incident, it occurs at a certain time of day.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+        <hr>
+        <!-- Footer here -->
+        <footer>
+    <p>
+        &copy; 2016 <a href="https://jayqi.com">Jay Qi</a>
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        View Source on <a href="https://github.com/jayqi/sf-walk-safety">GitHub</a>
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Icon by <a href="http://www.flaticon.com/authors/scott-de-jonge" title="Scott de Jonge">Scott de Jonge</a>
+        on <a href="http://www.flaticon.com" title="Flaticon">Flaticon</a>
+        (<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>)
+        &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+        Design: <a href="https://bootswatch.com/sandstone/">Bootswatch Sandstone</a>
+    </p>
+</footer>
+    </div> <!-- /container -->
+
+    <!--
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    -->
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="/static/js/vendor/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
+    
+<!-- Mapbox.js and its stylesheet -->
+<script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+
+<script src="/static/js/easy-button.js"></script>
+<link href="/static/css/easy-button.css" rel='stylesheet' />
+
+<script>L.mapbox.accessToken = 'pk.eyJ1IjoianlxaSIsImEiOiJjaW01ZG11MjcwMWl0dGttM2R2c2JvbThiIn0.eE6Xt0dMIl7Y2tOT8e6dyQ';
+
+var splitmap1 = L.mapbox.map('splitmap1', 'mapbox.light',{
+        minZoom:12,
+        maxZoom:18
+    })
+    .setView([37.7680, -122.4367], 12);
+
+var splitmap2 = L.mapbox.map('splitmap2', 'mapbox.light',{
+        minZoom:12,
+        maxZoom:18
+    })
+    .setView([37.7680, -122.4367], 12);
+
+
+splitmap1.scrollWheelZoom.disable();
+splitmap2.scrollWheelZoom.disable();
+
+var kde_thefts = L.mapbox.tileLayer('jyqi.3nj276s8').addTo(splitmap1);
+kde_thefts.setOpacity(0.66)
+
+var kde_robberies = L.mapbox.tileLayer('jyqi.32dcovup').addTo(splitmap2);
+kde_robberies.setOpacity(0.66)
+
+// when either map finishes moving, trigger an update on the other one.
+splitmap1.on('moveend', follow).on('zoomend', follow);
+splitmap2.on('moveend', follow).on('zoomend', follow);
+
+// quiet is a cheap and dirty way of avoiding a problem in which one map
+// syncing to another leads to the other map syncing to it, and so on
+// ad infinitum. this says that while we are calling sync, do not try to
+// loop again and sync other maps
+var quiet = false;
+function follow(e) {
+    if (quiet) return;
+    quiet = true;
+    if (e.target === splitmap1) sync(splitmap2, e);
+    if (e.target === splitmap2) sync(splitmap1, e);
+    quiet = false;
+}
+
+// sync simply steals the settings from the moved map (e.target)
+// and applies them to the other map.
+function sync(map, e) {
+    map.setView(e.target.getCenter(), e.target.getZoom(), {
+        animate: false,
+        reset: true
+    });
+}
+
+
+
+
+
+// Define log legend
+var legend_log = L.control({position: 'bottomright'});
+
+
+
+legend_log.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'mapinfo maplegend');
+    div.innerHTML += 'Log color scale:' + '<br>' +
+            '<i style="background: #ffffcc"></i> 0.0' + '<br>' +
+            '<i style="background: #ffeda0"></i> 0.001' + '<br>' +
+            '<i style="background: #fed976"></i> 0.0027' + '<br>' +
+            '<i style="background: #feb24c"></i> 0.0072' + '<br>' +
+            '<i style="background: #fd8d3c"></i> 0.019' + '<br>' +
+            '<i style="background: #fc4e2a"></i> 0.052' + '<br>' +
+            '<i style="background: #e31a1c"></i> 0.14' + '<br>' +
+            '<i style="background: #bd0026"></i> 0.37' + '<br>' +
+            '<i style="background: #800026"></i> 1.0';
+    return div;
+};
+
+
+// Add legend to map
+var legendon = false
+
+L.easyButton( '<strong>L</strong>', function(){
+    if (legendon) {
+        legend_log.removeFrom(splitmap2);
+        legendon = false;
+    } else {
+        legend_log.addTo(splitmap2);
+        legendon = true;
+    }
+}).addTo(splitmap2);</script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+    </body>
+    </html>
