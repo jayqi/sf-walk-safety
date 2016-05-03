@@ -6,7 +6,6 @@ import pandas as pd
 
 def initialize_application():
     app = Flask('application')
-    app.debug = True
 
     # Read data from file
     df_robberies = pd.read_pickle(os.path.join(APP_DATA, 'robbery-street.p'))
