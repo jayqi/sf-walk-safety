@@ -6,12 +6,6 @@ from datetime import datetime, time
 import math
 import json
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-from sklearn.neighbors import KernelDensity
-
-
 #######################################################
 ######################### MAPS ########################
 #######################################################
@@ -287,42 +281,3 @@ def heat_listcoords(df,filters):
     df['intensity'] = 0.1
 
     return df[['y','x','intensity']].values.tolist()
-
-########################################################
-########################## KDE #########################
-########################################################
-
-def silverman_bwxy(df):
-    count = df['x'].count()
-    stdx = df['x'].std()
-    stdy = df['y'].std()
-    iqrx = np.subtract(*np.percentile(df['x'], [75, 25]))
-    iqry = np.subtract(*np.percentile(df['y'], [75, 25]))
-    sigma = min(stdx,stdy,iqrx,iqry)
-    return 0.9*sigma*count**(-0.2)
-
-def build_spatial_kde(df):
-    spacekde = KernelDensity(bandwidth = silverman_bwxy(df[['x','y']]),metric='haversine')
-    spacekde.fit(df[['x','y']])
-
-    xmin = -122.5237517
-    xmax = -122.3602017
-    ymin = 37.7040012
-    ymax = 37.8341382
-
-    xv, yv = np.meshgrid(np.linspace(xmin,xmax,num=100),np.linspace(ymin,ymax,num=100))
-
-    X_grid = np.vstack([xv.ravel(), yv.ravel()]).transpose()
-
-    Z = np.exp(spacekde.score_samples(X_grid))
-
-    Z = Z/Z.max()
-
-    tol = 1e-1
-    Z[abs(Z) < tol] = 0.0
-
-    return [[point[1], point[0], point[2]] for point in zip(X_grid[:,0],X_grid[:,1],Z)]
-
-def drop_zeroes(nparray):
-    df = pd.DataFrame(nparray)
-    return df[df[2]!=0.0].values.tolist()
